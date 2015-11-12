@@ -9,6 +9,7 @@
 	padding-left: 0;
 	list-style: none;
 	border-left: 3px solid #1182f5;
+	cursor: pointer;
 }
 .top-row ul li p{
 	height: 100%;
@@ -45,6 +46,7 @@
 	color: #fff;
 	border: 3px solid #fff;
 	box-shadow: 0 0 0 6px #363636;
+	cursor: pointer;
 }
 .profile-menu div{
 	margin: 0 0 7px 0;
@@ -69,7 +71,8 @@
 	color: #fff;
 }
 .bottom-inner-wrapper{
-	padding: 20px 0 0 0; 
+	padding: 20px 0 10px 0;
+	border-bottom: 1px solid #d8d8d8;
 }
 .game-box-wrapper{
 	padding: 0 0 25px 0;
@@ -85,9 +88,6 @@
 .game-box{
 	padding-bottom: 15px;
 }
-.game-box:nth-child(1){
-	padding-left: 20%;
-}
 .game-box-bar{
 	width: 120px;
 	height: 3px;
@@ -95,7 +95,7 @@
 	background: #d8d8d8;
 }
 .game-box-bar .box-bar-cover{
-	background: #363636;
+	background: #e43f3f;
 }
 .game-img{
 	width: 120px;
@@ -104,88 +104,30 @@
 .game-box p{
 	width: 120px;
 	background: #363636;
-	padding: 0;
+	padding: 2px 0;
 	margin: 2px 0 0 0;
 	color: #fff;
+	font-size: 12px;
 	font-weight: normal;
+	font-style: italic;
 }
-.img-cover-box{
-	width: 32px;
-	height: 32px;
-	margin: 0 0 0 88px;
-	padding: 6px 0 0 12px;
-	background: #363636;
-	position: absolute;
-	color: #fff;
+.versus{
+	padding-bottom: 20px;
+	font-size: 16px;
 	font-weight: bold;
-}
-.winner .box-bar-cover{
-	background: #e43f3f;
-}
-.winner .game-img{
-	border: 2px solid #e43f3f;
-}
-.winner .img-cover-box{
-	background: #e43f3f;
-}
-.featured-teams{
-	padding-left: 0;
-}
-.featured-teams div{
-	width: 120px;
-}
-.featured-teams h6{
-	width: 120px;
 	font-style: italic;
-	font-size: 12px; 
 }
-.featured-teams p{
-	width: 120px;
-	font-style: italic;
+.result p{
+	padding-top: 10px;
 	font-size: 12px;
-	color: #fff;
-	background: #363636;
-	margin: 2px 0 10px 0;
+	font-style: italic;
 }
-.featured-teams img{
-	width: 120px;
-	border: 2px solid #1182f5;
-}
-.game-levels-wrapper{
-	padding: 0px;
-	margin: 0 0 30px 0;
-}
-.game-levels{
-	width: 75%;
-	height: 35px;
-	margin-bottom: 0;
-	background: #363636;
+.result input{
+	width: 40px;
+	height: 40px;
+	background: #e43f3f;
+	font-weight: bold;
 	border: none;
-	border-radius: 0; 
-	display: inline-block;
-}
-.game-levels p{
-	margin: 7px 0 0 33%;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 12px;
-	font-style: italic;
-	color: #fff;
-	position: absolute;
-}
-.game-levels-wrapper img{
-	vertical-align: top;
-	margin: 0 -4px 0 0;
-}
-.progressbar-cover{
-	background: #e43f3f;
-}
-.level{
-	margin: 7px 0 0 5px;
-	font-family: arial;
-	font-weight: bold;
-	font-size: 14px;
-	vertical-align: top;
-	display: inline-block;
 }
 .profile-views{
 	float: right;
@@ -252,8 +194,20 @@
 	.profile-views{
 		width: 29.333333%;
 	}
+	.versus{
+		padding-top: 60px;
+	}
+	.result div:nth-of-type(1){
+		padding-left: 0;
+	}
 }
 @media screen and (min-width: 990px){
+	.versus{
+		padding-left: 40px;
+	}
+	.result div:nth-of-type(1){
+		padding-left: 10px;
+	}
 }
 @media screen and (min-width: 1024px){
 	.profile-menu img{
@@ -283,5 +237,14 @@
 	}
 	.profile-views{
 		width: 31.333333%;
+	}
+	.versus{
+		padding-left: 25px;
+	}
+	.bottom-main{
+		padding: 0 50px;
+	}
+	.result div:nth-of-type(1){
+		padding-left: 0;
 	}
 }
