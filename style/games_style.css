@@ -1,0 +1,287 @@
+.top-row{
+	margin: -10px 0 0 0; 
+}
+.top-row ul{
+	padding: 0;
+}
+.top-row ul li{
+	height: 50px;
+	padding-left: 0;
+	list-style: none;
+	border-left: 3px solid #1182f5;
+}
+.top-row ul li p{
+	height: 100%;
+	padding: 15px 0 0 5px;
+	background: #929292;
+	font-size: 12px;
+	font-weight: bold;	
+}
+.top-row ul li p span{
+	font-style: italic;
+	font-weight: normal;
+}
+.top-row ul li p img{
+	margin: -3px 0 0 0;
+	padding: 0 0 0 5px;
+}
+.top-row .checked p{
+	background: #f4f4f4;
+}
+.top-row .checked p:nth-of-type(1){
+	color: #1182f5;
+}
+.middle-row{
+	margin: 40px 0;
+}
+.middle-row p{
+	width: 230px;
+	height: 56px;
+	margin: 0 auto; 
+	padding: 12px 0 0 0;
+	background: #363636;
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+	border: 3px solid #fff;
+	box-shadow: 0 0 0 6px #363636;
+}
+.profile-menu div{
+	margin: 0 0 7px 0;
+	background: #e43f3f;
+}
+.profile-menu div:nth-child(1){
+	height: 30px;
+}
+.profile-menu .active{
+	background: #363636;
+}
+.match-info{
+	background: #363636;
+	margin-bottom: 7px;
+}
+.match-info p{
+	height: 30px;
+	margin: 0;
+	padding-top: 6px;
+	font-size: 12px;
+	font-style: italic;
+	color: #fff;
+}
+.bottom-inner-wrapper{
+	padding: 20px 0 0 0; 
+}
+.game-box-wrapper{
+	padding: 0 0 25px 0;
+}
+.game-box-wrapper p{
+	font-style: italic;
+	font-size: 12px;
+	margin: 0 0 15px 0;
+}
+.game-box-wrapper p img{
+	width: 20px;
+}
+.game-box{
+	padding-bottom: 15px;
+}
+.game-box:nth-child(1){
+	padding-left: 20%;
+}
+.game-box-bar{
+	width: 120px;
+	height: 3px;
+	margin-bottom: 3px;
+	background: #d8d8d8;
+}
+.game-box-bar .box-bar-cover{
+	background: #363636;
+}
+.game-img{
+	width: 120px;
+	border: 2px solid #363636;
+}
+.game-box p{
+	width: 120px;
+	background: #363636;
+	padding: 0;
+	margin: 2px 0 0 0;
+	color: #fff;
+	font-weight: normal;
+}
+.img-cover-box{
+	width: 32px;
+	height: 32px;
+	margin: 0 0 0 88px;
+	padding: 6px 0 0 12px;
+	background: #363636;
+	position: absolute;
+	color: #fff;
+	font-weight: bold;
+}
+.winner .box-bar-cover{
+	background: #e43f3f;
+}
+.winner .game-img{
+	border: 2px solid #e43f3f;
+}
+.winner .img-cover-box{
+	background: #e43f3f;
+}
+.featured-teams{
+	padding-left: 0;
+}
+.featured-teams div{
+	width: 120px;
+}
+.featured-teams h6{
+	width: 120px;
+	font-style: italic;
+	font-size: 12px; 
+}
+.featured-teams p{
+	width: 120px;
+	font-style: italic;
+	font-size: 12px;
+	color: #fff;
+	background: #363636;
+	margin: 2px 0 10px 0;
+}
+.featured-teams img{
+	width: 120px;
+	border: 2px solid #1182f5;
+}
+.game-levels-wrapper{
+	padding: 0px;
+	margin: 0 0 30px 0;
+}
+.game-levels{
+	width: 75%;
+	height: 35px;
+	margin-bottom: 0;
+	background: #363636;
+	border: none;
+	border-radius: 0; 
+	display: inline-block;
+}
+.game-levels p{
+	margin: 7px 0 0 33%;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	font-style: italic;
+	color: #fff;
+	position: absolute;
+}
+.game-levels-wrapper img{
+	vertical-align: top;
+	margin: 0 -4px 0 0;
+}
+.progressbar-cover{
+	background: #e43f3f;
+}
+.level{
+	margin: 7px 0 0 5px;
+	font-family: arial;
+	font-weight: bold;
+	font-size: 14px;
+	vertical-align: top;
+	display: inline-block;
+}
+.profile-views{
+	float: right;
+	padding: 0;
+}
+.profile-views h5{
+	height: 32px;
+	margin: 0;
+	padding: 10px 5px;
+	background: #1182f5;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: #fff;
+}
+.profile-views p{
+	padding: 5px 0;
+	margin: 0;
+	border-bottom: 1px solid #d8d8d8;
+	font-size: 12px;
+	font-style: italic;
+}
+.profile-views p:hover{
+	background: #d8d8d8;
+}
+.profile-views p span{
+	float: right;
+	padding: 10px 5px 0 0; 
+}
+.profile-views p img{
+	width: 39px;
+	margin: 0 5px 0 0;
+	border: 2px solid #363636; 
+}
+.online-player{
+	color: #1182f5;
+}
+.online-player span{
+	color: #333;
+}
+.profile-views .online-player img{
+	border: 2px solid #1182f5;
+}
+@media screen and (min-width: 768px){
+	.profile-menu{
+		padding: 0;
+		margin-left: 15px;
+	}
+	.match-info{
+		margin-left: 7px;
+	}
+	.profile-menu img{
+		margin-left: -8px;
+	}
+	.bottom-main{
+		margin-left: 7px;
+		border-left: 1px solid #d8d8d8;
+		border-right: 1px solid #d8d8d8; 
+	}
+	.game-levels-wrapper{
+		margin: 0;
+	}
+	.profile-views{
+		width: 29.333333%;
+	}
+}
+@media screen and (min-width: 990px){
+}
+@media screen and (min-width: 1024px){
+	.profile-menu img{
+		margin-left: 0;
+	}
+}
+@media screen and (min-width: 1200px){
+	.player-box-bar{
+		margin-left: 16px;  
+	}
+	.player-box p{
+		margin: 7px 0 7px 16px;
+	}
+	.player-likes{
+		margin: 7px 0 0 16px;
+	}
+	.player-name-box{
+		margin: -10px 0 0 -20px;
+		padding: 0;
+	}
+	.player-icon-wrapper{
+		margin-left: 15px; 
+	}
+	.game-box-wrapper p img{
+		float: right;
+		margin: 0 30px 0 0;
+	}
+	.profile-views{
+		width: 31.333333%;
+	}
+}
