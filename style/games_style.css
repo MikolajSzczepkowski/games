@@ -193,6 +193,16 @@
 	text-align: center;
 	cursor: pointer;
 }
+
+.players-wrapper div p{
+	width: 120px;
+	margin-top: 3px;
+	padding: 2px 0; 
+	background: #363636;
+	font-size: 12px;
+	font-style: italic;
+	color: #fff;
+}
 .profile-views{
 	float: right;
 	padding: 0;
@@ -331,6 +341,7 @@
 	.report p{
 		width: 125px;
 	}
+
 }
 @media screen and (min-width: 1024px){
 	.profile-menu img{
@@ -375,5 +386,21 @@
 	}
 	.ratings-wrapper{
 		margin-left: -2px;
+	}
+	.players-wrapper:nth-of-type(even){
+		padding-right: 0;
+		padding-left: 15px;
+	}
+	.players-right{
+		padding-right: 0;
+	}
+	.players-right div, .players-right p{
+		float: right;
+	}
+	.players-wrapper{
+		padding-left: 0;
+	}
+	.players-wrapper div{
+		padding-left: 0;
 	}
 }
