@@ -203,36 +203,42 @@
 	font-style: italic;
 	color: #fff;
 }
-.profile-views{
+.game-chat{
 	float: right;
 	padding: 0;
 }
-.profile-views h5{
+.match-info.game-chat{
+	margin-top: -37px; 
+	margin-left: 0;
+	background: none;
+}
+.match-info.game-chat p{
+	margin: 0 15px;
+	background: #363636;
+}
+.game-chat h5{
 	height: 32px;
 	margin: 0;
 	padding: 10px 5px;
-	background: #1182f5;
+	background: #363636;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 12px;
 	font-style: italic;
-	font-weight: bold;
 	color: #fff;
 }
-.profile-views p{
+.game-chat p{
 	padding: 5px 0;
 	margin: 0;
 	border-bottom: 1px solid #d8d8d8;
 	font-size: 12px;
 	font-style: italic;
 }
-.profile-views p:hover{
-	background: #d8d8d8;
-}
-.profile-views p span{
+
+.game-chat p span{
 	float: right;
 	padding: 10px 5px 0 0; 
 }
-.profile-views p img{
+.game-chat p img{
 	width: 39px;
 	margin: 0 5px 0 0;
 	border: 2px solid #363636; 
@@ -243,8 +249,15 @@
 .online-player span{
 	color: #333;
 }
-.profile-views .online-player img{
+.game-chat .online-player img{
 	border: 2px solid #1182f5;
+}
+p.chat-message{
+	margin: 10px 0;
+	padding: 15px 10px;
+	background: #f4f4f4;
+	border-radius: 15px;
+	border-bottom: none;
 }
 @media screen and (min-width: 480px){
 	.ratings{
@@ -296,7 +309,7 @@
 	.game-levels-wrapper{
 		margin: 0;
 	}
-	.profile-views{
+	.game-chat{
 		width: 29.333333%;
 	}
 	.versus{
@@ -369,7 +382,7 @@
 		float: right;
 		margin: 0 30px 0 0;
 	}
-	.profile-views{
+	.game-chat{
 		width: 31.333333%;
 	}
 	.bottom-main{
