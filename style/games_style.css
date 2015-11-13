@@ -207,8 +207,15 @@
 	float: right;
 	padding: 0;
 }
+.game-chat-inner{
+	height: 500px;
+	overflow-y: scroll;  
+}
+.game-chat-inner ul{
+	list-style: none;
+	padding: 0;
+}
 .match-info.game-chat{
-	margin-top: -37px; 
 	margin-left: 0;
 	background: none;
 }
@@ -225,6 +232,12 @@
 	font-size: 12px;
 	font-style: italic;
 	color: #fff;
+}
+.game-chat h6{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	font-style: italic;
+	color: #d8d8d8;
 }
 .game-chat p{
 	padding: 5px 0;
@@ -258,6 +271,16 @@ p.chat-message{
 	background: #f4f4f4;
 	border-radius: 15px;
 	border-bottom: none;
+}
+.new-message{
+	padding-top: 10px
+}
+.new-message input, .new-message textarea{
+	height: 50px;
+	background: #f4f4f4;
+	border: none;
+	border-radius: 15px;
+	resize: none;
 }
 @media screen and (min-width: 480px){
 	.ratings{
@@ -333,6 +356,9 @@ p.chat-message{
 	}
 	.report p{
 		width: 95px;
+	}
+	.match-info.game-chat{
+		margin-top: -37px; 
 	}
 }
 @media screen and (min-width: 990px){
