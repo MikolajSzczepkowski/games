@@ -12,6 +12,9 @@
 	border-left: 3px solid #1182f5;
 	cursor: pointer;
 }
+.top-row ul li.red-border{
+	border-left: 3px solid #e43f3f;
+}
 .top-row ul li p{
 	height: 100%;
 	padding: 15px 0 0 5px;
@@ -272,9 +275,8 @@
 	font-style: italic;
 }
 
-.game-chat p span{
-	float: right;
-	padding: 10px 5px 0 0; 
+.game-chat span{
+	padding-top: 20px;
 }
 .game-chat p img{
 	width: 39px;
