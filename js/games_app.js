@@ -43,7 +43,7 @@ $(function (){
 		$.ajax({
 			url: url,
 			dataType: "html",
-			type: "POST",
+			type: "GET",
 			success: function(data){
 				$("#content-wrapper").html( $(data).find("#content")).hide().fadeIn(500);
 			}
