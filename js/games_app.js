@@ -38,8 +38,15 @@ $(function (){
 
 		$("nav a.active").removeClass("active");
 		$(this).addClass("active");
+		$("content").remove();
 
-		$("#content").empty();
-		$("#content").load(url + "#content").hide().fadeIn(500);
+		$.ajax({
+			url: url,
+			dataType: "html",
+			type: "POST",
+			success: function(data){
+				$("#content-wrapper").html( $(data).find("#content")).hide().fadeIn(500);
+			}
+		});
 	});
 });
