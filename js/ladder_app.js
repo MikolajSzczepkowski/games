@@ -4,10 +4,10 @@ $(function (){
 		$(this).addClass("checked-color");
 	});
 	
-	$(".ladder-box").on("mouseenter", function(){
+	$(document).on("mouseenter", ".ladder-box", function(){
 		$(this).find("div").addClass("hover");
 	});
-	$(".ladder-box").on("mouseleave", function(){
+	$(document).on("mouseleave", ".ladder-box", function(){
 		$(this).find("div").removeClass("hover");
 	});
 });

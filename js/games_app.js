@@ -6,27 +6,36 @@ $(function (){
 	$("li").filter(".checked").on("click", function(){
 		$(this).addClass("checked-color");
 	});
-	$(".game-box-bar").on("mouseenter", function(){
+	$(document).on("mouseenter", ".game-box-bar",function(){
 		$(this).find("span").fadeIn();
 	});
-	$(".game-box-bar").on("mouseleave", function(){
+	$(document).on("mouseleave", ".game-box-bar", function(){
 		$(this).find("span").fadeOut();
 	});
 
-	$(".result-inner-wrapper").on("mouseenter", function(){
+	$(document).on("mouseenter", ".ladder-box", function(){
+		$(this).find("div").addClass("hover");
+	});
+	$(document).on("mouseleave", ".ladder-box", function(){
+		$(this).find("div").removeClass("hover");
+	});
+
+	$(document).on("mouseenter", ".result-inner-wrapper", function(){
 		currentTeamResult = $(this);
 		currentTeamResult.find(".enter-result").nextAll().fadeIn(200);
 	});
-	$(".result-inner-wrapper").on("mouseleave", function(){
+	$(document).on("mouseleave", ".result-inner-wrapper", function(){
 		currentTeamResult.find(".enter-result").nextAll().fadeOut(200);		
 	});
-	$(".result-list").on("click", function(){
+
+	$(document).on("click", ".result-list", function(){
 		clickedResult = $(this).text();
 		currentTeamResult.find(".enter-result").nextAll().fadeOut(200);
 		currentTeamResult.find(".enter-result").empty().css({"padding-top":"5px",
 															"background":"#363636"}).text(clickedResult);	
 	});
-	$(".ratings label img").on("click", function(){
+	
+	$(document).on("click", ".ratings label img", function(){
 		clickedRate = $(this);
 		$(".ratings").find("img").css("background","#e43f3f");
 		clickedRate.css("background","#363636");
@@ -43,9 +52,9 @@ $(function (){
 		$.ajax({
 			url: url,
 			dataType: "html",
-			type: "GET",
+			type: "POST",
 			success: function(data){
-				$("#content-wrapper").html( $(data).find("#content")).hide().fadeIn(500);
+				$("#content-wrapper").html($(data).find("#content")).hide().fadeIn(500);
 			}
 		});
 	});
