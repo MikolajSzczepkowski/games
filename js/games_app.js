@@ -31,4 +31,15 @@ $(function (){
 		$(".ratings").find("img").css("background","#e43f3f");
 		clickedRate.css("background","#363636");
 	});
+
+	$("nav a").on("click", function(e){
+		e.preventDefault();
+		var url = this.href;
+
+		$("nav a.active").removeClass("active");
+		$(this).addClass("active");
+
+		$("#content").empty();
+		$("#content").load(url + "#content").hide().fadeIn(500);
+	});
 });
