@@ -356,6 +356,10 @@ p.chat-message{
 		padding: 0;
 		margin-left: 15px;
 	}
+	.profile-menu a img{
+		width: 59px;
+		height: auto;
+	}
 	.match-info{
 		margin-left: 7px;
 	}
@@ -426,6 +430,10 @@ p.chat-message{
 	}
 	.match-info.game-chat p{
 		height: 30px;
+	}
+	.profile-menu a img{
+		width: 78px;
+		height: 78px;
 	}
 }
 @media screen and (min-width: 1024px){
