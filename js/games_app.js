@@ -1,5 +1,7 @@
 $(function (){
-	var clickedResult,
+	var clickedTopic,
+		currentTeamTopic,
+		clickedResult,
 		currentTeamResult,
 		clickedRate;
 
@@ -18,6 +20,21 @@ $(function (){
 	});
 	$(document).on("mouseleave", ".ladder-box", function(){
 		$(this).find("div").removeClass("hover");
+	});
+
+	$(document).on("mouseenter", ".topic-inner-wrapper", function(){
+		currentTeamTopic = $(this);
+		currentTeamTopic.find(".enter-topic").nextAll().fadeIn(200);
+	});
+	$(document).on("mouseleave", ".topic-inner-wrapper", function(){
+		currentTeamTopic.find(".enter-topic").nextAll().fadeOut(200);		
+	});
+
+	$(document).on("click", ".topic-list", function(){
+		clickedTopic = $(this).text();
+		currentTeamTopic.find(".enter-topic").nextAll().fadeOut(200);
+		currentTeamTopic.find(".enter-topic").empty().css({"padding-top":"5px",
+															"background":"#363636"}).text(clickedTopic);	
 	});
 
 	$(document).on("mouseenter", ".result-inner-wrapper", function(){
