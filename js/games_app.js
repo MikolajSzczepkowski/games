@@ -76,7 +76,7 @@ $(function (){
 		});
 	});
 
-	$(".ladder-box a").on("click", function(e){
+	$(document).on("click", ".ladder-box a", function(e){
 		e.preventDefault();
 		var url = this.href;
 
