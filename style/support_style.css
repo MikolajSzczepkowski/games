@@ -24,9 +24,12 @@
 }
 .topic-wrapper ul{
 	margin: 0;
-	padding: 0;	
+	padding: 0 0 210px 0;	
 	display: inline-block;
 	z-index: 50;
+}
+.topic-wrapper ul:hover{
+	padding: 0 0 75px 0;
 }
 .topic-wrapper ul li{
 	height: 35px;
@@ -40,6 +43,7 @@
 	cursor: pointer;
 }
 .topic-wrapper ul li:nth-of-type(1){
+	height: 50px;
 	padding: 0;
 	margin-top: 0;
 	display: inline-block;
@@ -54,7 +58,7 @@
 	float: right;
 	background: #e43f3f;
     color: #fff;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: normal;
     font-style: italic;
     border: none;
@@ -69,6 +73,11 @@
 .text-holder textarea{
 	height: 150px;
 	resize: none;
+}
+@media screen and (min-width: 480px){
+	.topic-wrapper ul li:nth-of-type(1){
+		height: 35px;
+	}
 }
 @media screen and (min-width: 768px){
 	.match-info{
