@@ -64,7 +64,6 @@ $(function (){
 
 		$("nav a.active").removeClass("active");
 		$(this).addClass("active");
-		$("#content").remove();
 
 		$.ajax({
 			url: url,
@@ -79,8 +78,6 @@ $(function (){
 	$(document).on("click", ".ladder-box a", function(e){
 		e.preventDefault();
 		var url = this.href;
-
-		$("#content").remove();
 
 		$.ajax({
 			url: url,
