@@ -52,13 +52,13 @@
 	box-shadow: 0 0 0 6px #363636;
 	cursor: pointer;
 }
-.profile-menu a img{
+.profile-menu img, .profile-menu a img{
 	width: 78px;
 	height: 78px;
 	margin: 0 0 7px 0;
 	background: #e43f3f;
 }
-.profile-menu a:nth-of-type(1) img{
+.profile-menu img{
 	height: 30px;
 }
 .profile-menu .active img{

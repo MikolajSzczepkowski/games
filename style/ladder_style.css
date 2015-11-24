@@ -26,16 +26,16 @@
 }
 .border-menu:before {
 	content: "";
-	position: absolute;
-	top: 14px;
-	left: 5px;
-	width: 6px;
-	height: 10px;
-	border-top: 6px double #363636;
-	border-bottom: 2px solid #363636;
+    position: absolute;
+    top: 15px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    border-top: 5px double #363636;
+    border-bottom: 2px solid #363636;
 }
 .border-menu.hover:before{
-	border-top: 6px double #e43f3f;
+	border-top: 5px double #e43f3f;
 	border-bottom: 2px solid #e43f3f;
 }
 .ladder-box{

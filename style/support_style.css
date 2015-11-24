@@ -1,7 +1,7 @@
-.rules-inner-wrapper{
+.support-inner-wrapper{
 	padding: 0 0 10px 0;
 }
-.text-box{
+.support-text-box{
 	margin-bottom: 5px;
 	background: #f4f4f4;
 	border-left: 3px solid #e43f3f;
@@ -74,14 +74,14 @@
 	.match-info{
 		margin-left: 7px;
 	}
-	.rules-main{
+	.support-main{
 		margin-left: 7px;
 		border-left: 1px solid #d8d8d8;
 		border-right: 1px solid #d8d8d8; 
 	}
 }
 @media screen and (min-width: 1200px){
-	.rules-main{
+	.support-main{
 		padding: 0 50px;
 	}
 }
