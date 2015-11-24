@@ -64,7 +64,23 @@ $(function (){
 
 		$("nav a.active").removeClass("active");
 		$(this).addClass("active");
-		$("content").remove();
+		$("#content").remove();
+
+		$.ajax({
+			url: url,
+			dataType: "html",
+			type: "GET",
+			success: function(data){
+				$("#content-wrapper").html($(data).find("#content")).hide().fadeIn(500);
+			}
+		});
+	});
+
+	$(".ladder-box a").on("click", function(e){
+		e.preventDefault();
+		var url = this.href;
+
+		$("#content").remove();
 
 		$.ajax({
 			url: url,

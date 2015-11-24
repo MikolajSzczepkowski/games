@@ -67,6 +67,9 @@
 .ladder-box table tr td:nth-of-type(even){
 	width: 20px;
 }
+a:hover{
+	text-decoration: none;
+}
 @media screen and (min-width: 480px){
 	.ladder-box table{
 		width: 70%;
