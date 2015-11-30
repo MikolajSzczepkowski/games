@@ -295,9 +295,9 @@
 	border: 2px solid #1182f5;
 }
 p.chat-message{
-	margin: 0;
+	margin: 10px 0;
 	padding: 15px 10px;
-	background: #1182f5;
+	background: #f4f4f4;
 	border-radius: 15px;
 	border-bottom: none;
 }
@@ -434,7 +434,6 @@ p.chat-message{
 	}
 	.profile-menu a img{
 		width: 78px;
-		height: 78px;
 	}
 }
 @media screen and (min-width: 1024px){
