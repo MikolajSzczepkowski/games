@@ -295,9 +295,9 @@
 	border: 2px solid #1182f5;
 }
 p.chat-message{
-	margin: 10px 0;
+	margin: 0;
 	padding: 15px 10px;
-	background: #f4f4f4;
+	background: #1182f5;
 	border-radius: 15px;
 	border-bottom: none;
 }
