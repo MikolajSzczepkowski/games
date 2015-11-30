@@ -5,9 +5,6 @@ $(function (){
 		currentTeamResult,
 		clickedRate;
 
-	$("li").filter(".checked").on("click", function(){
-		$(this).addClass("checked-color");
-	});
 	$(document).on("mouseenter", ".game-box-bar",function(){
 		$(this).find("span").fadeIn();
 	});
