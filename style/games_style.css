@@ -279,6 +279,7 @@
 
 .game-chat span{
 	padding-top: 20px;
+	padding-left: 10px;
 }
 .game-chat p img{
 	width: 39px;
@@ -305,17 +306,18 @@ p.chat-message{
 	padding-top: 10px
 }
 .new-message input{
-	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
-	font-weight: bold;
-	font-style: italic;
-	padding-left: 10px;
-}
-.new-message input, .new-message textarea{
-	height: 50px;
-	background: #f4f4f4;
+	height: 30px;
+	margin-top: 5px;
+	background: #e43f3f;
 	border: none;
-	border-radius: 15px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	font-style: italic;
+	color: #fff;
+	float: right;
+}
+.new-message textarea{
+	height: 100px;
 	resize: none;
 }
 .right-banner{
@@ -366,7 +368,9 @@ p.chat-message{
 		margin-left: 7px;
 	}
 	.profile-menu img{
-		margin-left: -8px;
+		width: 59px;
+    	height: auto;
+    	padding: 4px 0;
 	}
 	.bottom-main{
 		margin-left: 7px;
@@ -435,6 +439,11 @@ p.chat-message{
 	}
 	.profile-menu a img{
 		width: 78px;
+	}
+	.profile-menu img{
+		width: 78px;
+    	height: auto;
+    	padding: 0;
 	}
 }
 @media screen and (min-width: 1024px){
