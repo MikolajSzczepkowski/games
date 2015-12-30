@@ -18,13 +18,73 @@
 <div class="container-fluid">
 	<nav id="navigation" class="row text-center nav-wrapper">
 		<div class="col-md-1 col-md-offset-1">
-			<div id="menu" class="menu-size text-center pointer border-bottom">
-				<img src="images/icon-menu.png" alt="menu">
+			<div id="menu" class="dropdown menu-size text-center pointer border-bottom">
+				<a href="#" data-toggle="dropdown" data-target="#">
+					<img src="images/icon-menu.png" alt="menu">
+				</a>
+				<ul class="dropdown-menu menu-box">
+					<li>
+						<a href="#"><img src="images/home.gif" alt="home">Home</a>
+					</li>
+					<li>
+						<a href="#"><img src="images/tv.gif" alt="tv">TV</a>
+					</li>
+					<li>
+						<a href="#"><img src="images/rank.gif" alt="ranking">Leaderboards</a>
+					</li>
+					<li>
+						<a href="#"><img src="images/users.gif" alt="clans">Teams</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 		<div class="col-md-1 col-md-offset-1">
-			<div id="target" class="menu-size text-center pointer border-bottom">
-				<img src="images/target.png" alt="target">
+			<div id="target" class="dropdown menu-size text-center pointer border-bottom">
+				<a href="#" data-toggle="dropdown" data-target="#">
+					<img src="images/target.png" alt="target">
+				</a>
+				<div id="menuBackground" class="dropdown-menu menu-background">
+					<ul id="firstMenuBox" class="menu-box">
+						<li>
+							<h6>Playstation 4</h6>
+						</li>
+						<li>
+							<a href="#"><img src="images/menu-img-2.gif" alt="game"></a>
+						</li>
+						<li>
+							<a href="#"><img src="images/menu-img-2.gif" alt="game"></a>
+						</li>
+						<li>
+							<a href="#"><img src="images/menu-img-2.gif" alt="game">Battlefield 4</a>
+						</li>
+						<li>
+							<a href="#"><img src="images/menu-img-2.gif" alt="game">Rocket League</a>
+						</li>
+						<li>
+							<a href="#"><img src="images/menu-img-2.gif" alt="game">Call of Duty: AW</a>
+						</li>
+					</ul>
+					<ul id="secondMenuBox" class="menu-box menu-xbox">
+						<li>
+							<h6>Xbox One</h6>
+						</li>
+						<li>
+							<a href="#"><img src="images/menu-img.png" alt="game"></a>
+						</li>
+						<li>
+							<a href="#"><img src="images/menu-img.png" alt="game"></a>
+						</li>
+						<li>
+							<a href="#"><img src="images/menu-img.png" alt="game">Battlefield 4</a>
+						</li>
+						<li>
+							<a href="#"><img src="images/menu-img.png" alt="game"></a>
+						</li>
+						<li>
+							<a href="#"><img src="images/menu-img.png" alt="game"></a>
+						</li>
+					</ul>
+				</div>	
 			</div>
 		</div>
 		<div class="col-md-2 col-md-offset-3">
@@ -43,9 +103,15 @@
 		<div id="friends" class="col-xs-12 col-md-3 col-lg-2 friends">
 			<div class="col-xs-12 friends-search-wrapper text-center">
 				<ul class="col-xs-12">
-					<li class="friends-search-img"></li>
-					<li class="friends-search-img"></li>
-					<li class="friends-search-img"></li>
+					<li class="friends-search-img">
+						<img src="images/user-white.gif" alt="user">
+					</li>
+					<li class="friends-search-img">
+						<img src="images/users-white.gif" alt="users">
+					</li>
+					<li class="friends-search-img">
+						<img src="images/chat-white.png" alt="chat">
+					</li>
 				</ul>
 				<label class="col-xs-12" for="userSearch">
 					<input type="text" id="userSearch" placeholder="Search users...">
@@ -53,26 +119,27 @@
 			</div>
 			<div class="col-xs-12 text-center friends-header">friends(34)</div>
 				<ul class="col-xs-12 friends-list text-left">
-					<li><img src="images/team.png" alt="avatar"> Desperados_PL</li>
-					<li class="friends-active"><img src="images/team.png" alt="avatar"> Hooligan_Black</li>
-					<li><img src="images/team.png" alt="avatar"> Desperados_PL</li>
-					<li><img src="images/team.png" alt="avatar"> Hooligan_Black</li>
-					<li class="friends-active"><img src="images/team.png" alt="avatar"> Desperados_PL</li>
-					<li class="friends-active"><img src="images/team.png" alt="avatar"> Desperados_PL</li>
-					<ul class="row friends-list-buttons">
-						<li><img src="images/message.png" alt="massage" class="friends-list-buttons"></li>
-						<li><img src="images/user.png" alt="user" class="friends-list-buttons"></li>
-					</ul>
-					<li><img src="images/team.png" alt="avatar"> Hooligan_Black</li>
-					<li><img src="images/team.png" alt="avatar"> Desperados_PL</li>
-					<li><img src="images/team.png" alt="avatar"> Hooligan_Black</li>
-					<li><img src="images/team.png" alt="avatar"> Desperados_PL</li>
-					<li><img src="images/team.png" alt="avatar"> Hooligan_Black</li>
-					<li><img src="images/team.png" alt="avatar"> Desperados_PL</li>
-					<li><img src="images/team.png" alt="avatar"> Hooligan_Black</li>
-					<li><img src="images/team.png" alt="avatar"> Desperados_PL</li>
+					<li id="Depsperados_PL"><img src="images/team.png" alt="avatar">Desperados_PL</li>
+					<li id="Hooligan_Black" class="friends-active"><img src="images/team.png" alt="avatar">Hooligan_Black</li>
+					<li id="Jerry"><img src="images/team.png" alt="avatar">Jerry</li>
+					<li id="Cris"><img src="images/team.png" alt="avatar">Cris</li>
+					<li id="Muddy" class="friends-active"><img src="images/team.png" alt="avatar">Muddy</li>
+					<li id="Chester" class="friends-active"><img src="images/team.png" alt="avatar">Chester</li>
+					<li id="Mike"><img src="images/team.png" alt="avatar">Mike</li>
+					<li id="Mister Q"><img src="images/team.png" alt="avatar">Mister Q</li>
+					<li id="Mad Max"><img src="images/team.png" alt="avatar">Mad Max</li>
+					<li id="Noe"><img src="images/team.png" alt="avatar">Noe</li>
+					<li id="Darius"><img src="images/team.png" alt="avatar">Darius</li>
 				</ul>
 		</div>
+	</div>
+	<div id="chatContainer" class="chat-row chat-right-buffer">
+		<div id='chatInfo' class="chat-info">
+			<ul>
+			</ul>
+			<div id="chatInfoButton" class='badge'><img src='images/message.png'><span>0</span>
+			</div>
+		</div>	
 	</div>
 </div>
 <div class="container-fluid login">
@@ -261,6 +328,27 @@
 			</div>
 		</div>
 	</div>
+</div>
+<div class="container-fluid footer">
+	<h2 class="col-xs-12 col-sm-3 col-lg-offset-1"><a href="#">&copy; ProeSportclub 2015</a></h2>
+	<nav class="col-xs-12 col-sm-5 col-lg-4">
+		<ul>
+			<li class="text-uppercase"><a href="#">terms</a></li>
+			<li class="text-uppercase"><a href="#">faq</a></li>
+			<li class="text-uppercase"><a href="#">support</a></li>
+		</ul>
+	</nav>
+	<ul class="col-xs-12 col-sm-4">
+		<li>
+			<a href="#"><img src="images/youtube.png" alt="youtube"></a>
+		</li>
+		<li>
+			<a href="#"><img src="images/facebook.png" alt="facebook"></a>
+		</li>
+		<li>
+			<a href="#"><img src="images/twitter.png" alt="twitter"></a>
+		</li>
+	</ul>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
