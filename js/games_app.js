@@ -5,13 +5,6 @@ $(function (){
 		currentTeamResult,
 		clickedRate;
 
-	$(document).on("mouseenter", ".game-box-bar",function(){
-		$(this).find("span").fadeIn();
-	});
-	$(document).on("mouseleave", ".game-box-bar", function(){
-		$(this).find("span").fadeOut();
-	});
-
 	$(document).on("mouseenter", ".border-menu", function(){
 		$(this).addClass("hover");
 	});

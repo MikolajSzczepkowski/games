@@ -6,6 +6,9 @@
 	width: 120px;
     border: 2px solid #363636;
 }
+.team-box:hover img{
+	opacity: 0.5;
+}
 .team-box p{
 	width: 120px;
     margin-top: 3px;

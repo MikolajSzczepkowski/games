@@ -106,20 +106,21 @@
 }
 .game-box-bar .badge{
 	position: absolute;
-    margin-top: -20px;
-    margin-left: 82px;
+	margin-left: 82px;
+    margin-top: -22px;
+    display: block;
     background: #363636;
-    display: none;
+    opacity: 0;
+}
+.game-box-bar:hover .badge{
+	opacity: 1;
 }
 .game-img{
 	width: 120px;
 	border: 3px solid #363636;
 }
-.online .game-img{
-	border: 3px solid #1182F5;
-}
-div.online p, .players-wrapper div.online p{
-	background: #1182F5;
+.game-box:hover .game-img, .players-wrapper div:hover .game-img{
+	opacity: 0.5;
 }
 .players-wrapper div, .game-box{
 	cursor: pointer;
@@ -154,6 +155,9 @@ div.online p, .players-wrapper div.online p{
 .result label input, .result li input{
 	visibility: hidden;
 	position: absolute;
+}
+.ratings-wrapper input:hover, .result-wrapper ul li:hover, .ratings label img:hover{
+	background: #363636;
 }
 .result li img{
 	margin-left: -2.5px;
