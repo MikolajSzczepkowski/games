@@ -42,6 +42,9 @@
 	list-style: none;
 	cursor: pointer;
 }
+.topic-wrapper ul li:hover{
+	background: #363636;
+}
 .topic-wrapper ul li:nth-of-type(1){
 	height: 50px;
 	padding: 0;
@@ -63,6 +66,9 @@
     font-style: italic;
     border: none;
 }
+.topic-wrapper .text-holder input:hover{
+	background: #363636;
+}
 .topic-wrapper .text-holder{
 	margin: 63px 0 0 0;
 	padding: 0;
@@ -72,6 +78,7 @@
 }
 .text-holder textarea{
 	height: 150px;
+	padding: 0 5px;
 	resize: none;
 }
 @media screen and (min-width: 480px){

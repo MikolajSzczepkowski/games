@@ -57,6 +57,13 @@
 .ladder-box table tr:nth-of-type(even){
 	background: #363636;
 }
+.ladder-box table tr a{
+	text-decoration: none;
+	color: #fff;
+}
+.ladder-box table tr a:hover{
+	color: #d8d8d8;
+}
 .ladder-box table tr.winner{
 	background: #1182f5;
 }

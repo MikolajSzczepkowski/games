@@ -12,11 +12,11 @@ $(function (){
 		$(this).find("span").fadeOut();
 	});
 
-	$(document).on("mouseenter", ".ladder-box", function(){
-		$(this).find("div").addClass("hover");
+	$(document).on("mouseenter", ".border-menu", function(){
+		$(this).addClass("hover");
 	});
-	$(document).on("mouseleave", ".ladder-box", function(){
-		$(this).find("div").removeClass("hover");
+	$(document).on("mouseleave", ".border-menu", function(){
+		$(this).removeClass("hover");
 	});
 
 	$(document).on("mouseenter", ".topic-inner-wrapper", function(){

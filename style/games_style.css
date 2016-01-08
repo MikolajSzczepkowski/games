@@ -40,10 +40,9 @@
 	margin: 40px 0;
 }
 .middle-row p{
-	width: 230px;
 	height: 56px;
-	margin: 0 auto; 
-	padding: 12px 0 0 0;
+	padding-top: 12px;
+	display: inline-block;
 	background: #363636;
 	font-size: 18px;
 	font-weight: bold;
@@ -52,14 +51,22 @@
 	box-shadow: 0 0 0 6px #363636;
 	cursor: pointer;
 }
+.middle-row .middle-info{
+	box-shadow: none;
+	cursor: default;
+}
 .profile-menu img, .profile-menu a img{
 	width: 78px;
 	height: 78px;
 	margin: 0 0 7px 0;
 	background: #e43f3f;
 }
+.profile-menu a:hover img{
+	background: #363636;
+}
 .profile-menu img{
 	height: 30px;
+	background: #363636;
 }
 .profile-menu .active img{
 	background: #363636;
@@ -91,7 +98,7 @@
 .game-box-bar{
 	width: 120px;
 	height: 3px;
-	margin-bottom: 3px;
+	margin-bottom: 5px;
 	background: #d8d8d8;
 }
 .game-box-bar .box-bar-cover{
@@ -106,7 +113,16 @@
 }
 .game-img{
 	width: 120px;
-	border: 2px solid #363636;
+	border: 3px solid #363636;
+}
+.online .game-img{
+	border: 3px solid #1182F5;
+}
+div.online p, .players-wrapper div.online p{
+	background: #1182F5;
+}
+.players-wrapper div, .game-box{
+	cursor: pointer;
 }
 .game-box p{
 	width: 120px;
@@ -276,7 +292,13 @@
 	font-size: 12px;
 	font-style: italic;
 }
-
+.game-chat p a{
+	text-decoration: none;
+	color: #1182f5;
+}
+.game-chat p a:hover{
+	color: #e43f3f;
+}
 .game-chat span{
 	padding-top: 20px;
 	padding-left: 10px;
@@ -316,8 +338,12 @@ p.chat-message{
 	color: #fff;
 	float: right;
 }
+.new-message input:hover{
+	background: #363636;
+}
 .new-message textarea{
 	height: 100px;
+	padding: 0 5px;
 	resize: none;
 }
 .right-banner{
