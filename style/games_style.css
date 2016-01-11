@@ -52,6 +52,7 @@
 	cursor: pointer;
 }
 .middle-row .middle-info{
+	background: #fff;
 	box-shadow: none;
 	cursor: default;
 }
@@ -85,7 +86,6 @@
 }
 .bottom-inner-wrapper{
 	padding: 20px 0 10px 0;
-	border-bottom: 1px solid #d8d8d8;
 }
 .game-box-wrapper p{
 	font-style: italic;
@@ -119,8 +119,11 @@
 	width: 120px;
 	border: 3px solid #363636;
 }
-.game-box:hover .game-img, .players-wrapper div:hover .game-img{
+.game-box:hover .game-img, .players-wrapper div div:hover .game-img{
 	opacity: 0.5;
+}
+.game-box:hover p, .players-wrapper div div:hover p{
+	background: #1182F5;
 }
 .players-wrapper div, .game-box{
 	cursor: pointer;
@@ -137,9 +140,14 @@
 }
 .versus{
 	padding-left: 65px;
+}
+.versus span{
+	padding: 0 8px 2px 8px;
+	border-radius: 5px;
+	background: #E43F3F;
+	color: #fff;
 	font-size: 16px;
 	font-weight: bold;
-	font-style: italic;
 }
 .result p{
 	height: 30px;
@@ -256,6 +264,9 @@
 .game-chat{
 	float: right;
 	padding: 0;
+}
+.game-chat-inner-wrapper{
+	display: none;
 }
 .game-chat-inner{
 	height: 500px;
@@ -459,7 +470,7 @@ p.chat-message{
 		margin-left: 2px;
 	}
 	.versus{
-		padding-left: 65px;
+		padding-left: 60px;
 	}
 	.report p{
 		width: 125px;
@@ -524,10 +535,10 @@ p.chat-message{
 		padding-right: 0;
 		padding-left: 15px;
 	}
-	.players-right{
+	.players-wrapper:nth-of-type(even) div{
 		padding-right: 0;
 	}
-	.players-right div, .players-right p{
+	.players-wrapper:nth-of-type(even) div div, .players-wrapper:nth-of-type(even) .game-img, .players-wrapper:nth-of-type(even) p{
 		float: right;
 	}
 	.players-wrapper{

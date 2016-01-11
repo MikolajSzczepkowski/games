@@ -2,12 +2,18 @@
 	width: 245px;
 	padding: 0 0 10px 0;
 }
+.team-box div{
+	cursor: pointer;
+}
 .team-box img{
 	width: 120px;
-    border: 2px solid #363636;
+    border: 3px solid #363636;
 }
-.team-box:hover img{
+.team-box div:hover img{
 	opacity: 0.5;
+}
+.team-box div:hover p{
+	background: #1182F5;
 }
 .team-box p{
 	width: 120px;

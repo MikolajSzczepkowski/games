@@ -55,6 +55,10 @@ $(function (){
 		$("nav a.active").removeClass("active");
 		$(this).addClass("active");
 
+		if(url != "team_card.html") {
+			$(".game-chat-inner-wrapper").fadeOut(500);
+		}
+
 		$.ajax({
 			url: url,
 			dataType: "html",
@@ -77,5 +81,10 @@ $(function (){
 				$("#content-wrapper").html($(data).find("#content")).hide().fadeIn(500);
 			}
 		});
+
+		if (url = "team_card.html") {
+			console.log("weszlo");
+			$(".game-chat-inner-wrapper").fadeIn(500);
+		}
 	});
 });
