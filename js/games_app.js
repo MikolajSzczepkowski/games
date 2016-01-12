@@ -3,7 +3,8 @@ $(function (){
 		currentTeamTopic,
 		clickedResult,
 		currentTeamResult,
-		clickedRate;
+		clickedRate,
+		tap = ("ontouchstart" in document.documentElement);
 
 	$(document).on("mouseenter", ".border-menu", function(){
 		$(this).addClass("hover");
@@ -12,13 +13,22 @@ $(function (){
 		$(this).removeClass("hover");
 	});
 
-	$(document).on("mouseenter", ".topic-inner-wrapper", function(){
-		currentTeamTopic = $(this);
-		currentTeamTopic.find(".enter-topic").nextAll().fadeIn(200);
-	});
-	$(document).on("mouseleave", ".topic-inner-wrapper", function(){
-		currentTeamTopic.find(".enter-topic").nextAll().fadeOut(200);		
-	});
+	if(!tap){
+		$(document).on("mouseenter", ".topic-inner-wrapper", function(){
+			currentTeamTopic = $(this);
+			currentTeamTopic.find(".enter-topic").nextAll().fadeIn(200);
+		});
+		$(document).on("mouseleave", ".topic-inner-wrapper", function(){
+			currentTeamTopic.find(".enter-topic").nextAll().fadeOut(200);		
+		});
+	}
+	else{
+		$(document).on("click", ".topic-inner-wrapper", function(){
+			currentTeamTopic = $(this);
+			currentTeamTopic.find(".enter-topic").nextAll().fadeIn(200);
+		});
+	}
+	
 
 	$(document).on("click", ".topic-list", function(){
 		clickedTopic = $(this).text();
@@ -83,7 +93,6 @@ $(function (){
 		});
 
 		if (url = "team_card.html") {
-			console.log("weszlo");
 			$(".game-chat-inner-wrapper").fadeIn(500);
 		}
 	});
