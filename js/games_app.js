@@ -27,6 +27,21 @@ $(function (){
 			currentTeamTopic.find(".enter-topic").empty().css({"padding-top":"5px",
 																"background":"#363636"}).text(clickedTopic);	
 		});
+
+		$(document).on("mouseenter", ".result-inner-wrapper", function(){
+			currentTeamResult = $(this);
+			currentTeamResult.find(".enter-result").nextAll().fadeIn(200);
+		});
+		$(document).on("mouseleave", ".result-inner-wrapper", function(){
+			currentTeamResult.find(".enter-result").nextAll().fadeOut(200);		
+		});
+
+		$(document).on("click", ".result-list", function(){
+			clickedResult = $(this).text();
+			currentTeamResult.find(".enter-result").nextAll().fadeOut(200);
+			currentTeamResult.find(".enter-result").empty().css({"padding-top":"5px",
+																"background":"#363636"}).text(clickedResult);	
+		});
 	}
 	else{
 		$(document).on("click", ".enter-topic", function(){
@@ -39,22 +54,18 @@ $(function (){
 			currentTeamTopic.empty().css({"padding-top":"5px",
 																"background":"#363636"}).text(clickedTopic);	
 		});
+
+		$(document).on("click", ".enter-result", function(){
+			currentTeamResult = $(this);
+			currentTeamResult.nextAll().fadeIn(200);
+		});
+		$(document).on("click", ".result-list", function(){
+			clickedResult = $(this).text();
+			currentTeamResult.nextAll().fadeOut(200);
+			currentTeamResult.empty().css({"padding-top":"5px",
+																"background":"#363636"}).text(clickedResult);	
+		});
 	}
-
-	$(document).on("mouseenter", ".result-inner-wrapper", function(){
-		currentTeamResult = $(this);
-		currentTeamResult.find(".enter-result").nextAll().fadeIn(200);
-	});
-	$(document).on("mouseleave", ".result-inner-wrapper", function(){
-		currentTeamResult.find(".enter-result").nextAll().fadeOut(200);		
-	});
-
-	$(document).on("click", ".result-list", function(){
-		clickedResult = $(this).text();
-		currentTeamResult.find(".enter-result").nextAll().fadeOut(200);
-		currentTeamResult.find(".enter-result").empty().css({"padding-top":"5px",
-															"background":"#363636"}).text(clickedResult);	
-	});
 	
 	$(document).on("click", ".ratings label img", function(){
 		clickedRate = $(this);
