@@ -25,7 +25,7 @@ $(function (){
 	else{
 		$(document).on("click", ".enter-topic", function(){
 			currentTeamTopic = $(this);
-			currentTeamTopic.find(".enter-topic").nextAll().fadeIn(200);
+			currentTeamTopic.nextAll().fadeIn(200);
 		});
 	}
 	
