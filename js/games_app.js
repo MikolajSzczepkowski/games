@@ -23,13 +23,12 @@ $(function (){
 		});
 	}
 	else{
-		$(document).on("click", ".topic-inner-wrapper", function(){
+		$(document).on("click", ".enter-topic", function(){
 			currentTeamTopic = $(this);
 			currentTeamTopic.find(".enter-topic").nextAll().fadeIn(200);
 		});
 	}
 	
-
 	$(document).on("click", ".topic-list", function(){
 		clickedTopic = $(this).text();
 		currentTeamTopic.find(".enter-topic").nextAll().fadeOut(200);
