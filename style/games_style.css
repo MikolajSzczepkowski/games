@@ -1,3 +1,100 @@
+.game-payment-wrapper.covering-box>div{
+	border-top: 5px solid #e43f3f;
+	border-bottom: 3px solid #e43f3f;
+}
+.game-payment-wrapper.covering-box form input[type="submit"]:hover{
+	background: #e43f3f;
+}
+.game-page form p{
+	margin: 10px 0 0 15px;
+	padding-left: 0;
+	padding-bottom: 5px;
+	font-style: italic;
+}
+.game-payment-wrapper form p{
+	border-bottom: 1px solid #e43f3f;
+}
+.game-payment-wrapper form input[type="checkbox"] + label span{
+	margin-left: 5px;
+}
+.game-page form>div{
+	margin: 5px 0 0 0;
+}
+.game-page form label{
+	margin-left: 5px;
+	font-style: normal;
+}
+.game-page.covering-box form input[type="submit"]{
+	margin: 30px 15px;
+	float: right;
+}
+.covering-box.game-payment-wrapper form input[type="checkbox"]:checked + label span{
+	background:url(./../images/checkbox-red.png) left top no-repeat;
+}
+.game-page form input[type="button"]{
+	text-align: left;
+	font-style: italic;
+}
+.game-page form .teams-to-choose{
+	padding: 0 0 0 50px;
+	list-style: none;
+}
+.game-page form div a img{
+	width: 35px;
+	margin: -42px 0 0 0;
+	background: none;
+	vertical-align: middle;
+	float: right;
+}
+.game-page form .teams-to-choose li:nth-of-type(1) img{
+	margin-top: -5px;
+	float: right;
+}
+.game-page form .teams-to-choose{
+	margin: 0;
+	padding: 0 17px 0 15px;
+	border: none;
+	background: none;
+	box-shadow: none;
+}
+.game-page form .teams-to-choose li{
+	width: 100%;
+	height: 50px;
+	padding: 15px 0 0 0;
+	background: #363636;
+	color: #fff;
+	font-style: italic;
+	cursor: pointer;
+}
+.game-page form .teams-to-choose li:nth-of-type(1){
+	display: block;
+}
+.game-page form .teams-to-choose li:hover, .game-page form input[type="button"]:hover{
+	background: #1182f5;
+}
+.game-page form .teams-to-choose li input{
+	visibility: hidden;
+	position: absolute;
+}
+.game-page form div.disabled{
+	opacity: 0.5;
+}
+.game-page form div.disabled input[type="button"]:hover{
+	background: #363636;
+}
+.game-page form div.disabled a, .game-page form div.disabled a input{
+	cursor: default;
+}
+.check-players-wrapper div form p{
+	border-bottom: 1px solid #1182f5;
+}
+.check-players-wrapper div form input[type="checkbox"] + label span{
+	margin: 3px 5px 0 0;
+	float: left;
+}
+.check-players-wrapper div form input[type="checkbox"] + label:hover, .game-payment-wrapper form label:hover{
+	color: #e43f3f;
+}
 .top-row{
 	margin: -10px 0 0 0; 
 }

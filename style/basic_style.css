@@ -9,13 +9,18 @@ body{
 	background: #fff;
 	border-bottom: 5px solid #e43f3f;
 }
+.nav-wrapper ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
 .nav-wrapper div img{
 	margin: 10px 0;
 }
 .menu-size{
 	height: 50px;
 }
-#user{
+#user div{
 	display: inline-block;
 }
 .user-avatar img{
@@ -30,12 +35,14 @@ body{
 	background: #d8d8d8;
 }
 .menu-box{
+	top: 55px;
 	list-style: none;
 	margin-top: 5px;
 	box-shadow: none;
 	border-radius: 0;
 	padding: 0;
 	background: #d8d8d8;
+	border: 0;
 	border-bottom: 3px solid #e43f3f;
 }
 .menu-box li{
@@ -52,50 +59,168 @@ body{
 	max-width: 100%;
 	margin: 0;
 }
-#target .menu-box{
+#gameButton .menu-box {
+	top: 0;
 	margin: 0; 
 	display: inline-block;
-	border: 1px solid rgba(0,0,0,.15);
-	border-bottom: none;
-	border-top: none; 
 }
-#target #firstMenuBox{
+#gameButton #firstMenuBox{
 	margin-bottom: 10px;
 	border-bottom: 3px solid #e43f3f;
 }
-#target .menu-box li{
+#gameButton .menu-box li{
 	width: 350px;
 	height: 90px;
 }
-#target .menu-box li:first-child{
+#gameButton .menu-box li:first-child{
 	height: 63px;
+	padding: 5px 0 0 0;
+	display: inline-block;
 	background: #fff;
 }
-#target .menu-box li:first-child:hover{
+#gameButton .menu-box li:first-child:hover{
 	background: #fff;
 	color: #333;
 }
-#target .menu-box li:first-child h6{
-	height: 63px;
-	width: 250px;
-	padding: 20px 90px 0 30px;
-	margin: 0;
+#gameButton .menu-box li:first-child h6{
+	width: 280px;
+	padding: 0 0 0 30px; 
+	display: inline-block;
 	font-size: 14px;
 }
-#target .menu-box li:hover {
+#gameButton .menu-box li:hover {
 	background: #e43f3f; 
 }
-#target .menu-box li:hover a{
+#gameButton .menu-box li:hover a{
 	color: #fff;
 }
-#target .menu-box li a{
+#gameButton .menu-box li a{
 	padding: 0;
 	display: inline-block;
 	text-decoration: none;
 	color: #333;
 }
-#target .menu-box li a img{
+#gameButton .menu-box li a img{
 	padding-right: 20px;
+}
+.menu-info-box{
+	margin: 10px 0 0 -15px;
+	padding: 0 4px;
+	position: absolute;
+	background: #000;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 10px;
+}
+.background-cover{
+	width: 100%;
+	height: 100%;
+	padding:0;
+	margin:0;
+	top:0;
+	left:0;
+	position:absolute;
+	background:rgba(0, 0, 0, 0.5);
+	z-index: 1500;
+	display: none;
+}
+.coins-payment{
+	top: 100px;
+	background:rgba(0, 0, 0, 0.8);
+	border-top: 5px solid #e43f3f;
+	border-bottom: 3px solid #e43f3f;
+	color: #fff;
+}
+.coins-payment-text{
+	height: 150px;
+	margin-top: 30px;
+	padding: 10px;
+	background: #e43f3f;
+	text-align: left;
+}
+.coins-list{
+	padding: 0;
+}
+.coins-list ul{
+	padding: 0;
+}
+.coins-list ul li{
+	width: 30%;
+	padding-left: 1%;
+	display: inline-block;
+	float: left;
+	cursor: pointer;
+}
+.coins-list ul li:nth-of-type(1), .coins-list ul li:nth-of-type(4){
+	padding-left: 0;
+}
+.coins-list ul li p{
+	height: 32px;
+	margin: 0 0 5px 0;
+	padding: 0;
+	background: #e43f3f;
+	border: 1px solid #e43f3f;
+	font-weight: bold;
+	text-align: center;
+}
+.coins-list ul li p:nth-of-type(even){
+	padding-top: 5px;
+	background: #1182f5;
+	border: 1px solid #1182f5;
+}
+.coins-list ul li:hover p, .coins-list ul li.active p{
+	background: #363636;
+	border: 1px solid #fff;
+}
+.coins-list ul li p img{
+	margin: 0;
+}
+.coins-payment button{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background: none;
+	border: none;
+}
+.have-alert span{
+	background: #e43f3f;
+}
+#alert div .menu-box{
+	width: 280px;
+	max-height: 500px;
+	margin: 0;
+	padding: 0 10px 20px 10px;
+	background: #fff;
+	overflow-y: auto;
+}
+#alert div .menu-box h6{
+	padding: 0 0 5px 0;
+	font-style: italic;
+	border-bottom: 1px solid #d8d8d8;
+}
+#alert div .menu-box ul li{
+	margin: 0 0 5px 0;
+	padding: 15px 10px 10px 10px;
+	background: #e43f3f;
+	border-radius: 40px;
+}
+#alert div .menu-box ul li:hover{
+	background: #363636;
+}
+#alert div .menu-box ul li:hover img{
+	opacity: 1;
+}
+#alert div .menu-box ul li p{
+	width: 170px;
+	display: inline-block;
+	color: #fff;
+	font-style: italic;
+}
+#alert div .menu-box ul li img{
+	max-width: 100%;
+	margin: 0;
+	display: inline-block;
+	vertical-align: top;
+	opacity: 0.5;
 }
 .pointer{
 	cursor: pointer;
@@ -113,11 +238,148 @@ body{
 	font-weight: bold;
 	line-height: 2;
 }
+.login-text:hover{
+	opacity: 0.5;
+}
+.covering-box{
+	top: 100px;
+}
+.covering-box h2{
+	height: 50px;
+	margin: 0;
+	padding-top: 18px;
+	background: #fff;
+	color: #333;
+	font-weight: bold;
+	font-size: 14px;
+}
+.covering-box h2 span{
+	margin-left: 5px;
+	font-style: italic;
+	font-weight: normal;
+}
+.covering-box>div{
+	margin-top: 5px;
+	background: #fff;
+	border-top: 5px solid #1182f5;
+	border-bottom: 3px solid #1182f5;
+}
+.covering-box form{
+	border-bottom: 1px solid #d8d8d8;
+}
+.covering-box form>div{
+	margin: 20px 0;
+}
+.covering-box form div img{
+	width: 50px;
+	display: inline-block;
+	float: left;
+	background: #1182f5;
+	vertical-align: top;
+}
+.covering-box form input{
+	width: 85%;
+	height: 50px;
+	padding-left: 10px;
+	display: inline-block;
+	float: left;
+	background: #363636;
+	color: #fff;
+	border: none;
+}
+.covering-box form input[type="checkbox"] {
+	display:none;
+}
+.covering-box form input[type="checkbox"] + label span {
+	width:15px;
+	height:15px;
+	margin: 0 0 -2px 0;
+	display:inline-block;
+	background:url(./../images/checkbox.png) left top no-repeat;
+}
+.covering-box form input[type="checkbox"]:checked + label span{
+	background:url(./../images/checkbox-blue.png) left top no-repeat;
+}
+.covering-box form input[type="checkbox"]#acceptTerms + label span {
+	float: right;
+}
+.covering-box form input[type="submit"]{
+	width: 33.33%;
+	padding: 0 15px;
+	font-weight: bold; 
+}
+.covering-box form input[type="submit"]:hover, .change-form-button:hover{
+	background: #1182f5;
+	color: #fff;
+}
+.covering-box form #forgotPassword{
+	margin-right: 3%;
+	float: right;
+	background: none;
+	border: none;
+	color: #333;
+	font-style: italic;
+}
+.covering-box form #forgotPassword:hover{
+	color: #E43F3F; 
+}
+.covering-box form label{
+	padding: 0;
+	font-style: italic;
+	font-weight: normal;
+	cursor: pointer;
+}
+.covering-box form input[type="checkbox"]{
+	width: auto;
+	height: auto;
+	cursor: pointer;
+}
+.change-form-button{
+	height: 50px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	background: #d8d8d8;
+	border: none;
+	font-weight: bold;
+}
+.login-wrapper, .register-wrapper{
+	top: 1%;
+}
+.register-wrapper form{
+	padding-bottom: 20px;
+}
+.register-wrapper form>div{
+	margin: 10px 0;
+}
+.register-wrapper form>div:nth-of-type(1){
+	margin-top: 20px;
+}
+.register-wrapper form div span{
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	float: left;
+	background: #1182f5;
+}
+.register-wrapper form p{
+	margin-top: 10px;
+	font-weight: bold;
+}
+.register-wrapper form p input{
+	width: 100%;
+	margin-top: 10px;
+}
 .friends{
 	display: none;
 	background: #fff;
 	border-left: 1px solid #d8d8d8;
 	padding: 73px 0 0 0;
+}
+.friends-search-wrapper ul li.active{
+	background: #1182f5;
+}
+.friends-search-wrapper ul li:hover{
+	background: #1182f5;
 }
 .friends-search-img{
 	width: 30px;
@@ -131,21 +393,30 @@ body{
 .friends-search-img img{
 	width: 30px;
 }
-#userSearch{
+#friendSearch{
+	padding: 1px 5px;
 	font-style: italic;
 	font-weight: lighter;
 }
-.friends-header{
-	font-size: 12px;
-	font-style: italic;
-	margin: 10px 0 0 0;
-	border-bottom: 1px solid #d8d8d8; 
-}
-.friends-list{
+.friends-wrapper{
 	height: 400px;
-	margin: 5px 0 0 0;
 	overflow-y: scroll;
 	background: #fff;
+}
+.friends-header{
+	margin: 10px 0 0 0;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #d8d8d8;
+	font-size: 12px;
+	font-style: italic;
+}
+.friends-list{
+	padding: 0;
+	margin: 5px 0 10px 0;
+	background: #fff;
+}
+#teamsList.friends-list li{
+	list-style: none;
 }
 .friends-list li{
 	font-size: 12px;
@@ -184,7 +455,7 @@ li.friends-active{
 .friends-list-buttons li img{
 	width: 15px;
 }
-.friends-list-buttons li img:hover{
+.friends-list-buttons li:hover img{
 	transform: translateY(-5px);
 }
 .chat-row{
@@ -198,11 +469,9 @@ li.friends-active{
 }
 .chat-right-buffer{
 	right: 0;
-
 }
 .chat-right-buffer-clear{
 	right: 20px;
-
 }
 .chat-window{
 	width: 300px;
@@ -220,6 +489,13 @@ li.friends-active{
 .chat-top-bar{
 	padding: 0;
 	border-radius: 0;
+}
+.chat-top-bar a{
+	text-decoration: none;
+	color: #333;
+}
+.chat-top-bar a:hover{
+	color: #E43F3F;
 }
 .chat-top-bar h3{
 	font-size: 12px;
@@ -420,11 +696,22 @@ li.social-list img{
 	.menu-box{
 		left: 45%;
 	}
-	#target .menu-box{
+	#gameButton .menu-box{
 		position: relative;
 		left: 10%;
 	}
-}
+	.coins-list ul li{
+		width: 20%;
+	}
+	.coins-list ul li:nth-of-type(4){
+		padding-left: 1%;
+	}
+	.covering-box form input[type="submit"]{
+		margin-left: 15px;
+	}
+	.covering-box form #forgotPassword{
+		margin-right: 2%;
+	}
 @media screen and (min-width: 640px){
 	.social-list:nth-child(1){
 		margin-left: 40%;
@@ -435,23 +722,27 @@ li.social-list img{
 	.social-list:nth-child(3){
 		margin-left: 50%;
 	}
-	#target .menu-box{
+	#gameButton .menu-box{
 		position: relative;
 		left: 20%;
 	}
+	.covering-box form #forgotPassword{
+	margin-right: 4%;
 }
 @media screen and (min-width: 768px){
 	.footer nav ul li:nth-child(1){
 		margin: 0;
 	}
-	#target #firstMenuBox{
+	#gameButton #firstMenuBox{
 		margin-bottom: 0;
 		border-bottom: none;
 	}
-	#target .menu-box{
+	#gameButton .menu-box{
 		position: relative;
 		left: 0;
 	}
+	.covering-box form #forgotPassword{
+	margin-right: 2%;
 }
 @media screen and (min-width: 990px){
 	.nav-wrapper{
@@ -462,16 +753,43 @@ li.social-list img{
 	.menu-box{
 		left: 0;
 	}
-	#target #firstMenuBox{
-		margin-left: 26%;
+	.background-cover{
+		position: fixed;
+	}
+	#registerContainer{
+		position: absolute;
+	}
+	#gameButton .menu-box{
+		border-bottom: 0;
+	}
+	#gameButton #firstMenuBox{
+		margin-left: 26.6%;
 	}
 	.menu-background{	
 		width: 100%;
-		top: 53px;
+		top: 55px;
 		left: 0;
 		padding:0;
 		margin:0;
 		position: fixed;
+	}
+	#alert div .menu-box{
+		width: 400px;
+	}
+	#alert div .menu-box ul li{
+		margin: 0 0 5px 0;
+		padding: 10px 10px 10px 20px;
+		background: #e43f3f;
+		border-radius: 60px;
+	}
+	#alert div .menu-box ul li p{
+		width: 314px;
+		display: inline-block;
+		color: #fff;
+		font-style: italic;
+	}
+	.login-wrapper, .register-wrapper{
+		top: 100px;
 	}
 	.login{
 		height: 255px;
@@ -495,9 +813,6 @@ li.social-list img{
 	.friends-row{
 		float: right;
 	}
-	.friends-list{
-		height: inherit;
-	}
 	#userSearch{
 		width: 100%;
 	}
@@ -519,7 +834,12 @@ li.social-list img{
 	.chat-right-buffer{
 		right: 27%;
 	}
-	
+	.covering-box form input{
+		width: 75%;
+	}
+	.covering-box form #forgotPassword{
+		margin-right: 15%;
+	}
 }
 @media screen and (min-width: 1024px){
 	.social{
@@ -528,14 +848,83 @@ li.social-list img{
 	li.social-list img{
 		margin: 8px 0 0 0;
 	}
+	#gameButton #firstMenuBox{
+		margin-left: 26.5%;
+	}
+	.covering-box form input{
+		width: 76%;
+	}
+	.covering-box form #forgotPassword{
+	margin-right: 0;
+	}
 }
 @media screen and (min-width: 1200px){
 	.chat-right-buffer{
 		right: 18%;
 	}
+	#gameButton #firstMenuBox{
+		margin-left: 26.25%;
+	}
+	#user{
+		padding-left: 0;
+		padding-top: 15px;
+		text-align: left;
+	}
+	#user div{
+		margin-top: -15px;
+		float: left;
+	}
+	#coins, #alert{
+		width: 5%;
+		padding: 0;
+	}
+	#coins>div, #alert>div{
+		float: right;
+	}
+	.covering-box form input{
+		width: 81%;
+	}
+	.covering-box form input[type="checkbox"]#acceptTerms + label span {
+		margin-right: -15px;
+	}
 }
 @media screen and (min-width: 1280px){
 	.login-text{
 		margin: 135px 0 0 45px;
+	}
+	.covering-box form input{
+		width: 83%;
+	}
+}
+@media screen and (min-width: 1360px){
+	#gameButton #firstMenuBox{
+		margin-left: 26.1%;
+	}
+	.covering-box form input{
+		width: 84%;
+	}
+}
+@media screen and (min-width: 1600px){
+	#gameButton #firstMenuBox{
+		margin-left: 25.95%;
+	}
+	.covering-box form input{
+		width: 87%;
+	}
+}
+@media screen and (min-width: 1680px){
+	#gameButton #firstMenuBox{
+		margin-left: 25.9%;
+	}
+	.covering-box form input{
+		width: 88%;
+	}
+}
+@media screen and (min-width: 1920px){
+	#gameButton #firstMenuBox{
+		margin-left: 25.8%;
+	}
+	.covering-box form input{
+		width: 90%;
 	}
 }

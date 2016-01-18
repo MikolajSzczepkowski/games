@@ -2,6 +2,7 @@ $(function (){
 	var pageHeight = $(window).height(),
 		pageWidth = $(document).width(),
 		htmlHeight = $("html").height(),
+		initialCoverHeight = $(".background-cover").css("height"),
 		chatBoxCounter = 0,
 		allFriends = [
 			{id: "Depsperados_PL",
@@ -26,25 +27,51 @@ $(function (){
 			address: "chat9.html"},
 			{id: "Darius",
 			address: "chat10.html"}
+		],
+		allTeams = [
+			{id: "Kozaki",
+			address: "#"},
+			{id: "Hooligans",
+			address: "#"},
+			{id: "Cienkie bolki",
+			address: "#"},
+			{id: "teamAAA",
+			address: "#"},
+			{id: "team amazing",
+			address: "#"},
+			{id: "TeaM",
+			address: "#"}
 		];
 
 	if(pageWidth>=990){
-		$(".friends-list").css("height", (pageHeight-186));
+		$(".friends-wrapper").css("height", (pageHeight-154));
 		$(".main-inner-wrapper").css("padding-bottom", (pageHeight - htmlHeight));
 	}
 	else{
-		$(".friends-list").css("height", "400px");
+		$(".friends-wrapper").css("height", "400px");
 	}
 	$(window).resize(function(){
 		pageHeight = $(window).height(),
 		pageWidth = $(document).width();
 		if(pageWidth>=990){
-			$(".friends-list").css("height", (pageHeight - 195));
+			$(".friends-wrapper").css("height", (pageHeight - 163));
 			$(".main-inner-wrapper").css("padding-bottom", (pageHeight - htmlHeight));
 		}
 		else{
-			$(".friends-list").css("height", "400px");
+			$(".friends-wrapper").css("height", "400px");
 		}
+	});
+
+	if ($("#alert").hasClass("have-alert")) {
+		$("#alert div a").find("img").attr("src", "images/have-alert.png");
+	}
+	$(document).on("scroll", function(){
+		var windowScroll = $(window).scrollTop(),
+			convertCoverHeight = initialCoverHeight.replace(/[^0-9]/g, ''),
+			coverHeightNumber = parseInt(convertCoverHeight),
+			newHeight = coverHeightNumber + windowScroll;
+
+		$(".background-cover").css("height", newHeight);
 	});
 
 	$(document).on("click", ".panel-heading span.icon-minim", function() {
@@ -112,7 +139,7 @@ $(function (){
 			$("#chatInfo").fadeOut(200);
 		};
 	};
-	$(document).on("click", ".friends-list li", function() {
+	$(document).on("click", "#friendsList li", function() {
 		var $selectedFriend = $(this).attr("id");
 		for (var i = 0; i < allFriends.length ; i++) {
 			if (allFriends[i].id === $selectedFriend) {
@@ -121,12 +148,32 @@ $(function (){
 					userButton = "<li><img src='images/user.png' alt='user' class='friends-list-buttons'></li>",
 					addUserButton = "<li><img src='images/add-user.png' alt='add user' class='friends-list-buttons'></li>";
 				if (!$(this).parent().hasClass("friends-list-buttons")) {
-					$(".friends-list").find(".friends-list-buttons").remove();
+					$("#friendsList").find(".friends-list-buttons").remove();
 					$(this).after(ul);
 					$(this).next(".friends-list-buttons").append(messageButton, userButton, addUserButton);
 				}
 			}
 		};
+	});
+	$(document).on("click", "#teamsList li", function() {
+		var $selectedTeam = $(this).attr("id");
+		for (var i = 0; i < allTeams.length ; i++) {
+			if (allTeams[i].id === $selectedTeam) {
+				var	ul = "<ul class='row friends-list-buttons'></ul>",
+					profileButton = "<li><a data-name='"+allTeams[i].id+"' href='"+allTeams[i].address+"'><img src='images/user.png' alt='profile' class='friends-list-buttons'></a></li>",
+					likeButton = "<li><img src='images/like-team.png' alt='like' class='friends-list-buttons'></li>";
+				if (!$(this).parent().hasClass("friends-list-buttons")) {
+					$("#teamsList").find(".friends-list-buttons").remove();
+					$(this).after(ul);
+					$(this).next(".friends-list-buttons").append(profileButton, likeButton);
+				}
+			}
+		};
+	});
+	$(document).on("click", "#teamsList .friends-list-buttons li", function(){
+		if ($(this).find("img").attr("alt")==="like") {
+			$(this).find("img").attr("src", "images/liked-team.png");
+		}
 	});
 
 	$(document).on("click", "#chatOn a", function(e){
@@ -211,5 +258,67 @@ $(function (){
 			direction: "down",
 			easing: "swing"
 		},200);
+	});
+	
+	$(document).on("click", ".friends-search-wrapper ul li", function(){
+		if (!$(this).hasClass("active")) {
+			$(".friends-search-wrapper ul li").removeClass("active");
+			$(this).addClass("active");
+		}
+		if ($("#teamSearchButton").hasClass("active")) {
+			$(".friends-search-wrapper label input").attr("placeholder","Search teams...");
+		}
+		else if ($("#userSearchButton").hasClass("active")) {
+			$(".friends-search-wrapper label input").attr("placeholder","Search users...");
+		}
+	});
+	$(document).on("click", ".coins-list ul li", function(){
+		if (!$(this).hasClass("active")) {
+			$(".coins-list ul li").removeClass("active");
+			$(this).addClass("active");
+		}
+	});
+	
+	$("#coins").on("click", function(){
+		$("#paymentContainer").show();
+	});
+	$(document).mouseup(function (e){
+		var container = $("#paymentInnerWrapper");
+
+		if (!container.is(e.target) && container.has(e.target).length === 0){
+			$("#paymentContainer").hide();
+		}
+	});
+
+	$("#loginRegister").on("click", function(){
+		$("#loginContainer").show();
+	});
+	$(document).mouseup(function (e){
+		var container = $("#loginInnerWrapper");
+
+		if (!container.is(e.target) && container.has(e.target).length === 0){
+			$("#loginContainer").hide();
+		}
+	});
+	$(document).mouseup(function (e){
+		var container = $("#registerInnerWrapper");
+
+		if (!container.is(e.target) && container.has(e.target).length === 0 && !$("#ui-datepicker-div").is(e.target) && $("#ui-datepicker-div").has(e.target).length === 0){
+			$("#registerContainer").hide();
+		}
+	});
+
+	$("#moveToRegister").on("click", function(){
+		$("#loginContainer").hide();
+		$("#registerContainer").show();
+	});
+	$("#moveToLogin").on("click", function(){
+		$("#registerContainer").hide();
+		$("#loginContainer").show();
+	});
+
+	$("#registerDatepicker").datepicker({
+		changeYear: true,
+		yearRange: "1945:2016"
 	});
 });
