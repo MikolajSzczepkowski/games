@@ -85,6 +85,9 @@
 .game-page form div.disabled a, .game-page form div.disabled a input{
 	cursor: default;
 }
+.create-game-id-wrapper, .choose-team-wrapper, .check-players-wrapper, .game-payment-wrapper{
+	top: 430px;
+}
 .check-players-wrapper div form p{
 	border-bottom: 1px solid #1182f5;
 }
@@ -583,6 +586,9 @@ p.chat-message{
 		width: 78px;
     	height: auto;
     	padding: 0;
+	}
+	.create-game-id-wrapper, .choose-team-wrapper, .check-players-wrapper, .game-payment-wrapper{
+		top: 100px;
 	}
 }
 @media screen and (min-width: 1024px){
