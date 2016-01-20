@@ -201,7 +201,7 @@
 .game-box-bar{
 	width: 120px;
 	height: 3px;
-	margin-bottom: 5px;
+	margin-bottom: 8px;
 	background: #d8d8d8;
 }
 .game-box-bar .box-bar-cover{
@@ -209,14 +209,11 @@
 }
 .game-box-bar .badge{
 	position: absolute;
-	margin-left: 82px;
-    margin-top: -22px;
+	margin-left: 42px;
+    margin-top: -9px;
     display: block;
     background: #363636;
-    opacity: 0;
-}
-.game-box-bar:hover .badge{
-	opacity: 1;
+    display: none;
 }
 .game-img{
 	width: 120px;
@@ -227,6 +224,9 @@
 }
 .game-box:hover p, .players-wrapper div div:hover p{
 	background: #e43f3f;
+}
+.game-box:hover .badge{
+	display: block;
 }
 .players-wrapper div, .game-box{
 	cursor: pointer;
@@ -245,8 +245,8 @@
 	padding-left: 150px;
 }
 .versus span{
-	padding: 0 8px 2px 8px;
-	border-radius: 5px;
+	padding: 0 10px 2px 10px;
+	border-radius: 12px;
 	background: #E43F3F;
 	color: #fff;
 	font-size: 16px;
@@ -527,7 +527,7 @@ p.chat-message{
 	}
 	.versus{
 		padding-top: 60px;
-		padding-left: 10px;
+		padding-left: 8px;
 	}
 	.ratings-wrapper{
 		margin-left: 29px;
@@ -571,7 +571,7 @@ p.chat-message{
 		margin-left: 2px;
 	}
 	.versus{
-		padding-left: 60px;
+		padding-left: 57px;
 	}
 	.report p{
 		width: 125px;
@@ -650,5 +650,8 @@ p.chat-message{
 	}
 	.players-wrapper div{
 		padding-left: 0;
+	}
+	.versus{
+		padding-left: 55px;
 	}
 }
