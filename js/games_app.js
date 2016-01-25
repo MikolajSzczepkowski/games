@@ -163,4 +163,11 @@ $(function (){
 			$("#checkPlayersContainer").hide();
 		}
 	});
+
+	$(document).on("click", "#chooseTeamForm div input", function(){
+		if ($(this).parents("div").hasClass("disabled")) {
+			$(this).parents("div").removeClass("disabled");
+			$(this).parents("div").siblings().addClass("disabled");
+		}
+	});
 });
