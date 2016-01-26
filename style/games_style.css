@@ -351,6 +351,9 @@
 	border-top: 3px solid #e43f3f;
 	border-bottom: 3px solid #e43f3f;
 }
+.report-match-wrapper .topic-wrapper .text-holder{
+	margin: 111px 0px 0px;
+}
 .report-match-wrapper .topic-wrapper .text-holder textarea{
 	background: none;
 	color: #fff;
@@ -359,12 +362,14 @@
 .report-match-wrapper .topic-wrapper ul{
 	margin: 0;
 	position: absolute;
+	background: rgba(0, 0, 0, 0.8);
 }
 .report-match-wrapper .topic-wrapper ul:hover{
 	margin: 0;
 }
 .report-match-wrapper button{
 	height: 35px;
+	margin-top: 66px;
 	float: right;
 	border: none;
 	background: #e43f3f;
@@ -589,7 +594,10 @@ p.chat-message{
 		height: auto;
 	}
 	.report-match-wrapper{
-	top: 700px;
+		top: 700px;
+	}
+	.report-match-wrapper button{
+		margin-top: 0;
 	}
 }
 @media screen and (min-width: 990px){
