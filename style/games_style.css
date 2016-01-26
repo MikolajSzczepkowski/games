@@ -254,14 +254,13 @@
 }
 .result p{
 	height: 30px;
-	padding-top: 5px;
 	margin-bottom: 5px;
 	padding-left: 0;
 	font-size: 12px;
 	font-style: italic;
 }
 .result p:nth-of-type(2){
-	padding-top: 15px;
+	padding-top: 10px;
 }
 .result label input, .result li input{
 	visibility: hidden;
@@ -364,11 +363,23 @@
 .report-match-wrapper .topic-wrapper ul:hover{
 	margin: 0;
 }
-
+.report-match-wrapper button{
+	height: 35px;
+	float: right;
+	border: none;
+	background: #e43f3f;
+	color: #fff;
+	font-style: italic;
+}
+.report-match-wrapper button:hover{
+	background: #363636;
+}
+.report-match-wrapper .support-text-box{
+	padding: 15px;
+}
 .report input{
 	width: 101px;
 	height: 30px;
-	margin-left: 81px;
 	float: right;
 	background: #363636;
 	color: #fff;
@@ -501,7 +512,7 @@ p.chat-message{
 		padding-left: 7px;
 	}
 	.right-input{
-		padding-left: 40px;
+		padding-left: 42px;
 	}
 }
 @media screen and (min-width: 640px){
