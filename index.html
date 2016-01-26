@@ -152,8 +152,8 @@
 <div class="container">
 	<div class="main">
 		<div class="main-inner-wrapper">
-			<div id="createGameIdContainer" class="background-cover">
-				<div id="createGameIdInnerWrapper" class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4 covering-box game-page create-game-id-wrapper">
+			<div id="createGameIdContainer" class="background-cover modal fade" role="dialog">
+				<div id="createGameIdInnerWrapper" class="row covering-box game-page create-game-id-wrapper modal-dialog">
 					<h2 class="col-xs-12 text-center text-uppercase">game accounts</h2>
 					<div class="col-xs-12">
 						<form name="create-game-id" id="createGameIdForm" class="col-xs-12">
@@ -167,8 +167,8 @@
 					</div>
 				</div>	
 			</div>
-			<div id="chooseTeamContainer" class="background-cover">
-				<div id="chooseTeamInnerWrapper" class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4 covering-box game-page choose-team-wrapper">
+			<div id="chooseTeamContainer" class="background-cover modal fade" role="dialog">
+				<div id="chooseTeamInnerWrapper" class="row covering-box game-page choose-team-wrapper modal-dialog">
 					<h2 class="col-xs-12 text-center text-uppercase">choose or create a new team</h2>
 					<div class="col-xs-12">
 						<form name="choose-team" id="chooseTeamForm" class="col-xs-12">
@@ -198,8 +198,8 @@
 					</div>
 				</div>	
 			</div>
-			<div id="checkPlayersContainer" class="background-cover">
-				<div id="checkPlayersInnerWrapper" class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4 covering-box game-page check-players-wrapper">
+			<div id="checkPlayersContainer" class="background-cover modal fade" role="dialog">
+				<div id="checkPlayersInnerWrapper" class="row covering-box game-page check-players-wrapper modal-dialog">
 					<h2 class="col-xs-12 text-center">TEAM ID<span>(Team A)</span></h2>
 					<div class="col-xs-12">
 						<form name="check-players" id="checkPlayersForm" class="col-xs-12">
@@ -221,8 +221,8 @@
 					</div>
 				</div>	
 			</div>
-			<div id="gamePaymentContainer" class="background-cover">
-				<div id="gamePaymentInnerWrapper" class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4 covering-box game-page game-payment-wrapper">
+			<div id="gamePaymentContainer" class="background-cover modal fade" role="dialog">
+				<div id="gamePaymentInnerWrapper" class="row covering-box game-page game-payment-wrapper modal-dialog">
 					<h2 class="col-xs-12 text-center text-uppercase">payment</h2>
 					<div class="col-xs-12">
 						<form name="game-payment" id="gamePaymentForm" class="col-xs-12">
@@ -245,19 +245,19 @@
 					<li id="gameLoginButton" class="col-xs-6 col-sm-2 checked">
 						<p>Login <span>(click here)</span><img src="images/check-mark.png" alt="check-mark"></p>
 					</li>
-					<li id="createGameIdButton" class="col-xs-6 col-sm-2 checked">
+					<li id="createGameIdButton" class="col-xs-6 col-sm-2 checked" data-toggle="modal" data-target="#createGameIdContainer">
 						<p>Game ID <span>(create)</span><img src="images/check-mark.png" alt="check-mark"></p>
 					</li>
-					<li id="chooseTeamButton" class="col-xs-6 col-sm-2">
+					<li id="chooseTeamButton" class="col-xs-6 col-sm-2" data-toggle="modal" data-target="#chooseTeamContainer">
 						<p>Team <span>(choose)</span></p>
 					</li>
-					<li id="checkPlayersButton" class="col-xs-6 col-sm-2 locked">
+					<li id="checkPlayersButton" class="col-xs-6 col-sm-2 locked" data-toggle="modal" data-target="#checkPlayersContainer">
 						<p>Players <span>(check)</span></p>
 					</li>
 					<li id="signUpButton" class="col-xs-6 col-sm-2 locked red-border">
 						<p>Sign up <span>(click here)</span></p>
 					</li>
-					<li id="paymentButton" class="col-xs-6 col-sm-2 locked red-border">
+					<li id="paymentButton" class="col-xs-6 col-sm-2 locked red-border" data-toggle="modal" data-target="#gamePaymentContainer">
 						<p>Payment <span>(choose)</span></p>
 					</li>
 				</ul>

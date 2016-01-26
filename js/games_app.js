@@ -123,47 +123,6 @@ $(function (){
 		$(this).find("p span").text(checkedPlayers+"/"+displayedPlayers)
 	});
 
-	$("#paymentButton").on("click", function(){
-		$("#gamePaymentContainer").show();
-	});
-	$(document).mouseup(function (e){
-		var container = $("#gamePaymentInnerWrapper");
-
-		if (!container.is(e.target) && container.has(e.target).length === 0){
-			$("#gamePaymentContainer").hide();
-		}
-	});
-	$("#createGameIdButton").on("click", function(){
-		$("#createGameIdContainer").show();
-	});
-	$(document).mouseup(function (e){
-		var container = $("#createGameIdInnerWrapper");
-
-		if (!container.is(e.target) && container.has(e.target).length === 0){
-			$("#createGameIdContainer").hide();
-		}
-	});
-	$("#chooseTeamButton").on("click", function(){
-		$("#chooseTeamContainer").show();
-	});
-	$(document).mouseup(function (e){
-		var container = $("#chooseTeamInnerWrapper");
-
-		if (!container.is(e.target) && container.has(e.target).length === 0){
-			$("#chooseTeamContainer").hide();
-		}
-	});
-	$("#checkPlayersButton").on("click", function(){
-		$("#checkPlayersContainer").show();
-	});
-	$(document).mouseup(function (e){
-		var container = $("#checkPlayersInnerWrapper");
-
-		if (!container.is(e.target) && container.has(e.target).length === 0){
-			$("#checkPlayersContainer").hide();
-		}
-	});
-
 	$(document).on("click", "#chooseTeamForm div input", function(){
 		if ($(this).parents("div").hasClass("disabled")) {
 			$(this).parents("div").removeClass("disabled");

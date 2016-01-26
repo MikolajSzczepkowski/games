@@ -1,6 +1,7 @@
 body{
 	font-family: 'Open Sans', sans-serif;
 	background: url(./../images/background.png) repeat;
+	padding-right: 0!important;
 }
 .margin-left{
 	margin-left: 15px;
@@ -12,7 +13,7 @@ body{
 .nav-wrapper ul{
 	list-style: none;
 	padding: 0;
-	margin: 0;
+	margin: 0 0 0 15px;
 }
 .nav-wrapper div img{
 	margin: 10px 0;
@@ -20,8 +21,11 @@ body{
 .menu-size{
 	height: 50px;
 }
-#user div{
+#user div div{
 	display: inline-block;
+}
+#user ul{
+	margin: 0;
 }
 .user-avatar img{
 	width: 35px;
@@ -59,48 +63,48 @@ body{
 	max-width: 100%;
 	margin: 0;
 }
-#gameButton .menu-box {
+.menu-background .menu-box{
 	top: 0;
 	margin: 0; 
 	display: inline-block;
 }
-#gameButton #firstMenuBox{
+.menu-background #firstMenuBox{
 	margin-bottom: 10px;
 	border-bottom: 3px solid #e43f3f;
 }
-#gameButton .menu-box li{
+.menu-background .menu-box li{
 	width: 350px;
 	height: 90px;
 }
-#gameButton .menu-box li:first-child{
+.menu-background .menu-box li:first-child{
 	height: 63px;
 	padding: 5px 0 0 0;
 	display: inline-block;
 	background: #fff;
 }
-#gameButton .menu-box li:first-child:hover{
+.menu-background .menu-box li:first-child:hover{
 	background: #fff;
 	color: #333;
 }
-#gameButton .menu-box li:first-child h6{
+.menu-background .menu-box li:first-child h6{
 	width: 280px;
 	padding: 0 0 0 30px; 
 	display: inline-block;
 	font-size: 14px;
 }
-#gameButton .menu-box li:hover {
+.menu-background .menu-box li:hover {
 	background: #e43f3f; 
 }
-#gameButton .menu-box li:hover a{
+.menu-background .menu-box li:hover a{
 	color: #fff;
 }
-#gameButton .menu-box li a{
+.menu-background .menu-box li a{
 	padding: 0;
 	display: inline-block;
 	text-decoration: none;
 	color: #333;
 }
-#gameButton .menu-box li a img{
+.menu-background .menu-box li a img{
 	padding-right: 20px;
 }
 .menu-info-box{
@@ -120,9 +124,12 @@ body{
 	top:0;
 	left:0;
 	position:absolute;
-	background:rgba(0, 0, 0, 0.5);
 	z-index: 1500;
 	display: none;
+}
+.modal-open{
+	overflow-y: auto;
+	padding-right: 0!important;
 }
 .coins-payment{
 	top: 100px;
@@ -184,38 +191,39 @@ body{
 .have-alert span{
 	background: #e43f3f;
 }
-#alert div .menu-box{
+#alert .menu-box{
 	width: 280px;
 	max-height: 500px;
-	margin: 0;
+	margin: 0 0 0 15px;
 	padding: 0 10px 20px 10px;
 	background: #fff;
 	overflow-y: auto;
 }
-#alert div .menu-box h6{
+#alert .menu-box h6{
 	padding: 0 0 5px 0;
 	font-style: italic;
 	border-bottom: 1px solid #d8d8d8;
 }
-#alert div .menu-box ul li{
+#alert .menu-box ul li{
 	margin: 0 0 5px 0;
 	padding: 15px 10px 10px 10px;
 	background: #e43f3f;
 	border-radius: 40px;
+	cursor: pointer;
 }
-#alert div .menu-box ul li:hover{
+#alert .menu-box ul li:hover{
 	background: #363636;
 }
-#alert div .menu-box ul li:hover img{
+#alert .menu-box ul li:hover img{
 	opacity: 1;
 }
-#alert div .menu-box ul li p{
+#alert .menu-box ul li p{
 	width: 170px;
 	display: inline-block;
 	color: #fff;
 	font-style: italic;
 }
-#alert div .menu-box ul li img{
+#alert .menu-box ul li img{
 	max-width: 100%;
 	margin: 0;
 	display: inline-block;
@@ -278,7 +286,7 @@ body{
 	vertical-align: top;
 }
 .covering-box form input{
-	width: 85%;
+	width: 85.9%;
 	height: 50px;
 	padding-left: 10px;
 	display: inline-block;
@@ -305,6 +313,7 @@ body{
 }
 .covering-box form input[type="submit"]{
 	width: 33.33%;
+	margin-left: 15px;
 	padding: 0 15px;
 	font-weight: bold; 
 }
@@ -342,9 +351,6 @@ body{
 	border: none;
 	font-weight: bold;
 }
-.login-wrapper, .register-wrapper{
-	top: 1%;
-}
 .register-wrapper form{
 	padding-bottom: 20px;
 }
@@ -366,8 +372,9 @@ body{
 	font-weight: bold;
 }
 .register-wrapper form p input{
-	width: 100%;
+	padding-left: 50px;
 	margin-top: 10px;
+	cursor: pointer;
 }
 .friends{
 	display: none;
@@ -382,7 +389,6 @@ body{
 	background: #1182f5;
 }
 .friends-search-img{
-	width: 30px;
 	height: 30px;
 	margin-top: 10px; 
 	background: #000;
@@ -394,6 +400,7 @@ body{
 	width: 30px;
 }
 #friendSearch{
+	width: 100%;
 	padding: 1px 5px;
 	font-style: italic;
 	font-weight: lighter;
@@ -403,20 +410,47 @@ body{
 	overflow-y: scroll;
 	background: #fff;
 }
+.friends-wrapper>div{
+	border: none;
+}
 .friends-header{
 	margin: 10px 0 0 0;
 	padding-bottom: 5px;
 	border-bottom: 1px solid #d8d8d8;
 	font-size: 12px;
 	font-style: italic;
+	cursor: pointer;
+}
+.friends-wrapper a{
+	text-decoration: none;
+	color: #333;
+}
+.friends-wrapper a h4:after {
+    font-family: 'Glyphicons Halflings';
+    font-size: 14px;  
+    content: "\e114"; 
+    float: right;        
+    color: grey;  
+}
+.friends-wrapper a.collapsed h4:after {
+    content: "\e080";   
+}
+.friends-header:hover{
+	color: #E43F3F;
 }
 .friends-list{
 	padding: 0;
 	margin: 5px 0 10px 0;
 	background: #fff;
 }
-#teamsList.friends-list li{
+#teamsList.friends-list{
+	padding: 0;
+}
+#teamsList.friends-list li, #groupList.friends-list li{
 	list-style: none;
+}
+#teamsList.friends-list li img{
+	width: 25px;
 }
 .friends-list li{
 	font-size: 12px;
@@ -426,7 +460,14 @@ body{
 	list-style-image: url(./../images/list-bullet-black.png);
 	cursor: pointer;
 }
-.friends-list li:hover{
+#groupList.friends-list li{
+	padding-left: 5px;
+}
+#groupList.friends-list li a{
+	color: #333;
+	text-decoration: none;
+}
+.friends-list li:hover, #groupList.friends-list li:hover a{
 	background: #d8d8d8;
 	color: #fff;
 }
@@ -502,11 +543,15 @@ li.friends-active{
 	font-style: italic;
 	line-height: 1.5;
 }
+.chat-top-bar a:hover h3 span{
+	color: #333;
+}
 .chat-top-bar h3 img{
 	margin-top: -2px;
 	margin-right: 5px;
 }
 .chat-top-bar span{
+	margin-left: 5px;
 	color: #363636;
 	cursor: pointer;
 }
@@ -554,10 +599,10 @@ li.friends-active{
 	color: #1182f5;
 }
 .chat-body img{
-	border: 2px solid #363636;
+	border: 3px solid #363636;
 }
 .chat-body .online-player img{
-	border: 2px solid #1182f5;
+	border: 3px solid #1182f5;
 }
 p.chat-panel-message{
 	margin: 0;
@@ -627,6 +672,134 @@ p.chat-panel-message{
 .chat-info ul li:hover{
 	background: #d8d8d8;
 }
+.dropup .dropdown-menu.chat-settings{
+	min-width: 130px;
+	margin: 0 0 0 -30px;
+	padding: 0;
+	border-radius: 0;
+	box-shadow: none;
+}
+.chat-settings li{
+	height: 30px;
+	text-align: center;
+}
+.chat-settings li:hover, .chat-settings li:hover a{
+	background: #e43f3f;
+}
+.chat-settings li a{
+	padding: 3px 0;
+	font-weight: bold;
+}
+.dropup .dropdown-menu.team-dropup{
+	min-width: 170px;
+	max-height: 132px;
+	margin: 0 0 0 -2px;
+	padding: 0;
+	border-radius: 0;
+	box-shadow: none;
+	overflow-y: auto; 
+}
+.team-dropup li a{
+	padding: 3px 5px;
+}
+.team-dropup li a span{
+	margin-top: 3px;
+	float: right;
+}
+.team-dropup li:hover, .team-dropup li:hover a, .team-dropup li:hover a span{
+	background: #000;
+	color: #fff;
+}
+.team-dropup li a img{
+	padding: 0 5px;
+}
+.groupmates{
+	top: 100px;
+	background: #fff;
+	border-top: 5px solid #e43f3f;
+	border-bottom: 3px solid #e43f3f;
+	color: #333;
+}
+.groupmates h2{
+	padding-bottom: 10px;
+	border-bottom: 1px solid #d8d8d8;
+	font-size: 22px;
+	font-weight: bold; 
+}
+.groupmates ul{
+	max-height: 200px;
+	list-style: none;
+	margin: 0 0 0 -5px;
+	padding: 0 0 20px 0;
+	overflow-y: auto;
+}
+.groupmates ul li{
+	margin: 5px;
+	display: inline-block;
+}
+.groupmates .chosen-groupmate{
+	width: 120px;
+	height: 120px;
+	margin-top: -120px;
+	position: relative;
+	background: rgba(250, 250, 250, 0.5);
+	opacity: 0;
+}
+.groupmates .chosen-groupmate span{
+	margin: 40px 0 0 40px;
+	color: rgba(228, 63, 63, 1);
+	font-size: 40px;
+}
+.groupmates-box img{
+	width: 120px;
+    border: 3px solid #363636;
+}
+.groupmates-box p{
+	width: 120px;
+    margin-top: 3px;
+    padding: 2px 0;
+    background: #363636;
+    font-size: 12px;
+    font-style: italic;
+    color: #fff;
+}
+.groupmates-box:hover p, .groupmates ul li.chosen .groupmates-box p{
+	background: #E43F3F; 
+}
+.groupmates ul li a:hover div, .groupmates ul li.chosen a div{
+	opacity: 1;
+}
+
+.groupmates ul::-webkit-scrollbar{
+	width: 7px;
+}
+.groupmates ul::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+	border-radius: 10px;
+}
+.groupmates ul::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+	background: #363636;
+}
+.groupmates input[type="text"]{
+	margin-top: 20px;
+	margin-bottom: 20px;
+    border: 1px solid #d8d8d8;
+    font-size: 22px;
+}
+.groupmates input[type="submit"]{
+	margin: 20px auto;
+	padding: 1px 10px;
+    display: block;
+	background: #e43f3f;
+	border: none;
+	color: #fff;
+	font-size: 22px;
+	font-weight: bold;
+}
+.groupmates input[type="submit"]:hover{
+	background: #363636;
+}
 .social{
 	height: 50px;
 	border-top: 3px solid #e43f3f;
@@ -654,7 +827,9 @@ li.social-list img{
 .main{
 	background: #fff;
 	margin-top: 15px;
+	margin-bottom: 50px;
 	border-top: 3px solid #e43f3f;
+	border-bottom: 3px solid #e43f3f;
 	border-left: 1px solid #d8d8d8;
 	border-right: 1px solid #d8d8d8;
 }
@@ -696,7 +871,7 @@ li.social-list img{
 	.menu-box{
 		left: 45%;
 	}
-	#gameButton .menu-box{
+	.menu-background .menu-box{
 		position: relative;
 		left: 10%;
 	}
@@ -705,9 +880,6 @@ li.social-list img{
 	}
 	.coins-list ul li:nth-of-type(4){
 		padding-left: 1%;
-	}
-	.covering-box form input[type="submit"]{
-		margin-left: 15px;
 	}
 	.covering-box form #forgotPassword{
 		margin-right: 2%;
@@ -722,33 +894,39 @@ li.social-list img{
 	.social-list:nth-child(3){
 		margin-left: 50%;
 	}
-	#gameButton .menu-box{
+	.menu-background .menu-box{
 		position: relative;
 		left: 20%;
 	}
 	.covering-box form #forgotPassword{
 	margin-right: 4%;
-}
+	}
+	.covering-box form input{
+		width: 90%;
+	}
 @media screen and (min-width: 768px){
 	.footer nav ul li:nth-child(1){
 		margin: 0;
 	}
-	#gameButton #firstMenuBox{
+	.menu-background #firstMenuBox{
 		margin-bottom: 0;
 		border-bottom: none;
 	}
-	#gameButton .menu-box{
+	.menu-background .menu-box{
 		position: relative;
 		left: 0;
 	}
-	.covering-box form #forgotPassword{
-	margin-right: 2%;
-}
+	.groupmates{
+		width: 650px;
+	}
+	.groupmates ul{
+	max-height: 300px;
+	}
 @media screen and (min-width: 990px){
 	.nav-wrapper{
 		position: fixed;
 		width: 100%;
-		z-index: 1111;
+		z-index: 500;
 	}
 	.menu-box{
 		left: 0;
@@ -759,11 +937,11 @@ li.social-list img{
 	#registerContainer{
 		position: absolute;
 	}
-	#gameButton .menu-box{
+	.menu-background .menu-box{
 		border-bottom: 0;
 	}
-	#gameButton #firstMenuBox{
-		margin-left: 26.6%;
+	.menu-background #firstMenuBox{
+		margin-left: 27.7%;
 	}
 	.menu-background{	
 		width: 100%;
@@ -834,9 +1012,6 @@ li.social-list img{
 	.chat-right-buffer{
 		right: 27%;
 	}
-	.covering-box form input{
-		width: 75%;
-	}
 	.covering-box form #forgotPassword{
 		margin-right: 15%;
 	}
@@ -848,22 +1023,19 @@ li.social-list img{
 	li.social-list img{
 		margin: 8px 0 0 0;
 	}
-	#gameButton #firstMenuBox{
-		margin-left: 26.5%;
-	}
-	.covering-box form input{
-		width: 76%;
+	.menu-background #firstMenuBox{
+		margin-left: 27.6%;
 	}
 	.covering-box form #forgotPassword{
-	margin-right: 0;
+	margin-right: 25px;
 	}
 }
 @media screen and (min-width: 1200px){
 	.chat-right-buffer{
 		right: 18%;
 	}
-	#gameButton #firstMenuBox{
-		margin-left: 26.25%;
+	.menu-background #firstMenuBox{
+		margin-left: 27.25%;
 	}
 	#user{
 		padding-left: 0;
@@ -871,6 +1043,9 @@ li.social-list img{
 		text-align: left;
 	}
 	#user div{
+		cursor: pointer;
+	}
+	#user div div{
 		margin-top: -15px;
 		float: left;
 	}
@@ -878,11 +1053,8 @@ li.social-list img{
 		width: 5%;
 		padding: 0;
 	}
-	#coins>div, #alert>div{
-		float: right;
-	}
-	.covering-box form input{
-		width: 81%;
+	#alert .menu-box{
+		margin: 0;
 	}
 	.covering-box form input[type="checkbox"]#acceptTerms + label span {
 		margin-right: -15px;
@@ -892,39 +1064,37 @@ li.social-list img{
 	.login-text{
 		margin: 135px 0 0 45px;
 	}
-	.covering-box form input{
-		width: 83%;
+	.menu-background #firstMenuBox{
+		margin-left: 27.1%;
 	}
 }
 @media screen and (min-width: 1360px){
-	#gameButton #firstMenuBox{
-		margin-left: 26.1%;
-	}
-	.covering-box form input{
-		width: 84%;
+	.menu-background #firstMenuBox{
+		margin-left: 26.9%;
 	}
 }
 @media screen and (min-width: 1600px){
-	#gameButton #firstMenuBox{
-		margin-left: 25.95%;
-	}
-	.covering-box form input{
-		width: 87%;
+	.menu-background #firstMenuBox{
+		margin-left: 26.6%;
 	}
 }
 @media screen and (min-width: 1680px){
-	#gameButton #firstMenuBox{
-		margin-left: 25.9%;
-	}
-	.covering-box form input{
-		width: 88%;
+	.menu-background #firstMenuBox{
+		margin-left: 26.55%;
 	}
 }
 @media screen and (min-width: 1920px){
-	#gameButton #firstMenuBox{
-		margin-left: 25.8%;
+	.menu-background #firstMenuBox{
+		margin-left: 26.35%;
 	}
-	.covering-box form input{
-		width: 90%;
+}
+@media screen and (min-height: 910px){
+	#registerContainer{
+		position: fixed;
+	}
+}
+@-moz-document url-prefix() {
+	.team-dropup li a span{
+		margin-top: -17px;
 	}
 }

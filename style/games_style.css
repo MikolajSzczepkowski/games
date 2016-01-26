@@ -25,7 +25,7 @@
 	font-style: normal;
 }
 .game-page.covering-box form input[type="submit"]{
-	margin: 30px 15px;
+	margin: 30px 16px;
 	float: right;
 }
 .covering-box.game-payment-wrapper form input[type="checkbox"]:checked + label span{
@@ -52,7 +52,7 @@
 }
 .game-page form .teams-to-choose{
 	margin: 0;
-	padding: 0 17px 0 15px;
+	padding: 0 16px 0 15px;
 	border: none;
 	background: none;
 	box-shadow: none;
