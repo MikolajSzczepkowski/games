@@ -589,7 +589,7 @@ p.chat-message{
 		height: auto;
 	}
 	.report-match-wrapper{
-	top: 0;
+	top: 700px;
 	}
 }
 @media screen and (min-width: 990px){
@@ -624,6 +624,9 @@ p.chat-message{
 	}
 	.create-game-id-wrapper, .choose-team-wrapper, .check-players-wrapper, .game-payment-wrapper{
 		top: 100px;
+	}
+	.report-match-wrapper{
+	top: 0;
 	}
 }
 @media screen and (min-width: 1024px){
