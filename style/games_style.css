@@ -345,7 +345,7 @@
 	padding: 0;
 }
 .report-match-wrapper{
-	top: 100px;
+	top: 1200px;
 	padding: 20px 30px 300px 30px;
 	background: rgba(0, 0, 0, 0.8);
 	border-top: 3px solid #e43f3f;
@@ -587,6 +587,9 @@ p.chat-message{
 	}
 	.match-info.game-chat p{
 		height: auto;
+	}
+	.report-match-wrapper{
+	top: 0;
 	}
 }
 @media screen and (min-width: 990px){
