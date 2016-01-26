@@ -75,7 +75,7 @@
 }
 .text-holder textarea{
 	height: 150px;
-	padding: 0 5px;
+	padding: 5px 10px;
 	resize: none;
 }
 @media screen and (min-width: 480px){

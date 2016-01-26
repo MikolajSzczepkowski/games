@@ -345,16 +345,37 @@
 .ratings-wrapper{
 	padding: 0;
 }
-.report p{
+.report-match-wrapper{
+	padding: 20px 30px 300px 30px;
+	background: rgba(0, 0, 0, 0.8);
+	border-top: 3px solid #e43f3f;
+	border-bottom: 3px solid #e43f3f;
+
+}
+.report-match-wrapper .topic-wrapper .text-holder textarea{
+	background: none;
+	color: #fff;
+	border: 1px solid #fff;
+}
+.report-match-wrapper .topic-wrapper ul{
+	margin: 0;
+	position: absolute;
+}
+.report-match-wrapper .topic-wrapper ul:hover{
+	margin: 0;
+}
+
+.report input{
 	width: 101px;
 	height: 30px;
 	margin-left: 81px;
-	padding-top: 5px;
 	float: right;
 	background: #363636;
 	color: #fff;
 	text-align: center;
-	cursor: pointer;
+	font-weight: normal;
+	font-style: italic;
+	font-size: 12px;
 }
 .players-wrapper div p{
 	width: 120px;
@@ -490,7 +511,7 @@ p.chat-message{
 	.ratings{
 		width: 155px;
 	}
-	.report p{
+	.report input{
 		width: 138px;
 	}
 }
@@ -547,7 +568,7 @@ p.chat-message{
 	.report{
 		margin-top: -40px
 	}
-	.report p{
+	.report input{
 		width: 95px;
 	}
 	.match-info.game-chat{
@@ -573,7 +594,7 @@ p.chat-message{
 	.versus{
 		padding-left: 57px;
 	}
-	.report p{
+	.report input{
 		width: 125px;
 	}
 	.match-info.game-chat p{

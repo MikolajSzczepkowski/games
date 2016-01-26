@@ -52,7 +52,7 @@ $(function (){
 			clickedTopic = $(this).text();
 			currentTeamTopic.nextAll().fadeOut(200);
 			currentTeamTopic.empty().css({"padding-top":"5px",
-																"background":"#363636"}).text(clickedTopic);	
+											"background":"#363636"}).text(clickedTopic);
 		});
 
 		$(document).on("click", ".enter-result", function(){
@@ -63,7 +63,7 @@ $(function (){
 			clickedResult = $(this).text();
 			currentTeamResult.nextAll().fadeOut(200);
 			currentTeamResult.empty().css({"padding-top":"5px",
-																"background":"#363636"}).text(clickedResult);	
+											"background":"#363636"}).text(clickedResult);	
 		});
 	}
 	
