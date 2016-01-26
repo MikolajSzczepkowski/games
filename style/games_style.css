@@ -346,11 +346,11 @@
 	padding: 0;
 }
 .report-match-wrapper{
+	top: 100px;
 	padding: 20px 30px 300px 30px;
 	background: rgba(0, 0, 0, 0.8);
 	border-top: 3px solid #e43f3f;
 	border-bottom: 3px solid #e43f3f;
-
 }
 .report-match-wrapper .topic-wrapper .text-holder textarea{
 	background: none;
