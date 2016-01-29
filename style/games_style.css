@@ -136,10 +136,10 @@
 	margin: -3px 0 0 0;
 	padding: 0 0 0 5px;
 }
-.middle-row{
+.middle-row-games{
 	margin: 40px 0;
 }
-.middle-row p{
+.middle-row-games p{
 	height: 56px;
 	padding-top: 12px;
 	display: inline-block;
@@ -151,25 +151,25 @@
 	box-shadow: 0 0 0 6px #363636;
 	cursor: pointer;
 }
-.middle-row .middle-info{
+.middle-row-games .middle-info{
 	background: #fff;
 	box-shadow: none;
 	cursor: default;
 }
-.profile-menu img, .profile-menu a img{
+.games-menu img, .games-menu a img{
 	width: 78px;
 	height: 78px;
 	margin: 0 0 7px 0;
 	background: #e43f3f;
 }
-.profile-menu a:hover img{
+.games-menu a:hover img{
 	background: #363636;
 }
-.profile-menu img{
+.games-menu img{
 	height: 30px;
 	background: #363636;
 }
-.profile-menu .active img{
+.games-menu .active img{
 	background: #363636;
 }
 .match-info{
@@ -213,7 +213,7 @@
     margin-top: -9px;
     display: block;
     background: #363636;
-    display: none;
+    opacity: 0;
 }
 .game-img{
 	width: 120px;
@@ -226,7 +226,7 @@
 	background: #e43f3f;
 }
 .game-box:hover .badge{
-	display: block;
+	opacity: 1;
 }
 .players-wrapper div, .game-box{
 	cursor: pointer;
@@ -535,18 +535,18 @@ p.chat-message{
 	.top-row ul li{
 		margin-bottom: 0;
 	}
-	.profile-menu{
+	.games-menu{
 		padding: 0;
 		margin-left: 15px;
 	}
-	.profile-menu a img{
+	.games-menu a img{
 		width: 59px;
 		height: auto;
 	}
 	.match-info{
 		margin-left: 7px;
 	}
-	.profile-menu img{
+	.games-menu img{
 		width: 59px;
     	height: auto;
     	padding: 4px 0;
@@ -622,10 +622,10 @@ p.chat-message{
 	.match-info.game-chat p{
 		height: 30px;
 	}
-	.profile-menu a img{
+	.games-menu a img{
 		width: 78px;
 	}
-	.profile-menu img{
+	.games-menu img{
 		width: 78px;
     	height: auto;
     	padding: 0;
@@ -638,7 +638,7 @@ p.chat-message{
 	}
 }
 @media screen and (min-width: 1024px){
-	.profile-menu img{
+	.games-menu img{
 		margin-left: 0;
 	}
 }

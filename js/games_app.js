@@ -123,7 +123,7 @@ $(function (){
 		$(this).find("p span").text(checkedPlayers+"/"+displayedPlayers)
 	});
 
-	$(document).on("click", "#chooseTeamForm div input", function(){
+	$(document).on("click", "#chooseTeamForm .form-click", function(){
 		if ($(this).parents("div").hasClass("disabled")) {
 			$(this).parents("div").removeClass("disabled");
 			$(this).parents("div").siblings().addClass("disabled");
