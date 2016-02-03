@@ -120,13 +120,39 @@ $(function (){
 	$(document).on("click", "#checkPlayersForm", function(){
 		displayedPlayers = $(this).find("input:checkbox").length,
 		checkedPlayers = $(this).find("input:checked").length;
-		$(this).find("p span").text(checkedPlayers+"/"+displayedPlayers)
+		$(this).find("p span").text(checkedPlayers+"/"+displayedPlayers);
 	});
 
 	$(document).on("click", "#chooseTeamForm .form-click", function(){
 		if ($(this).parents("div").hasClass("disabled")) {
 			$(this).parents("div").removeClass("disabled");
-			$(this).parents("div").siblings().addClass("disabled");
+			$(this).parents("div").siblings(".to-choose").addClass("disabled");
 		}
+	});
+
+	$(document).on("click", "#gamesPickSlider ul li", function(){
+		if (!$(this).hasClass("current-game")) {
+			$("#gamesPickSlider ul li").removeClass("current-game");
+			$(this).addClass("current-game");
+		}
+	});
+
+	$(document).on("click", "#choosePaymentMethod input", function(){
+		if ($(this).prop("checked", false)) {
+			$("#choosePaymentMethod input").prop("checked", false);
+			$(this).prop("checked", true);
+		}
+	});
+
+	$(document).on("click", "#acceptPayment", function(){
+		if ($("#eachPlayerPay").is(":checked")) {
+			$(this).attr("value", "pending");
+			$("#cancelPayment").show();
+		}
+	});
+
+	$(document).on("change", "#choosePaymentMethod input", function(){
+		$("#acceptPayment").attr("value", "sign up");
+		$("#cancelPayment").hide();
 	});
 });

@@ -152,6 +152,29 @@
 <div class="container">
 	<div class="main">
 		<div class="main-inner-wrapper">
+			<div id="loginOnlyContainer" class="background-cover modal fade" role="dialog">
+				<div id="loginInnerWrapper" class="row covering-box login-wrapper modal-dialog">
+					<h2 class="col-xs-12 text-center text-uppercase">logo</h2>
+					<div class="col-xs-12">
+						<form name="login" id="loginForm" class="col-xs-12">
+							<div class="col-xs-12">
+								<img src="images/username.png">
+								<input type="text" id="loginUsername" placeholder="username">
+							</div>
+							<div class="col-xs-12">
+								<img src="images/password.png">
+								<input type="password" id="loginPassword" placeholder="password">
+								<button id="forgotPassword">forgot password?</button>
+							</div>
+							<input type="submit" name="submit-login" value="login" class="col-xs-12 col-sm-4 col-lg-3 text-uppercase text-center">
+							<div class="col-xs-12">
+								<input type="checkbox" id="rememberCheckbox">
+								<label for="rememberCheckbox" class="col-xs-12 col-sm-3 col-md-6 col-lg-4">remember me <span></span></label>	
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
 			<div id="createGameIdContainer" class="background-cover modal fade" role="dialog">
 				<div id="createGameIdInnerWrapper" class="row covering-box game-page create-game-id-wrapper modal-dialog">
 					<h2 class="col-xs-12 text-center text-uppercase">game accounts</h2>
@@ -172,7 +195,7 @@
 					<h2 class="col-xs-12 text-center text-uppercase">choose or create a new team</h2>
 					<div class="col-xs-12">
 						<form name="choose-team" id="chooseTeamForm" class="col-xs-12">
-							<div class="col-xs-12 dropdown">
+							<div class="col-xs-12 to-choose dropdown">
 								<img src="images/teams-white.png">
 								<a href="#" data-toggle="dropdown" data-target="#">
 									<input type="button" id="chooseTeam" value="Choose team" class="form-click">
@@ -188,9 +211,80 @@
 									</li>
 								</ul>
 							</div>
-							<div class="col-xs-12 disabled">
+							<h2 class="col-xs-12 text-center text-uppercase">or</h2>
+							<div class="col-xs-12 to-choose disabled">
 								<img src="images/teams-white.png">
 								<input type="text" id="createNewTeam" placeholder="Create a new team" class="form-click">
+							</div>
+							<div class="col-xs-12 game-slider-wrapper">
+								<div id="gamesPickSlider" class="games-slider">
+									<ul>
+										<li>
+											<a href="#">
+												<h5><span>MK X</span></h5>
+												<div class="img-holder">
+													<img src="images/game-slide.png">
+												</div>
+											</a>
+										</li>
+										<li class="current-game">
+											<a href="#">
+												<h5><span>Battlefield 4</span></h5>
+												<div class="img-holder">
+													<img src="images/game-slide.png">
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<h5><span>MK X</span></h5>
+												<div class="img-holder">
+													<img src="images/game-slide.png">
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<h5><span>MK X</span></h5>
+												<div class="img-holder">
+													<img src="images/game-slide.png">
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<h5><span>MK X</span></h5>
+												<div class="img-holder">
+													<img src="images/game-slide.png">
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<h5><span>MK X</span></h5>
+												<div class="img-holder">
+													<img src="images/game-slide.png">
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<h5><span>MK X</span></h5>
+												<div class="img-holder">
+													<img src="images/game-slide.png">
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<h5><span>MK X</span></h5>
+												<div class="img-holder">
+													<img src="images/game-slide.png">
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
 							</div>
 							<input type="submit" name="choose-team-accept" value="accept" class="col-xs-12 col-sm-4 col-lg-3 text-uppercase text-center">
 						</form>
@@ -222,26 +316,54 @@
 			</div>
 			<div id="gamePaymentContainer" class="background-cover modal fade" role="dialog">
 				<div id="gamePaymentInnerWrapper" class="row covering-box game-page game-payment-wrapper modal-dialog">
-					<h2 class="col-xs-12 text-center text-uppercase">payment</h2>
+					<h2 class="col-xs-12 text-center text-uppercase">sign up</h2>
 					<div class="col-xs-12">
 						<form name="game-payment" id="gamePaymentForm" class="col-xs-12">
-							<p class="col-xs-12 col-sm-6 col-md-10 col-lg-8">Choose payment method</p>
-							<div class="col-xs-12">
-								<input type="checkbox" id="eachPlayerPay">
-								<label for="eachPlayerPay">Each palyer pays for himself (10 coins)<span><payment/span></label>
+							<div id="choosePaymentMethod" class="col-xs-12 no-padding">
+								<p class="col-xs-12 col-sm-6 col-md-10 col-lg-5 no-padding">Choose payment method</p>
+								<div class="col-xs-12 no-padding">
+									<input type="checkbox" id="eachPlayerPay">
+									<label for="eachPlayerPay"><span></span>Each palyer pays for himself (10 coins)</label>
+								</div>
+								<div class="col-xs-12 no-padding">
+									<input type="checkbox" id="payForTeam">
+									<label for="payForTeam"><span></span>Pay for team (50 coins)</label>
+								</div>
 							</div>
-							<div class="col-xs-12">
-								<input type="checkbox" id="payForTeam">
-								<label for="payForTeam">Pay for team (50 coins) <span></span></label>
+							<div class="col-xs-12 no-padding">
+								<div id="gamePaymentTeam" class="col-sm-6 col-sm-offset-3 game-payment-team">
+									<h4 class="col-xs-12">Team Amazing</h4>
+									<div class="col-xs-12">
+										<input type="checkbox" id="player1">
+										<label for="player1"><span></span>Player 1 (Game ID)</label>
+									</div>
+									<div class="col-xs-12">
+										<input type="checkbox" id="player2">
+										<label for="player2"><span></span>Player 2 (Game ID)</label>
+									</div>
+									<div class="col-xs-12">
+										<input type="checkbox" id="player3">
+										<label for="player3"><span></span>Player 3 (Game ID)</label>
+									</div>
+								</div>							
 							</div>
-							<input type="submit" name="accept-payment" value="accept" class="col-xs-12 col-sm-4 col-lg-3 text-uppercase text-center">
+							<div class="col-xs-12 no-padding">
+								<div class="col-sm-6 col-sm-offset-3">
+									<input type="checkbox" id="acceptTerms">
+									<label for="acceptTerms" class="col-xs-12 col-sm-8 col-lg-7">I accept terms of use and Privacy Policy<span></span></label>
+								</div>
+							</div>
+							<div class="col-xs-12 no-padding">
+								<input type="button" id="acceptPayment" value="sign up" class="col-xs-12 text-uppercase text-center">
+								<input type="button" id="cancelPayment" value="cancel" class="col-xs-12 text-uppercase text-center">
+							</div>
 						</form>
 					</div>
 				</div>	
 			</div>
 			<div class="row top-row">
 				<ul>
-					<li id="gameLoginButton" class="col-xs-6 col-sm-2 checked">
+					<li id="gameLoginButton" class="col-xs-6 col-sm-2 checked" data-toggle="modal" data-target="#loginOnlyContainer">
 						<p>Login <span>(click here)</span><img src="images/check-mark.png" alt="check-mark"></p>
 					</li>
 					<li id="createGameIdButton" class="col-xs-6 col-sm-2 checked" data-toggle="modal" data-target="#createGameIdContainer">
@@ -253,11 +375,8 @@
 					<li id="checkPlayersButton" class="col-xs-6 col-sm-2 locked" data-toggle="modal" data-target="#checkPlayersContainer">
 						<p>Players <span>(check)</span></p>
 					</li>
-					<li id="signUpButton" class="col-xs-6 col-sm-2 locked red-border">
+					<li id="signUpButton" class="col-xs-6 col-sm-2 locked red-border" data-toggle="modal" data-target="#gamePaymentContainer">
 						<p>Sign up <span>(click here)</span></p>
-					</li>
-					<li id="paymentButton" class="col-xs-6 col-sm-2 locked red-border" data-toggle="modal" data-target="#gamePaymentContainer">
-						<p>Payment <span>(choose)</span></p>
 					</li>
 				</ul>
 			</div>

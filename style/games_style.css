@@ -2,7 +2,7 @@
 	border-top: 5px solid #e43f3f;
 	border-bottom: 3px solid #e43f3f;
 }
-.game-payment-wrapper.covering-box form input[type="submit"]:hover{
+.game-payment-wrapper.covering-box form input[type="button"]:hover{
 	background: #e43f3f;
 }
 .game-page form p{
@@ -12,10 +12,28 @@
 	font-style: italic;
 }
 .game-payment-wrapper form p{
+	margin: 10px 0;
 	border-bottom: 1px solid #e43f3f;
 }
 .game-payment-wrapper form input[type="checkbox"] + label span{
-	margin-left: 5px;
+	margin-left: -5px;
+	margin-right: 5px;
+}
+
+.covering-box form .game-payment-team label{
+	cursor: default;
+}
+
+.covering-box form .game-payment-team label:hover{
+	color: #333;
+}
+.game-page.game-payment-wrapper form>div{
+	margin: 10px 0 0 0;
+	padding: 0 0 10px 0;
+	border-bottom: 1px solid #d8d8d8;
+}
+.game-page.game-payment-wrapper form>div:last-of-type{
+	border-bottom: none;
 }
 .game-page form>div{
 	margin: 5px 0 0 0;
@@ -28,8 +46,25 @@
 	margin: 30px 16px;
 	float: right;
 }
+.game-page.covering-box form input#cancelPayment{
+	display: none;
+}
+.game-page.covering-box.game-payment-wrapper form input[type="button"]{
+	width: 100%;
+	margin: 0 0 15px 0;
+	float: left;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+}
+.no-padding{
+	padding: 0;
+}
 .covering-box.game-payment-wrapper form input[type="checkbox"]:checked + label span{
 	background:url(./../images/checkbox-red.png) left top no-repeat;
+}
+.covering-box.game-payment-wrapper form .game-payment-team input[type="checkbox"]:checked + label span{
+	background:url(./../images/checkbox-blue.png) left top no-repeat;
 }
 .game-page form input[type="button"]{
 	text-align: left;
@@ -84,6 +119,9 @@
 }
 .game-page form div.disabled a, .game-page form div.disabled a input{
 	cursor: default;
+}
+.game-page form > div.game-slider-wrapper{
+	margin-top: 15px;
 }
 .create-game-id-wrapper, .choose-team-wrapper, .check-players-wrapper, .game-payment-wrapper{
 	top: 430px;
@@ -186,9 +224,13 @@
 }
 .bottom-inner-wrapper{
 	padding: 20px 0 10px 0;
+	border-bottom: 1px solid #d8d8d8;
+}
+div.bottom-inner-wrapper:last-of-type{
+	border: none;
 }
 .left-buffer{
-	margin-left: 15px;
+	padding-left: 30px;
 }
 .game-box-wrapper p{
 	font-style: italic;
@@ -630,11 +672,17 @@ p.chat-message{
     	height: auto;
     	padding: 0;
 	}
-	.create-game-id-wrapper, .choose-team-wrapper, .check-players-wrapper, .game-payment-wrapper{
+	.create-game-id-wrapper, .choose-team-wrapper, .check-players-wrapper{
 		top: 100px;
 	}
+	.game-payment-wrapper{
+		top: 50px;
+	}
 	.report-match-wrapper{
-	top: 0;
+		top: 0;
+	}
+	.report{
+		padding: 0;
 	}
 }
 @media screen and (min-width: 1024px){
@@ -669,17 +717,14 @@ p.chat-message{
 	.bottom-main{
 		padding: 0 50px;
 	}
-	.ratings-wrapper input{
-		width: 88%;
-	}
 	.left-input{
-		margin-left: -40px;
+		margin-left: -34px;
 	}
 	.right-input{
-		padding-left: 54px;
+		padding-left: 49px;
 	}
 	.ratings-wrapper{
-		margin-left: -2px;
+		margin-left: 0;
 	}
 	.players-wrapper:nth-of-type(even){
 		padding-right: 0;
