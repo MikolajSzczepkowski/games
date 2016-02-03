@@ -17,120 +17,271 @@
 <body>
 <div class="container-fluid">
 	<nav id="navigation" class="row text-center nav-wrapper">
-		<div class="col-md-1 col-md-offset-1">
-			<div id="menu" class="dropdown menu-size text-center pointer border-bottom">
-				<a href="#" data-toggle="dropdown" data-target="#">
+		<ul>
+			<li class="col-md-1 col-md-offset-1 dropdown">
+				<div id="menu" class="menu-size text-center pointer border-bottom" data-toggle="dropdown">
 					<img src="images/icon-menu.png" alt="menu">
-				</a>
+				</div>
 				<ul class="dropdown-menu menu-box">
 					<li>
-						<a href="#"><img src="images/home.gif" alt="home">Home</a>
+						<a href="#"><img src="images/home.png" alt="home">Home</a>
 					</li>
 					<li>
-						<a href="#"><img src="images/tv.gif" alt="tv">TV</a>
+						<a href="#"><img src="images/tv.png" alt="tv">TV</a>
 					</li>
 					<li>
-						<a href="#"><img src="images/rank.gif" alt="ranking">Leaderboards</a>
-					</li>
-					<li>
-						<a href="#"><img src="images/users.gif" alt="clans">Teams</a>
+						<a href="#"><img src="images/rank.png" alt="leaderboards">Leaderboards</a>
 					</li>
 				</ul>
-			</div>
-		</div>
-		<div class="col-md-1 col-md-offset-1">
-			<div id="target" class="dropdown menu-size text-center pointer border-bottom">
-				<a href="#" data-toggle="dropdown" data-target="#">
-					<img src="images/target.png" alt="target">
-				</a>
-				<div id="menuBackground" class="dropdown-menu menu-background">
-					<ul id="firstMenuBox" class="menu-box">
+			</li>
+			<li class="col-md-1 col-md-offset-1 dropdown">
+				<div id="gameButton" class="menu-size text-center pointer border-bottom" data-toggle="dropdown">
+					<img src="images/game-menu.png" alt="game menu">
+				</div>
+					<div id="menuBackground" class="dropdown-menu menu-background">
+						<ul id="firstMenuBox" class="menu-box">
+							<li>
+								<h6>Playstation 4</h6>
+								<img src="images/playstation-menu.png" alt="playstation">
+							</li>
+							<li>
+								<a href="#"><img src="images/menu-img-2.gif" alt="game"></a>
+							</li>
+							<li>
+								<a href="#"><img src="images/menu-img-2.gif" alt="game"></a>
+							</li>
+							<li>
+								<a href="#"><img src="images/menu-img-2.gif" alt="game">Battlefield 4</a>
+							</li>
+							<li>
+								<a href="#"><img src="images/menu-img-2.gif" alt="game">Rocket League</a>
+							</li>
+							<li>
+								<a href="#"><img src="images/menu-img-2.gif" alt="game">Call of Duty: AW</a>
+							</li>
+						</ul>
+						<ul id="secondMenuBox" class="menu-box menu-xbox">
+							<li>
+								<h6>Xbox One</h6>
+								<img src="images/xbox-menu.png" alt="xbox">
+							</li>
+							<li>
+								<a href="#"><img src="images/menu-img.png" alt="game"></a>
+							</li>
+							<li>
+								<a href="#"><img src="images/menu-img.png" alt="game"></a>
+							</li>
+							<li>
+								<a href="#"><img src="images/menu-img.png" alt="game">Battlefield 4</a>
+							</li>
+							<li>
+								<a href="#"><img src="images/menu-img.png" alt="game"></a>
+							</li>
+							<li>
+								<a href="#"><img src="images/menu-img.png" alt="game"></a>
+							</li>
+						</ul>
+					</div>	
+			</li>
+			<li id="coins" class="col-md-1 col-md-offset-1 col-lg-offset-2" data-toggle="modal" data-target="#paymentContainer">
+				<div class="menu-size text-center pointer border-bottom">
+					<img src="images/coins-menu.png" alt="coins">
+					<span class="text-uppercase menu-info-box">get&nbsp;coins</span>
+				</div>
+			</li>
+			<li id="alert" class="col-md-1 have-alert dropdown">
+				<div class="menu-size text-center pointer border-bottom" data-toggle="dropdown">
+					<img src="images/alert.png" alt="alert">
+					<span class="text-uppercase menu-info-box">3</span>
+				</div>
+				<div class="dropdown-menu menu-box">
+					<h6 class="text-center">Today</h6>
+					<ul>
 						<li>
-							<h6>Playstation 4</h6>
+							<p >You have been invited to play in a match.
+							</p>
+							<img src="images/delete.png">
 						</li>
 						<li>
-							<a href="#"><img src="images/menu-img-2.gif" alt="game"></a>
+							<p >You have been invited to play in a match.</p>
+							<img src="images/delete.png">
 						</li>
 						<li>
-							<a href="#"><img src="images/menu-img-2.gif" alt="game"></a>
+							<p >You have been invited to play in a match.
+							</p>
+							<img src="images/delete.png">
 						</li>
 						<li>
-							<a href="#"><img src="images/menu-img-2.gif" alt="game">Battlefield 4</a>
+							<p >You have been invited to play in a match.</p>
+							<img src="images/delete.png">
 						</li>
 						<li>
-							<a href="#"><img src="images/menu-img-2.gif" alt="game">Rocket League</a>
+							<p >You have been invited to play in a match.</p>
+							<img src="images/delete.png">
 						</li>
 						<li>
-							<a href="#"><img src="images/menu-img-2.gif" alt="game">Call of Duty: AW</a>
+							<p >You have been invited to play in a match.</p>
+							<img src="images/delete.png">
 						</li>
 					</ul>
-					<ul id="secondMenuBox" class="menu-box menu-xbox">
-						<li>
-							<h6>Xbox One</h6>
-						</li>
-						<li>
-							<a href="#"><img src="images/menu-img.png" alt="game"></a>
-						</li>
-						<li>
-							<a href="#"><img src="images/menu-img.png" alt="game"></a>
-						</li>
-						<li>
-							<a href="#"><img src="images/menu-img.png" alt="game">Battlefield 4</a>
-						</li>
-						<li>
-							<a href="#"><img src="images/menu-img.png" alt="game"></a>
-						</li>
-						<li>
-							<a href="#"><img src="images/menu-img.png" alt="game"></a>
-						</li>
-					</ul>
-				</div>	
-			</div>
-		</div>
-		<div class="col-md-2 col-md-offset-3">
-			<div id="user" class="menu-size text-center pointer border-bottom">
-				<img src="images/user.png" alt="user">
-			</div>
-			User 01
-		</div>
-		<div id="chat" class="col-md-2 col-md-offset-1">
-			<div class="menu-size text-center pointer border-bottom">
-				<img src="images/chat.png" alt="chat">
-			</div>
-		</div>
+				</div>
+			</li>
+			<li id="user" class="col-md-2 dropdown">
+				<div data-toggle="dropdown">
+					<div class="menu-size text-center pointer border-bottom user-avatar">
+						<img src="images/player.png" alt="user">
+					</div>
+					User 01
+				</div>
+				<ul class="dropdown-menu menu-box">
+					<li>
+						<a href="#"><img src="images/user-menu.png" alt="profile">Profile</a>
+					</li>
+					<li class="dropdown-submenu">
+						<a tabindex="-1" href="#"><img src="images/users-menu.png" alt="teams">Teams</a>
+						<ul class="dropdown-menu menu-box">
+							<li>
+								<a id="createNewTeamMenuButton" href="#" data-toggle="modal" data-target="#createTeamContainer"><div></div>Create a new team</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<img src="images/team.png" alt="clans">
+									</div>
+									Drużyna
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<img src="images/team.png" alt="clans">
+									</div>
+									Drużyna
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<img src="images/team.png" alt="clans">
+									</div>
+									Drużyna
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<img src="images/team.png" alt="clans">
+									</div>
+									Drużyna
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<img src="images/team.png" alt="clans">
+									</div>
+									Drużyna
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<img src="images/team.png" alt="clans">
+									</div>
+									Drużyna
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<img src="images/team.png" alt="clans">
+									</div>
+									Drużyna
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div>
+										<img src="images/team.png" alt="clans">
+									</div>
+									Drużyna
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><img src="images/logout.png" alt="logout">Logout</a>
+					</li>
+				</ul>
+			</li>
+			<li id="chat" class="col-md-2 col-md-offset-1 col-lg-1">
+				<div class="menu-size text-center pointer border-bottom">
+					<img src="images/chat.png" alt="chat">
+				</div>
+			</li>
+		</ul>
 	</nav>
 	<div class="friends-row">
 		<div id="friends" class="col-xs-12 col-md-3 col-lg-2 friends">
 			<div class="col-xs-12 friends-search-wrapper text-center">
-				<ul class="col-xs-12">
-					<li class="friends-search-img">
-						<img src="images/user-white.gif" alt="user">
-					</li>
-					<li class="friends-search-img">
-						<img src="images/users-white.gif" alt="users">
-					</li>
-					<li class="friends-search-img">
+				<ul class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-12 col-md-offset-0">
+					<li id="createGroupButton" class="col-xs-12 friends-search-img" data-toggle="modal" data-target="#groupmatesContainer">
 						<img src="images/chat-white.png" alt="chat">
 					</li>
+					<li id="userSearchButton" class="col-xs-6 friends-search-img friends-search-button active">
+						<img src="images/user-small-white.png" alt="user">
+					</li>
+					<li id="teamSearchButton" class="col-xs-6 friends-search-img friends-search-button">
+						<img src="images/teams-white.png" alt="teams">
+					</li>
 				</ul>
-				<label class="col-xs-12" for="userSearch">
-					<input type="text" id="userSearch" placeholder="Search users...">
+				<label class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-12 col-md-offset-0" for="friendSearch">
+					<input type="text" id="friendSearch" placeholder="Search users...">
 				</label>
 			</div>
-			<div class="col-xs-12 text-center friends-header">friends(34)</div>
-				<ul class="col-xs-12 friends-list text-left">
-					<li id="Depsperados_PL"><img src="images/team.png" alt="avatar">Desperados_PL</li>
-					<li id="Hooligan_Black" class="friends-active"><img src="images/team.png" alt="avatar">Hooligan_Black</li>
-					<li id="Jerry"><img src="images/team.png" alt="avatar">Jerry</li>
-					<li id="Cris"><img src="images/team.png" alt="avatar">Cris</li>
-					<li id="Muddy" class="friends-active"><img src="images/team.png" alt="avatar">Muddy</li>
-					<li id="Chester" class="friends-active"><img src="images/team.png" alt="avatar">Chester</li>
-					<li id="Mike"><img src="images/team.png" alt="avatar">Mike</li>
-					<li id="Mister Q"><img src="images/team.png" alt="avatar">Mister Q</li>
-					<li id="Mad Max"><img src="images/team.png" alt="avatar">Mad Max</li>
-					<li id="Noe"><img src="images/team.png" alt="avatar">Noe</li>
-					<li id="Darius"><img src="images/team.png" alt="avatar">Darius</li>
-				</ul>
+			<div id="friendsWrapper" class="col-xs-12 panel-group friends-wrapper">
+				<div class="panel panel-default">
+					<a data-toggle="collapse" data-parent="#friendsWrapper" href="#friendsList">
+						<h4 class="col-xs-12 text-center friends-header">friends (34)</h4>
+					</a>
+					<ul id="friendsList" class="col-xs-12 friends-list text-left panel-collapse collapse in">
+						<li id="Depsperados_PL"><img src="images/team.png" alt="avatar">Desperados_PL</li>
+						<li id="Hooligan_Black" class="friends-active"><img src="images/team.png" alt="avatar">Hooligan_Black</li>
+						<li id="Jerry"><img src="images/team.png" alt="avatar">Jerry</li>
+						<li id="Cris"><img src="images/team.png" alt="avatar">Cris</li>
+						<li id="Muddy" class="friends-active"><img src="images/team.png" alt="avatar">Muddy</li>
+						<li id="Chester" class="friends-active"><img src="images/team.png" alt="avatar">Chester</li>
+						<li id="Mike"><img src="images/team.png" alt="avatar">Mike</li>
+						<li id="Mister Q"><img src="images/team.png" alt="avatar">Mister Q</li>
+						<li id="Mad Max"><img src="images/team.png" alt="avatar">Mad Max</li>
+						<li id="Noe"><img src="images/team.png" alt="avatar">Noe</li>
+						<li id="Darius"><img src="images/team.png" alt="avatar">Darius</li>
+					</ul>
+				</div>
+				<div class="panel panel-default">
+					<a data-toggle="collapse" data-parent="#friendsWrapper" href="#groupList">
+						<h4 class="col-xs-12 text-center friends-header">groups (3)</h4>
+					</a>
+					<ul id="groupList" class="col-xs-12 friends-list text-left panel-collapse collapse">
+						<li id="SuppaGruppa"><a href="group1.html">SuppaGruppa</a></li>
+						<li id="Group Galaxy"><a href="group2.html">Group Galaxy</a></li>
+						<li id="Group My"><a href="group3.html">Group My</a></li>
+					</ul>
+				</div>
+				<div class="panel panel-default">
+					<a data-toggle="collapse" data-parent="#friendsWrapper" href="#teamsList">
+						<h4 class="col-xs-12 text-center friends-header">teams (6) <img src="images/liked-team.png"></h4>
+					</a>
+					<ul id="teamsList" class="col-xs-12 friends-list text-left panel-collapse collapse">
+						<li id="Kozaki"><img src="images/team.png" alt="avatar">Kozaki</li>
+						<li id="Hooligans"><img src="images/team.png" alt="avatar">Hooligans</li>
+						<li id="Cienkie bolki"><img src="images/team.png" alt="avatar">Cienkie bolki</li>
+						<li id="teamAAA"><img src="images/team.png" alt="avatar">teamAAA</li>
+						<li id="team amazing"><img src="images/team.png" alt="avatar">team amazing</li>
+						<li id="TeaM"><img src="images/team.png" alt="avatar">TeaM</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div id="chatContainer" class="chat-row chat-right-buffer">
@@ -141,10 +292,1021 @@
 			</div>
 		</div>	
 	</div>
+	<div id="alertBox" class="row alert fade in alert-box-wrapper">
+		<div id="alertBoxWrapper" class="row alert-box">
+			<img src="images/chat-white.png">
+			<p>alert</p>
+		</div>
+	</div>
+	<div id="paymentContainer" class="background-cover modal fade" role="dialog">
+		<div id="paymentInnerWrapper" class="row coins-payment modal-dialog">
+			<p class="col-xs-12 col-sm-10 col-sm-offset-1 coins-payment-text"></p>
+			<div class="col-xs-12 col-sm-10 col-sm-offset-1 coins-list">
+				<ul>
+					<li>
+						<p>
+							<img src="images/coins-payment-2.png">
+							15
+						</p>
+						<p>1.99€</p>
+					</li>
+					<li>
+						<p>
+							<img src="images/coins-payment-2.png">
+							20
+						</p>
+						<p>2.99€</p>
+					</li>
+					<li>
+						<p>
+							<img src="images/coins-payment-2.png">
+							30
+						</p>
+						<p>3.99€</p>
+					</li>
+					<li>
+						<p>
+							<img src="images/coins-payment-2.png">
+							50
+						</p>
+						<p>4.99€</p>
+					</li>
+					<li>
+						<p>
+							<img src="images/coins-payment-2.png">
+							100
+						</p>
+						<p>5.99€</p>
+					</li>
+				</ul>
+			</div>
+			<button class="col-xs-12 col-md-6 col-lg-4 col-lg-offset-1">
+				<img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" alt="Check out with PayPal"/>
+			</button>
+			<button class="col-xs-12 col-md-6 col-lg-4 col-lg-offset-1">
+				<img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/ppcredit-logo-large.png" alt="PayPal Credit"/>
+			</button>	
+		</div>
+	</div>
+	<div id="loginContainer" class="background-cover modal fade" role="dialog">
+		<div id="loginInnerWrapper" class="row covering-box login-wrapper modal-dialog">
+			<h2 class="col-xs-12 text-center text-uppercase">logo</h2>
+			<div class="col-xs-12">
+				<form name="login" id="loginForm" class="col-xs-12">
+					<div class="col-xs-12">
+						<img src="images/username.png">
+						<input type="text" id="loginUsername" placeholder="username">
+					</div>
+					<div class="col-xs-12">
+						<img src="images/password.png">
+						<input type="password" id="loginPassword" placeholder="password">
+						<button id="forgotPassword">forgot password?</button>
+					</div>
+					<input type="submit" name="submit-login" value="login" class="col-xs-12 col-sm-4 col-lg-3 text-uppercase text-center">
+					<div class="col-xs-12">
+						<input type="checkbox" id="rememberCheckbox">
+						<label for="rememberCheckbox" class="col-xs-12 col-sm-3 col-md-6 col-lg-4">remember me <span></span></label>	
+					</div>
+				</form>
+				<button id="moveToRegister" class="col-xs-12 col-sm-4 col-sm-offset-4 text-uppercase text-center change-form-button" data-dismiss="modal" data-toggle="modal" href="#registerContainer">register</button>
+			</div>
+		</div>
+	</div>
+	<div id="registerContainer" class="background-cover">
+		<div id="registerInnerWrapper" class="row covering-box register-wrapper modal-dialog">
+			<h2 class="col-xs-12 text-center text-uppercase">logo</h2>
+			<div class="col-xs-12">
+				<form name="register" id="registerForm" class="col-xs-12">
+					<div class="col-xs-12">
+						<img src="images/username.png">
+						<input type="text" id="registerUsername" placeholder="username">
+					</div>
+					<div class="col-xs-12">
+						<img src="images/email.png">
+						<input type="text" id="registerEmail" placeholder="email">
+					</div>
+					<div class="col-xs-12">
+						<img src="images/email.png">
+						<input type="text" id="registerReEmail" placeholder="repeat email">
+					</div>
+					<div class="col-xs-12">
+						<img src="images/password.png">
+						<input type="password" id="registerPassword" placeholder="password">
+					</div>
+					<div class="col-xs-12">
+						<img src="images/password.png">
+						<input type="password" id="registerRePassword" placeholder="repeat password">
+					</div>
+					<p class="col-xs-12">Please enter your date of birth:
+						<input readonly type="text" id="registerDatepicker" placeholder="day / month / year" class="text-uppercase text-center">
+					</p>
+					<div class="col-xs-12">
+						<input type="checkbox" id="acceptTerms">
+						<label for="acceptTerms" class="col-xs-12 col-sm-8 col-lg-7">I accept terms of use and Privacy Policy<span></span></label>
+					</div>
+					<div class="col-xs-12">
+						<span></span>
+						<input type="text" id="captcha" placeholder="captcha">
+					</div>
+					<input type="submit" name="submit-register" value="sign up" class="col-xs-12 col-sm-4 col-lg-3 text-uppercase text-center">
+				</form>
+				<button id="moveToLogin" class="col-xs-12 col-sm-4 col-sm-offset-4 text-uppercase text-center change-form-button" data-dismiss="modal" data-toggle="modal" href="#loginContainer">login</button>
+			</div>
+		</div>	
+	</div>
+	<div id="groupmatesContainer" class="background-cover modal fade" role="dialog">
+		<div id="groupmatesInnerWrapper" class="row groupmates modal-dialog">
+			<form name="craete-group" id="createGroup" class="col-xs-12 col-sm-10 col-sm-offset-1">
+				<h2 class="text-uppercase text-center">choose your groupmates</h2>
+				<ul>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+				</ul>
+				<input type="text" id="createGroupName" class="col-xs-12 col-md-8 col-md-offset-2" placeholder="Enter group name">
+				<input type="submit" name="choose-groupmates-submit" value="create group" id="chooseGroupmatesSubmit" class="text-center text-uppercase">
+			</form>
+		</div>
+	</div>
+	<div id="addGroupmatesContainer" class="background-cover modal fade" role="dialog">
+		<div id="addGroupmatesInnerWrapper" class="row groupmates modal-dialog">
+			<form name="add-groupmates" id="addGroupmatesForm" class="col-xs-12 col-sm-10 col-sm-offset-1">
+				<h2 class="text-uppercase text-center">add groupmates</h2>
+				<ul>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="col-xs-6 col-sm-4 col-md-3 groupmates-box">
+								<div>
+									<img src="images/team-avatar.jpg" alt="team">
+									<div class="chosen-groupmate">
+										<span class="glyphicon glyphicon-plus"></span>
+									</div>
+								</div>
+								<p class="text-center">team</p>
+							</div>
+							
+						</a>
+					</li>
+				</ul>
+				<input type="submit" name="add-groupmates-submit" value="confirm" id="addGroupmatesSubmit" class="text-center text-uppercase">
+			</form>
+		</div>
+	</div>
+	<div id="createTeamContainer" class="background-cover modal fade" role="dialog">
+		<div id="createTeamInnerWrapper" class="row covering-box game-page create-team-wrapper modal-dialog">
+			<h2 class="col-xs-12 text-center text-uppercase">create a new team</h2>
+			<div class="col-xs-12">
+				<form name="create-team" id="createNewTeamForm" class="col-xs-12">
+					<div class="col-xs-12">
+						<img src="images/teams-white.png">
+						<input type="text" id="createNewTeamName" placeholder="Create a new team" class="form-click">
+					</div>
+					<div class="col-xs-12">
+						<div id="gamesSlider" class="games-slider">
+							<ul>
+								<li>
+									<a href="#">
+										<h5><span>MK X</span></h5>
+										<div class="img-holder">
+											<img src="images/game-slide.png">
+										</div>
+									</a>
+								</li>
+								<li class="current-game">
+									<a href="#">
+										<h5><span>Battlefield 4</span></h5>
+										<div class="img-holder">
+											<img src="images/game-slide.png">
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<h5><span>MK X</span></h5>
+										<div class="img-holder">
+											<img src="images/game-slide.png">
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<h5><span>MK X</span></h5>
+										<div class="img-holder">
+											<img src="images/game-slide.png">
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<h5><span>MK X</span></h5>
+										<div class="img-holder">
+											<img src="images/game-slide.png">
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<h5><span>MK X</span></h5>
+										<div class="img-holder">
+											<img src="images/game-slide.png">
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<h5><span>MK X</span></h5>
+										<div class="img-holder">
+											<img src="images/game-slide.png">
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<h5><span>MK X</span></h5>
+										<div class="img-holder">
+											<img src="images/game-slide.png">
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<input type="submit" name="create-team-accept" value="accept" class="col-xs-12 col-sm-4 col-lg-3 text-uppercase text-center">
+				</form>
+			</div>
+		</div>	
+	</div>
 </div>
 <div class="container-fluid login">
 	<div class="col-xs-12 col-md-2 col-md-offset-7">
-		<div class="login-text text-uppercase text-center pointer">login/register</div>
+		<div id="loginRegister" class="login-text text-uppercase text-center pointer" data-toggle="modal" data-target="#loginContainer">login/register</div>
 	</div>
 </div>
 <div class="container-fluid social">
@@ -168,8 +1330,8 @@
 							</div>
 							<input type="submit" name="submit-login" value="login" class="col-xs-12 col-sm-4 col-lg-3 text-uppercase text-center">
 							<div class="col-xs-12">
-								<input type="checkbox" id="rememberCheckbox">
-								<label for="rememberCheckbox" class="col-xs-12 col-sm-3 col-md-6 col-lg-4">remember me <span></span></label>	
+								<input type="checkbox" id="loginOnlyRememberCheckbox">
+								<label for="loginOnlyRememberCheckbox" class="col-xs-12 col-sm-3 col-md-6 col-lg-4">remember me <span></span></label>	
 							</div>
 						</form>
 					</div>
@@ -349,8 +1511,8 @@
 							</div>
 							<div class="col-xs-12 no-padding">
 								<div class="col-sm-6 col-sm-offset-3">
-									<input type="checkbox" id="acceptTerms">
-									<label for="acceptTerms" class="col-xs-12 col-sm-8 col-lg-7">I accept terms of use and Privacy Policy<span></span></label>
+									<input type="checkbox" id="acceptPaymentTerms">
+									<label for="acceptPaymentTerms" class="col-xs-12 col-sm-8">I accept terms of use and Privacy Policy<span></span></label>
 								</div>
 							</div>
 							<div class="col-xs-12 no-padding">

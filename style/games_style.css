@@ -19,7 +19,10 @@
 	margin-left: -5px;
 	margin-right: 5px;
 }
-
+.game-payment-wrapper form #acceptPaymentTerms + label span{
+	float: right;
+	margin: 3px 0 0 0;
+}
 .covering-box form .game-payment-team label{
 	cursor: default;
 }

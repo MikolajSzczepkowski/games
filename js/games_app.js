@@ -145,9 +145,17 @@ $(function (){
 	});
 
 	$(document).on("click", "#acceptPayment", function(){
-		if ($("#eachPlayerPay").is(":checked")) {
-			$(this).attr("value", "pending");
-			$("#cancelPayment").show();
+		if (!$("#acceptPaymentTerms").is(":checked")) {
+			$("#alertBox p").text("You must accept terms of use and Privacy Policy.");
+			$("#alertBox").show();
+			$("#alertBox").delay(3000).hide(0);
+		}
+		else if ($("#acceptPaymentTerms").is(":checked")) {
+			$("#alertBox").hide();
+			if ($("#eachPlayerPay").is(":checked")) {
+				$(this).attr("value", "pending");
+				$("#cancelPayment").show();
+			}
 		}
 	});
 
@@ -155,4 +163,5 @@ $(function (){
 		$("#acceptPayment").attr("value", "sign up");
 		$("#cancelPayment").hide();
 	});
+
 });
