@@ -154,6 +154,8 @@ $(function (){
 			$("#alertBox").hide();
 			if ($("#eachPlayerPay").is(":checked")) {
 				$(this).attr("value", "pending");
+				$(this).addClass("pending");
+				$(this).prop("disabled", true);
 				$("#cancelPayment").show();
 			}
 		}
@@ -161,6 +163,8 @@ $(function (){
 
 	$(document).on("change", "#choosePaymentMethod input", function(){
 		$("#acceptPayment").attr("value", "sign up");
+		$("#acceptPayment").removeClass("pending");
+		$("#acceptPayment").prop("disabled", false);
 		$("#cancelPayment").hide();
 	});
 

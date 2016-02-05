@@ -43,6 +43,17 @@
 					</div>
 				</div>	
 			</div>
+			<div id="uploadMediaContainer" class="background-cover modal fade" role="dialog">
+				<div id="uploadMediaInnerWrapper" class="row report-match-wrapper upload-media modal-dialog">
+					<form id="uploadMediaForm" class="col-xs-12">
+						<div class="col-xs-12">
+							<img src="images/upload-media.png" alt="upload media">
+							<input type="text" id="mediaUrl">
+						</div>
+						<input type="submit" id="submitUploadMedia" value="accept" class="col-xs-12 col-sm-3">
+					</form>
+				</div>	
+			</div>
 			<div class="col-xs-12 col-sm-7 match-info">
 				<p class="col-xs-12 col-sm-6 text-center">Match Id: 37854462</p>
 				<p class="col-xs-12 col-sm-6 text-center">Date: 23 Aug 2015, 16:45</p>	
@@ -112,13 +123,15 @@
 							<label for="rate2" class="col-xs-4"><input type="radio" name="rating" id="rate2"/><img src="images/rate-2.png" alt="rate-2"></label>
 							<label for="rate3" class="col-xs-4"><input type="radio" name="rating" id="rate3"/><img src="images/rate-3.png" alt="rate-3"></label>
 						</div>
-						<input type="button" value="upload media" class="col-xs-11 text-center"/>
+						<input type="button" value="upload media" class="col-xs-11 text-center" data-toggle="modal" data-target="#uploadMediaContainer"/>
 						<input type="submit" value="send" class="col-xs-11 text-center"/>
 					</div>
 					<div class="col-xs-12 col-sm-4 col-sm-offset-8 report" data-toggle="modal" data-target="#reportMatchContainer"><input type="button" value="report match"/></div>
 				</form>
-				<div id="iconWrapper" class="col-xs-12 bottom-inner-wrapper text-center">
-					<img src="images/file-empty.png" alt="empty file">
+				<div class="col-xs-12 bottom-inner-wrapper text-center">
+					<button id="iconWrapper" >
+						<img src="images/upload-media.png" alt="upload media">
+					</button>
 				</div>
 				<div class="col-xs-12 bottom-inner-wrapper">
 					<div class="col-xs-12 col-lg-6 players-wrapper">

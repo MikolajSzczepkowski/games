@@ -57,11 +57,11 @@
 	margin: 10px 0 0 0;
 	float: right;
 	background: #e43f3f;
-    color: #fff;
-    font-size: 14px;
-    font-weight: normal;
-    font-style: italic;
-    border: none;
+	color: #fff;
+	font-size: 14px;
+	font-weight: normal;
+	font-style: italic;
+	border: none;
 }
 .topic-wrapper .text-holder input:hover{
 	background: #363636;
@@ -70,7 +70,7 @@
 	margin: 63px 0 0 0;
 	padding: 0;
 	position: absolute;
-    font-style: italic;
+	font-style: italic;
 	z-index: 10;
 }
 .text-holder textarea{
