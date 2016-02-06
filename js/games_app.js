@@ -4,7 +4,12 @@ $(function (){
 		clickedResult,
 		currentTeamResult,
 		clickedRate,
+		playersToChoose = 3,
+		checkedPlayers,
+		playerGameId = true,
 		tap = ("ontouchstart" in document.documentElement);
+
+	$("#checkPlayersForm").find("p span").text(0+"/"+playersToChoose);
 
 	$(document).on("mouseenter", ".border-menu", function(){
 		$(this).addClass("hover");
@@ -117,10 +122,33 @@ $(function (){
 		$("#chooseTeam").attr("value", clickedTeam);
 	});
 
-	$(document).on("click", "#checkPlayersForm", function(){
-		displayedPlayers = $(this).find("input:checkbox").length,
-		checkedPlayers = $(this).find("input:checked").length;
-		$(this).find("p span").text(checkedPlayers+"/"+displayedPlayers);
+	$(document).on("change", "#checkPlayersForm input", function(){
+		checkedPlayers = $("#checkPlayersForm").find("input:checked").length;
+		$("#checkPlayersForm").find("p span").text(checkedPlayers+"/"+playersToChoose);
+	});
+	function checkIfPlayerHasGameId(){
+		for (var i = 0; i <= checkedPlayers; i++) {
+			if ($("#checkPlayersForm input:checked").eq(i).attr("data-gameId")==="false"){
+				return playerGameId = false;
+			}
+			else if($("#checkPlayersForm input:checked").eq(i).attr("data-gameId")==="true") {
+				playerGameId = true;
+			}
+		}
+	}
+	$(document).on("submit", "#checkPlayersForm", function(e){
+		e.preventDefault();
+		checkIfPlayerHasGameId();
+		if (checkedPlayers>playersToChoose) {
+			$("#alertBox p").text("You have exceeded the number of players.");
+			$("#alertBox").show();
+			$("#alertBox").delay(3000).hide(0);
+		}
+		if (playerGameId === false) {
+			$("#alertBox p").text("Chosen player does not have game ID.");
+			$("#alertBox").show();
+			$("#alertBox").delay(3000).hide(0);
+		}
 	});
 
 	$(document).on("click", "#chooseTeamForm .form-click", function(){

@@ -51,6 +51,14 @@
 .game-page.covering-box form input[type="submit"]{
 	margin: 30px 16px;
 	float: right;
+	cursor: pointer;
+}
+.game-page.covering-box form input[type="submit"].disabled{
+	opacity: 0.5;
+	cursor: default;
+}
+.game-page.covering-box form input[type="submit"].disabled:hover{
+	background: #363636;
 }
 .game-page.covering-box form input#cancelPayment{
 	display: none;
