@@ -861,6 +861,9 @@ p.chat-message{
 	}
 }
 @media screen and (min-width: 990px){
+	.players-wrapper h3{
+		margin-left: 5px;
+	}
 	div.left-buffer{
 		padding-left: 30px;
 	}
@@ -945,6 +948,13 @@ p.chat-message{
 	}
 }
 @media screen and (min-width: 1200px){
+	.players-wrapper h3{
+		width: 95.667%;
+		margin-left: 0;
+	}
+	.players-wrapper:nth-of-type(even) h3{
+		margin-left: 11px;
+	}
 	.left-input{
 		margin-left: 8px;
 	}
