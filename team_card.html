@@ -83,7 +83,6 @@
 					</div>
 				</div>
 				<form class="col-xs-12 bottom-inner-wrapper result left-buffer" name="result">
-					<p class="col-xs-3 col-sm-3 col-md-offset-1">enter result</p>
 					<div class="col-xs-1 col-sm-2 result-wrapper left-input">
 						<ul class="result-inner-wrapper">
 							<li class="enter-result text-center">
@@ -99,8 +98,9 @@
 								<input type="radio" name="result-3" id="result3"/>3	
 							</li>
 						</ul>
+						<label for="rate1"><input type="radio" name="rating" id="rate1"/><img src="images/rate-1.png" alt="rate-1"></label>
 					</div>
-					<div class="col-xs-4 col-xs-offset-2 col-sm-2 col-sm-offset-2 col-md-offset-1 result-wrapper right-input">
+					<div class="col-xs-4 col-xs-offset-2 col-sm-2 col-sm-offset-3 result-wrapper right-input">
 						<ul class="result-inner-wrapper">
 							<li class="enter-result text-center">
 								<img src="images/enter-result.png" alt="enter-result">
@@ -114,26 +114,39 @@
 							<li class="result-list text-center">
 								<input type="radio" name="result-3" id="result3"/>3	
 							</li>
-						</ul>	
+						</ul>
+						<label for="rate3"><input type="radio" name="rating" id="rate3"/><img src="images/rate-3.png" alt="rate-3"></label>
 					</div>
-					<p class="col-xs-3 col-xs-pull-3 col-sm-3 col-sm-pull-3 col-md-2 col-md-offset-2 col-md-pull-5">rate match</p>
-					<div class="col-xs-3 col-xs-pull-2 col-sm-pull-3 col-md-3 col-md-pull-4 ratings-wrapper">
+					<div class="col-xs-6 col-xs-push-1 ratings-wrapper">
+						<p class="col-xs-11 text-center text-uppercase">enter result</p>
 						<div class="ratings text-center">
-							<label for="rate1" class="col-xs-4"><input type="radio" name="rating" id="rate1"/><img src="images/rate-1.png" alt="rate-1"></label>
-							<label for="rate2" class="col-xs-4"><input type="radio" name="rating" id="rate2"/><img src="images/rate-2.png" alt="rate-2"></label>
-							<label for="rate3" class="col-xs-4"><input type="radio" name="rating" id="rate3"/><img src="images/rate-3.png" alt="rate-3"></label>
+							<p class="col-xs-4 text-center text-uppercase">rate match</p>
 						</div>
-						<input type="button" value="upload media" class="col-xs-11 text-center" data-toggle="modal" data-target="#uploadMediaContainer"/>
-						<input type="submit" value="send" class="col-xs-11 text-center"/>
+						<input type="button" value="upload media" class="col-xs-11 text-center text-uppercase" data-toggle="modal" data-target="#uploadMediaContainer"/>
+						<input type="button" value="report match" class="col-xs-11 text-center text-uppercase report-match-button" data-toggle="modal" data-target="#reportMatchContainer"/>
 					</div>
-					<div class="col-xs-12 col-sm-4 col-sm-offset-8 report" data-toggle="modal" data-target="#reportMatchContainer"><input type="button" value="report match"/></div>
+					<div class="col-xs-7 col-xs-push-1 col-sm-4 col-sm-offset-7 result-sumbit">
+						<input type="submit" value="send" class="text-center text-uppercase" />
+					</div>
 				</form>
+				<div class="col-xs-12 bottom-inner-wrapper">
+					<h3 class="col-xs-12 text-uppercase text-center">reports</h3>
+					<ul class="col-xs-12 report-list report-read">
+						<li><a href="#">PSC-Paul</a> wanst to join your clan<span data-toggle="modal" data-target="#requestReceivedContainer">read request</span>
+						</li>
+						<li><a href="#">Crazy Joe</a> wanst to join your clan<span data-toggle="modal" data-target="#requestReceivedContainer">read request</span>
+						</li>
+						<li><a href="#">Leonidas</a> wanst to join your clan<span data-toggle="modal" data-target="#requestReceivedContainer">read request</span>
+						</li>
+					</ul>
+				</div>
 				<div class="col-xs-12 bottom-inner-wrapper text-center">
+					<h3 class="col-xs-12 text-uppercase">attachments</h3>
 					<button id="iconWrapper" >
 						<img src="images/upload-media.png" alt="upload media">
 					</button>
 				</div>
-				<div class="col-xs-12 bottom-inner-wrapper">
+				<div class="col-xs-12 bottom-inner-wrapper bottom-players">
 					<div class="col-xs-12 col-lg-6 players-wrapper">
 						<div class="col-sm-6">
 							<div>

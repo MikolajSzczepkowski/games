@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,700italic,700,300italic&subset=latin,latin-ext'>
+	<link rel="stylesheet" type="text/css" href="./FlipClock-master/compiled/flipclock.css">
 	<link rel="stylesheet" href="./style/basic_style.css">
 	<link rel="stylesheet" href="./style/games_style.css">
 	<link rel="stylesheet" href="./style/ladder_style.css">
@@ -1553,7 +1554,7 @@
 			<div class="row middle-row-games">
 				<p class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-2 col-md-offset-1 text-center middle-info"></p>
 				<p class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-1 text-uppercase text-center">check in</p>
-				<p class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-2 col-md-offset-1 text-center middle-info"></p>
+				<p id="clock" class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 text-center middle-info"></p>
 			</div>
 			<div class="row bottom-row">
 				<nav class="col-xs-12 col-sm-1 text-center games-menu">
@@ -1733,5 +1734,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="./js/main_app.js"></script>
 <script src="./js/games_app.js"></script>
+<script src="./FlipClock-master/compiled/flipclock.min.js"></script>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>

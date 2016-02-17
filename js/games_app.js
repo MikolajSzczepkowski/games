@@ -7,7 +7,10 @@ $(function (){
 		playersToChoose = 3,
 		checkedPlayers,
 		playerGameId = true,
-		tap = ("ontouchstart" in document.documentElement);
+		tap = ("ontouchstart" in document.documentElement),
+		clock = $("#clock").FlipClock({
+			clockFace: "DailyCounter"
+		});
 
 	$("#checkPlayersForm").find("p span").text(0+"/"+playersToChoose);
 
@@ -72,10 +75,11 @@ $(function (){
 		});
 	}
 	
-	$(document).on("click", ".ratings label img", function(){
-		clickedRate = $(this);
-		$(".ratings").find("img").css("background","#e43f3f");
-		clickedRate.css("background","#363636");
+	$(document).on("click", ".result-wrapper label img", function(){
+		if (!$(this).hasClass("active")) {
+			$(".result-wrapper label img").removeClass("active");
+			$(this).addClass("active");
+		}
 	});
 
 	$("nav a").on("click", function(e){
