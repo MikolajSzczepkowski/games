@@ -827,6 +827,9 @@ p.chat-message{
 	.match-info.game-chat{
 		margin-top: -37px; 
 	}
+	.match-info.game-chat.margin-block{
+		margin-top: 0; 
+	}
 	.match-info.game-chat p{
 		height: auto;
 	}

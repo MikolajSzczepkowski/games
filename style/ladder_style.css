@@ -10,12 +10,25 @@
 	font-style: italic;
 	color: #fff;
 }
+.ladder-main{
+	padding: 0;
+	overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    list-style: none;
+}
+.ladder-main li{
+	width: 150px;
+	margin: 0 0 0 15px;
+	vertical-align: top;
+	display: inline-block;
+}
 .ladder-main p {
 	margin-bottom: 5px;
 	background: #363636;
 }
 .ladder-box-wrapper{
-	padding: 0; 
+	padding-left: 0;
 }
 .border-menu {
 	height: 39px;
@@ -96,12 +109,6 @@ a:hover{
 		border-left: 1px solid #d8d8d8;
 		border-right: 1px solid #d8d8d8; 
 	}
-	.ladder-main p:nth-of-type(1){
-		margin-top: -37px;
-	}
-	.ladder-main p:nth-of-type(3){
-		margin-top: -35px;
-	}
 	.ladder-box table{
 		width: 100%;
 	}
@@ -112,15 +119,6 @@ a:hover{
 	}
 }
 @media screen and (min-width: 1200px){
-	.ladder-main{
-		padding: 0 50px;
-	}
-	.ladder-main p:nth-of-type(2){
-		margin-top: -37px;
-	}
-	.ladder-main p:nth-of-type(3){
-		margin-top: -37px;
-	}
 	.ladder-box table{
 		width: 100%;
 	}

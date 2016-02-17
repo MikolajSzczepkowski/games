@@ -88,9 +88,15 @@ $(function (){
 
 		$("nav a.active").removeClass("active");
 		$(this).addClass("active");
-
 		if(url != "team_card.html") {
 			$(".game-chat-inner-wrapper").fadeOut(500);
+		};
+
+		if (url != "ladder.html") {
+			$(".match-info").removeClass("margin-block");
+		}
+		else{
+			$(".match-info").addClass("margin-block");
 		}
 
 		$.ajax({
@@ -106,6 +112,7 @@ $(function (){
 	$(document).on("click", ".ladder-box a", function(e){
 		e.preventDefault();
 		var url = this.href;
+		$(".match-info").removeClass("margin-block");
 
 		$.ajax({
 			url: url,
