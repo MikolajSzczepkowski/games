@@ -4,6 +4,7 @@ $(function (){
 		clickedResult,
 		currentTeamResult,
 		clickedRate,
+		hoverTeam,
 		playersToChoose = 3,
 		checkedPlayers,
 		playerGameId = true,
@@ -19,6 +20,18 @@ $(function (){
 	});
 	$(document).on("mouseleave", ".border-menu", function(){
 		$(this).removeClass("hover");
+	});
+
+	$(document).on("mouseenter", ".ladder-box tr", function(){
+		hoverTeam = $(this).attr("data-name");
+		$(".ladder-box tr").each(function(){
+			if ($(this).attr("data-name")===hoverTeam) {
+				$(this).addClass("winner");
+			}
+		});
+	});
+	$(document).on("mouseleave", ".ladder-box tr", function(){
+		$(".ladder-box tr").removeClass("winner");
 	});
 
 	if(!tap){
