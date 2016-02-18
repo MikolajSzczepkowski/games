@@ -84,7 +84,8 @@ $(function (){
 
 	$("nav a").on("click", function(e){
 		e.preventDefault();
-		var url = this.href;
+		var url = this.href,
+		link = $(this).attr("href");
 
 		$("nav a.active").removeClass("active");
 		$(this).addClass("active");
@@ -92,11 +93,11 @@ $(function (){
 			$(".game-chat-inner-wrapper").fadeOut(500);
 		};
 
-		if (url != "ladder.html") {
-			$(".match-info").removeClass("margin-block");
+		if (link === "ladder.html") {
+			$(".match-info").addClass("margin-block");
 		}
 		else{
-			$(".match-info").addClass("margin-block");
+			$(".match-info").removeClass("margin-block");
 		}
 
 		$.ajax({

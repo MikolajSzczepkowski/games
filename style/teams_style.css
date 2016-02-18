@@ -2,7 +2,11 @@
 	width: 245px;
 	padding: 0 0 10px 0;
 }
-.team-box div{
+.team-main{
+	padding-top: 10px;
+}
+.team-box>div{
+	margin-bottom: 20px;
 	cursor: pointer;
 }
 .team-box img{
@@ -14,6 +18,9 @@
 }
 .team-box div:hover p{
 	background: #e43f3f;
+}
+.team-box div:hover .badge{
+	opacity: 1;
 }
 .team-box p{
 	width: 120px;
@@ -53,6 +60,6 @@
 }
 @media screen and (min-width: 1200px){
 	.team-main{
-		padding: 0 50px;
+		padding: 10px 50px;
 	}
 }

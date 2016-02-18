@@ -210,6 +210,15 @@
 	box-shadow: 0 0 0 6px #363636;
 	cursor: pointer;
 }
+.middle-row-games p.deadline{
+	background: #e43f3f;
+	box-shadow: 0 0 0 6px #e43f3f;
+}
+.middle-row-games div.deadline div.inn{
+	background: #e43f3f;
+	color: #fff;
+	text-shadow: 0 1px 2px #fff;
+}
 .middle-row-games .middle-info{
 	background: #fff;
 	box-shadow: none;
@@ -293,8 +302,11 @@ div.bottom-inner-wrapper:last-of-type{
 .game-box:hover p, .players-wrapper div div:hover p{
 	background: #e43f3f;
 }
-.game-box:hover .badge{
+.game-box:hover .badge, .players-wrapper div:hover .badge{
 	opacity: 1;
+}
+.players-wrapper>div{
+	margin-bottom: 25px;
 }
 .players-wrapper div, .game-box{
 	cursor: pointer;
@@ -700,6 +712,51 @@ p.chat-message{
 .flip-clock-divider.seconds .flip-clock-label{
 	right: -50px;
 }
+#reportContainer{
+	top: 1500px;
+}
+.report-wrapper{
+	padding: 20px 30px;
+	background: rgba(0, 0, 0, 0.8);
+	border-top: 3px solid #e43f3f;
+	border-bottom: 3px solid #e43f3f;
+}
+.report-wrapper textarea{
+	height: 100px;
+	margin: 30px 0 10px 0;
+	padding: 5px;
+	background: none;
+	color: #fff;
+	border: 1px solid #fff;
+	resize: none;
+}
+.report-wrapper input{
+	margin: 0 0 10px 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background: #e43f3f;
+	border: none;
+	color: #fff;
+	font-style: italic;
+}
+.report-wrapper input:hover{
+	background: #363636;
+}
+.report-text-box{
+	margin-bottom: 5px;
+	background: #f4f4f4;
+	border-left: 3px solid #e43f3f;
+}
+.report-wrapper form{
+	padding: 0;
+}
+.report-wrapper p{
+	margin-top: 30px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border:1px solid #fff;
+	color: #fff;
+}
 @media screen and (min-width: 480px){
 	.ratings{
 		width: auto;
@@ -763,6 +820,12 @@ p.chat-message{
 	}
 }
 @media screen and (min-width: 768px){
+	#reportContainer{
+		top: 1000px;
+	}
+	.players-wrapper>div{
+		margin-bottom: 10px;
+	}
 	.report-read li{
 		margin-bottom: 0;
 	}
@@ -864,6 +927,9 @@ p.chat-message{
 	}
 }
 @media screen and (min-width: 990px){
+	#reportContainer{
+		top: 100px;
+	}
 	.players-wrapper h3{
 		margin-left: 5px;
 	}
@@ -1000,7 +1066,7 @@ p.chat-message{
 	.players-wrapper:nth-of-type(even) div{
 		padding-right: 0;
 	}
-	.players-wrapper:nth-of-type(even) div div, .players-wrapper:nth-of-type(even) .game-img, .players-wrapper:nth-of-type(even) p{
+	.players-wrapper:nth-of-type(even)>div>div, .players-wrapper:nth-of-type(even)>div>div>div, .players-wrapper:nth-of-type(even) .game-img, .players-wrapper:nth-of-type(even) p{
 		float: right;
 	}
 	.players-wrapper{
