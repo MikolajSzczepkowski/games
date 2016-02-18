@@ -77,7 +77,7 @@
 .ladder-box table tr a:hover{
 	color: #d8d8d8;
 }
-.ladder-box table tr.winner{
+.ladder-box table tr.path{
 	background: #1182f5;
 }
 .ladder-box table tr td{

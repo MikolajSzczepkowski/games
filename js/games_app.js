@@ -26,12 +26,12 @@ $(function (){
 		hoverTeam = $(this).attr("data-name");
 		$(".ladder-box tr").each(function(){
 			if ($(this).attr("data-name")===hoverTeam) {
-				$(this).addClass("winner");
+				$(this).addClass("path");
 			}
 		});
 	});
 	$(document).on("mouseleave", ".ladder-box tr", function(){
-		$(".ladder-box tr").removeClass("winner");
+		$(".ladder-box tr").removeClass("path");
 	});
 
 	if(!tap){
