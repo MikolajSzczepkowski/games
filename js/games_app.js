@@ -14,7 +14,6 @@ $(function (){
 		});
 
 	$("#checkPlayersForm").find("p span").text(0+"/"+playersToChoose);
-
 	$(document).on("mouseenter", ".border-menu", function(){
 		$(this).addClass("hover");
 	});

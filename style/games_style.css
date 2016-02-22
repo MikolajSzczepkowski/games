@@ -198,9 +198,11 @@
 .middle-row-games{
 	margin: 40px 0;
 }
-.middle-row-games p{
+.middle-row-games #checkInContainer{
+	padding: 0;
+}
+.middle-row-games input[type="button"]{
 	height: 56px;
-	padding-top: 12px;
 	display: inline-block;
 	background: #363636;
 	font-size: 18px;
@@ -208,9 +210,14 @@
 	color: #fff;
 	border: 3px solid #fff;
 	box-shadow: 0 0 0 6px #363636;
-	cursor: pointer;
 }
-.middle-row-games p.deadline{
+.middle-row-games #checkInTooltip{
+	margin: 20px 0 0 -25px;
+	position: absolute;
+	font-size: 14px;
+	color: #fff;
+}
+.middle-row-games button.deadline{
 	background: #e43f3f;
 	box-shadow: 0 0 0 6px #e43f3f;
 }
@@ -221,6 +228,10 @@
 }
 .middle-row-games div.deadline ul.flip{
 	background: #e43f3f;
+}
+.middle-row-games button.over-time{
+	background: #1182f5;
+	box-shadow: 0 0 0 6px #1182f5;
 }
 .middle-row-games .middle-info{
 	background: #fff;

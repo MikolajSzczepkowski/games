@@ -23,6 +23,9 @@
 	vertical-align: top;
 	display: inline-block;
 }
+.ladder-main li:last-of-type{
+	margin: 0 15px;
+}
 .ladder-main p {
 	margin-bottom: 5px;
 	background: #363636;
