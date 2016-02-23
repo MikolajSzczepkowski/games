@@ -48,7 +48,8 @@
 .game-page form label.terms{
 	font-style: italic;
 }
-.game-page.covering-box form input[type="submit"]{
+.game-page.covering-box form input[type="submit"],
+.covering-box form input[type="submit"] {
 	margin: 30px 16px;
 	float: right;
 	cursor: pointer;
@@ -144,7 +145,7 @@
 .game-page form > div.game-slider-wrapper{
 	margin-top: 15px;
 }
-.create-game-id-wrapper, .choose-team-wrapper, .check-players-wrapper, .game-payment-wrapper{
+#createGameIdContainer, #chooseTeamContainer, #checkPlayersContainer, #gamePaymentContainer{
 	top: 430px;
 }
 .check-players-wrapper div form p{
@@ -985,10 +986,10 @@ p.chat-message{
     	height: auto;
     	padding: 0;
 	}
-	.create-game-id-wrapper, .choose-team-wrapper, .check-players-wrapper, .report-match-wrapper.upload-media{
+	#createGameIdContainer, #chooseTeamContainer, #checkPlayersContainer, .report-match-wrapper.upload-media{
 		top: 100px;
 	}
-	.game-payment-wrapper{
+	#gamePaymentContainer{
 		top: 50px;
 	}
 	.report-match-wrapper{
