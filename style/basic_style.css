@@ -3,6 +3,23 @@ body{
 	background: url(./../images/background.png) repeat;
 	padding-right: 0!important;
 }
+.modal { 
+    position: fixed; 
+    top: 3%; 
+    right: 3%; 
+    left: 3%; 
+    width: auto; 
+    margin: 0; 
+}
+.modal-body { 
+    height: 60%; 
+}
+.modal-body { 
+    max-height: 350px; 
+    padding: 15px; 
+    overflow-y: auto; 
+    -webkit-overflow-scrolling: touch; 
+ }
 .margin-left{
 	margin-left: 15px;
 }
@@ -29,7 +46,7 @@ body{
 }
 .user-avatar img{
 	width: 35px;
-	border: 2px solid #e43f3f;
+	border: 2px solid #1182f5;
 }
 .menu-background{
 	padding: 0;
@@ -37,6 +54,12 @@ body{
 	border-radius: 0;
 	border-bottom: 3px solid #E43F3F;
 	background: #d8d8d8;
+}
+#menuBackground.menu-background{
+	background: #F5F5F5;
+}
+#menuBackground.menu-box{
+	background: #EFEFEF;
 }
 .menu-box{
 	top: 55px;
@@ -52,6 +75,12 @@ body{
 .menu-box li{
 	margin-bottom: 3px;
 	background: #fff;
+}
+.menu-box>.teams-menu{
+	height: 0;
+}
+.menu-box>.teams-menu>a{
+	display: none;
 }
 .menu-box li:last-child{
 	margin-bottom: 0;
@@ -116,12 +145,17 @@ body{
 	color: #fff;
 	font-size: 10px;
 }
+#chat .menu-info-box{
+	margin-left: 0;
+	background: #e43f3f; 
+}
 .dropdown-submenu {
 	position: relative;
 }
 .dropdown-submenu>.dropdown-menu {
+	width: 200px;
 	max-height: 340px;
-	top: 134px;
+	top: 67px;
 	left: 0;
 	margin-left: 0;
 	overflow-y: auto;
@@ -145,6 +179,12 @@ body{
 	margin: -20px 0 0 -17px;
 	position: absolute;
 	border: 3px solid #363636;
+}
+.dropdown-submenu>.dropdown-menu li:first-of-type div img{
+	border: none;
+    width: 64px;
+    top: 25%;
+    left: 30%;
 }
 .background-cover{
 	width: 100%;
@@ -242,6 +282,31 @@ body{
 	background: none;
 	border: none;
 }
+#errorContainer{
+	z-index: 2000;
+}
+.error-wrapper{
+	background: #fff;
+	color: #333;
+}
+.error-wrapper>div{
+	padding: 0 0 0 15px;
+}
+.error-wrapper p{
+	margin-top: 45px;
+	margin-bottom: 0;
+	font-style: italic;
+}
+.error-wrapper button{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	background: #e43f3f;
+	color: #fff;
+	font-weight: bold;
+}
+.error-wrapper button:hover{
+	background: #363636;
+}
 .have-alert span{
 	background: #e43f3f;
 }
@@ -306,7 +371,8 @@ body{
 	line-height: 2;
 }
 .login-text:hover{
-	opacity: 0.5;
+	background: #1182f5;
+	color: #fff;
 }
 .covering-box{
 	top: 100px;
@@ -360,18 +426,23 @@ body{
 .covering-box form input[type="checkbox"] + label span {
 	width:15px;
 	height:15px;
-	margin: 0 0 -2px 0;
+	margin: 0 0 -3px 0;
 	display:inline-block;
 	background:url(./../images/checkbox.png) left top no-repeat;
 }
 .covering-box form input[type="checkbox"]:checked + label span{
 	background:url(./../images/checkbox-blue.png) left top no-repeat;
 }
+.covering-box form input[type="checkbox"]#acceptNewTeam + label span {
+	margin: 0 0 -3px 5px;
+}
+.covering-box form input[type="checkbox"]#acceptTerms + label span {
+	margin: 3px 0 0 0;
+}
 .covering-box form input[type="checkbox"]#acceptTerms + label span {
 	float: right;
 }
 .covering-box form input[type="submit"]{
-	width: 33.33%;
 	margin-left: 15px;
 	padding: 0 15px;
 	font-weight: bold; 
@@ -379,6 +450,11 @@ body{
 .covering-box form input[type="submit"]:hover, .change-form-button:hover{
 	background: #1182f5;
 	color: #fff;
+}
+.covering-box form #createTeamTooltip{
+	margin: 17px 0 0 -30px;
+    position: absolute;
+    color: #fff;
 }
 .covering-box form #forgotPassword{
 	margin-right: 3%;
@@ -629,11 +705,18 @@ li.friends-active{
 	overflow-y: scroll;
 	list-style: none;
 }
+.chat-body ul li{
+	padding: 0;
+}
 .chat-body ul li .chat-message-wrapper{
 	margin-bottom: 5px;
 }
 .chat-body ul li div{
 	padding: 0;
+}
+.chat-body ul li.chat-statement{
+	margin: 15px 0;
+
 }
 .chat-body h6{
 	font-family: 'Open Sans', sans-serif;
@@ -749,7 +832,7 @@ p.chat-panel-message{
 	font-weight: bold;
 }
 .dropup .dropdown-menu.team-dropup{
-	min-width: 170px;
+	width: 200px;
 	max-height: 132px;
 	margin: 0 0 0 -2px;
 	padding: 0;
@@ -764,9 +847,16 @@ p.chat-panel-message{
 	margin-top: 3px;
 	float: right;
 }
-.team-dropup li:hover, .team-dropup li:hover a, .team-dropup li:hover a span{
-	background: #000;
-	color: #fff;
+.team-dropup li a span.crown{
+	width: 16px;
+	height: 16px;
+	background: url(./../images/crown.png) no-repeat;
+}
+.team-dropup li a:hover span{
+	color: #333;
+}
+.team-dropup li a:hover, .team-dropup li a span:hover{
+	color: #e43f3f;
 }
 .team-dropup li a img{
 	padding: 0 5px;
@@ -1017,6 +1107,9 @@ li.social-list img{
 	.covering-box form #forgotPassword{
 		margin-right: 2%;
 	}
+	.covering-box form input[type="submit"]{
+		width: 33.33%; 
+	}
 @media screen and (min-width: 640px){
 	.social-list:nth-child(1){
 		margin-left: 40%;
@@ -1102,6 +1195,12 @@ li.social-list img{
 	.dropdown-submenu:hover>.dropdown-menu {
 		display: block;
 	}
+	.menu-box>.teams-menu{
+		height: inherit;
+	}
+	.menu-box>.teams-menu>a{
+		display: block;
+	}
 	#alert .menu-box{
 		width: 400px;
 		margin-left: 15px;
@@ -1123,7 +1222,7 @@ li.social-list img{
 		margin-left: 25px;
 	}
 	.dropdown-submenu>.dropdown-menu {
-		margin-left: -52px;
+		margin-left: -1px;
 	}
 	.login-wrapper, .register-wrapper{
 		top: 100px;
@@ -1211,9 +1310,6 @@ li.social-list img{
 	#user>ul {
 		margin-left: 0;
 	}
-	.dropdown-submenu>.dropdown-menu {
-		margin-left: -14px;
-	}
 	#coins, #alert{
 		width: 5%;
 		padding: 0;
@@ -1222,7 +1318,7 @@ li.social-list img{
 		margin: 0;
 	}
 	.covering-box form input[type="checkbox"]#acceptTerms + label span {
-		margin-right: -15px;
+		margin-right: 30px;
 	}
 }
 @media screen and (min-width: 1280px){
@@ -1261,5 +1357,8 @@ li.social-list img{
 @-moz-document url-prefix() {
 	.team-dropup li a span{
 		margin-top: -17px;
+	}
+	.team-dropup li a span.crown{
+		margin-top: -19px;
 	}
 }
