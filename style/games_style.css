@@ -222,7 +222,7 @@
 	background: #e43f3f;
 	box-shadow: 0 0 0 6px #e43f3f;
 }
-.middle-row-games div.deadline div.inn{
+.middle-row-games div.deadline div.inn, .prize-container.deadline ul li{
 	background: #e43f3f;
 	color: #fff;
 	text-shadow: 0 1px 2px #fff;
@@ -238,6 +238,33 @@
 	background: #fff;
 	box-shadow: none;
 	cursor: default;
+}
+.prize-container{
+	margin-bottom: 10px;
+	font: normal 11px "Helvetica Neue", Helvetica, sans-serif;
+}
+.prize-container h6{
+	margin-bottom: 4px;
+	padding: 0;
+	font-size: 12px;
+}
+.prize-container ul{
+	list-style: none;
+}
+.prize-container ul li{
+	width: 11%;
+	height: 38px;
+	margin: 0 1px;
+	line-height: 38px;
+	display: inline-block;
+    background-color: #333;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 1px 2px #000;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #ccc;
 }
 .games-menu img, .games-menu a img{
 	width: 78px;
@@ -789,14 +816,17 @@ p.chat-message{
 	.game-payment-wrapper form #acceptPaymentTerms + label span{
 		margin: 3px 60px 0 0;
 	}
-	.flip-clock-wrapper ul {
+	.flip-clock-wrapper ul{
 		width: 9.9%;
 		height: 56px;
 	}
-	.flip-clock-wrapper ul li {
+	.prize-container ul li{
+		height: 56px;
+	}
+	.flip-clock-wrapper ul li, .prize-container ul li{
 		line-height: 58px;
 	}
-	.flip-clock-wrapper ul li a div div.inn {
+	.flip-clock-wrapper ul li a div div.inn, .prize-container ul li{
 		font-size: 36px;
 	}
 	.flip-clock-dot.top {
@@ -940,6 +970,9 @@ p.chat-message{
 	.result-sumbit input{
 		float: right;
 	}
+	.prize-container ul li{
+		width: 12%;
+	}
 }
 @media screen and (min-width: 990px){
 	#reportContainer{
@@ -1013,7 +1046,7 @@ p.chat-message{
 	.flip-clock-wrapper ul li {
 		line-height: 56px;
 	}
-	.flip-clock-wrapper ul li a div div.inn {
+	.flip-clock-wrapper ul li a div div.inn, .prize-container ul li{
 		font-size: 42px;
 	}
 	.flip-clock-divider .flip-clock-label{
@@ -1024,6 +1057,23 @@ p.chat-message{
 	}
 	.flip-clock-divider.seconds .flip-clock-label{
 		right: -60px;
+	}
+	.prize-container{
+		margin-top: -27px;
+		margin-bottom: 0;
+	}
+	.prize-container ul{
+		margin-bottom: 0;
+	    margin-left: 25px;
+	    padding-right: 0;
+	}
+	.prize-container ul li{
+		width: 14%;
+		height: 54px;
+		line-height: 56px;
+	}
+	.prize-container h6{
+		margin-left: 35px;
 	}
 }
 @media screen and (min-width: 1024px){
@@ -1101,5 +1151,11 @@ p.chat-message{
 	}
 	.flip-clock-divider.seconds .flip-clock-label{
 		right: -70px;
+	}
+	.prize-container ul{
+	    margin-left: 33px;
+	}
+	.prize-container h6{
+		margin-left: 40px;
 	}
 }
