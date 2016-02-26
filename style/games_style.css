@@ -303,6 +303,13 @@
 	border: none;
 	background: #e43f3f;
 }
+.report-wrapper .bottom-inner-wrapper button{
+	margin: 0 auto 10px auto;
+	display: block;
+}
+.report-wrapper .bottom-inner-wrapper button:last-of-type{
+	margin: 0 auto;
+}
 div.bottom-inner-wrapper:last-of-type{
 	border: none;
 }
@@ -344,7 +351,7 @@ div.bottom-inner-wrapper:last-of-type{
 .game-box:hover p, .players-wrapper div div:hover p{
 	background: #e43f3f;
 }
-.game-box:hover .badge, .players-wrapper div:hover .badge{
+.game-box:hover .badge, .players-wrapper div div:hover .badge{
 	opacity: 1;
 }
 .players-wrapper>div{
@@ -478,27 +485,33 @@ div.bottom-inner-wrapper:last-of-type{
 }
 .report-match-wrapper{
 	top: 1200px;
-	padding: 20px 30px 300px 30px;
+	padding: 20px 30px;
 	background: rgba(0, 0, 0, 0.8);
 	border-top: 3px solid #e43f3f;
 	border-bottom: 3px solid #e43f3f;
 }
-.report-match-wrapper.upload-media{
+#uploadMediaInnerWrapper{
 	top: 1500px;
 	padding: 30px 45px;
 }
-.report-match-wrapper.upload-media img{
+.upload-media{
+	margin-bottom: 15px;
+}
+.upload-media:nth-of-type(3){
+	margin-bottom: 0;
+}
+.upload-media img{
 	padding: 5px;
 	background: #e43f3f;
 }
-.report-match-wrapper.upload-media input[type="text"]{
+.upload-media input[type="text"]{
 	width: 100%;
 	padding: 11px 10px;
 	border: none; 
 	background: #363636;
 	color: #fff;
 }
-.report-match-wrapper.upload-media input[type="submit"]{
+.upload-media input[type="submit"]{
 	height: 35px;
 	margin-top: 10px;
 	background: #e43f3f;
@@ -508,11 +521,12 @@ div.bottom-inner-wrapper:last-of-type{
 	font-style: italic;
 	border: none;
 }
-.report-match-wrapper.upload-media input[type="submit"]:hover, .result-sumbit input[type="submit"]:hover, .ratings-wrapper input.report-match-button:hover{
+.upload-media input[type="submit"]:hover, .result-sumbit input[type="submit"]:hover, .ratings-wrapper input.report-match-button:hover{
 	background: #363636;
 }
 .report-match-wrapper .topic-wrapper .text-holder{
-	margin: 111px 0px 0px;
+	margin-top: 15px;
+	position: relative;
 }
 .report-match-wrapper .topic-wrapper .text-holder textarea{
 	background: none;
@@ -558,6 +572,9 @@ div.bottom-inner-wrapper:last-of-type{
 	color: #fff;
 	font-weight: bold;
 	font-size: 12px;
+}
+.report-wrapper .bottom-inner-wrapper h3{
+	background: #e43f3f;
 }
 .report-list{
 	font-size: 12px;
@@ -763,19 +780,11 @@ p.chat-message{
 	border-top: 3px solid #e43f3f;
 	border-bottom: 3px solid #e43f3f;
 }
-.report-wrapper textarea{
-	height: 100px;
-	margin: 30px 0 10px 0;
-	padding: 5px;
-	background: none;
-	color: #fff;
-	border: 1px solid #fff;
-	resize: none;
-}
 .report-wrapper input{
 	margin: 0 0 10px 0;
 	padding-top: 5px;
 	padding-bottom: 5px;
+	float: right;
 	background: #e43f3f;
 	border: none;
 	color: #fff;
@@ -793,7 +802,7 @@ p.chat-message{
 	padding: 0;
 }
 .report-wrapper p{
-	margin-top: 30px;
+	margin-top: 15px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	border:1px solid #fff;
@@ -850,13 +859,13 @@ p.chat-message{
 	}
 }
 @media screen and (min-width: 640px){
-	.report-match-wrapper.upload-media img{
-		margin: 0 0 2px 0;
+	.upload-media img{
+		margin: 0 0 3px 0;
 	}
 	.result-sumbit input{
 		width: 138px;
 	}
-	.report-match-wrapper.upload-media input[type="submit"]{
+	.upload-media input[type="submit"]{
 		width: 23.8%;
 		margin-left: 15px;
 	}
@@ -947,10 +956,10 @@ p.chat-message{
 	.report-match-wrapper button{
 		margin-top: 0;
 	}
-	.report-match-wrapper.upload-media{
+	#uploadMediaInnerWrapper{
 		top: 1000px;
 	}
-	.report-match-wrapper.upload-media input[type="text"]{
+	.upload-media input[type="text"]{
 		width: 90%;
 		margin: 0 0 0 -4px;
 	}
@@ -1019,7 +1028,7 @@ p.chat-message{
     	height: auto;
     	padding: 0;
 	}
-	#createGameIdContainer, #chooseTeamContainer, #checkPlayersContainer, .report-match-wrapper.upload-media{
+	#createGameIdContainer, #chooseTeamContainer, #checkPlayersContainer, #uploadMediaInnerWrapper{
 		top: 100px;
 	}
 	#gamePaymentContainer{

@@ -20,8 +20,22 @@
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae repellendus aperiam qui aut, expedita modi. Voluptas ut quaerat, nesciunt neque dolore facilis quo nulla impedit recusandae error aliquam perferendis commodi.
 						</div>
 						<form name="report-form" id="reportFrom" class="col-xs-12">
-							<textarea name="user-message" form="reportFrom" class="col-xs-12" placeholder="Write here..."></textarea>
-							<input type="submit" name="submit-report" value="send" class="col-xs-12 text-center">
+							<div class="col-xs-12 bottom-inner-wrapper text-center">
+								<h3 class="col-xs-12 text-uppercase">attachments</h3>
+								<button id="iconWrapper" >
+									<img src="images/upload-media.png" alt="upload media">
+								</button>
+								<button id="iconWrapper" >
+									<img src="images/upload-media.png" alt="upload media">
+								</button>
+								<button id="iconWrapper" >
+									<img src="images/upload-media.png" alt="upload media">
+								</button>
+							</div>
+							<p class="col-xs-12">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta ex, excepturi! Eaque dolore, quibusdam dignissimos minima inventore totam animi, dicta vitae sequi eius, quo nesciunt veniam sint praesentium nisi tempora?
+							</p>
+							<input type="submit" name="submit-report" value="send" class="col-xs-3 text-center">
 						</form>
 					</div>
 				</div>	
@@ -33,21 +47,18 @@
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae repellendus aperiam qui aut, expedita modi. Voluptas ut quaerat, nesciunt neque dolore facilis quo nulla impedit recusandae error aliquam perferendis commodi.
 						</div>
 						<form name="report" id="report" class="col-xs-12 topic-wrapper">
-							<ul class="col-xs-12 col-sm-8 topic-inner-wrapper">
-								<li class="col-xs-12 enter-topic text-center">
-									Choose your topic to precise your ticket<img src="images/enter-topic.png" alt="enter-topic">
-								</li>
-								<li class="col-xs-12 topic-list text-center">
-									<input type="radio" name="topic-1" id="topic1"/>Game
-								</li>
-								<li class="col-xs-12 topic-list text-center">
-									<input type="radio" name="topic-2" id="topic2"/>Player
-								</li>
-								<li class="col-xs-12 topic-list text-center">
-									<input type="radio" name="topic-3" id="topic3"/>Tournament	
-								</li>
-							</ul>
-							<button class="col-xs-12 col-sm-3 col-sm-offset-1">upload media</button>
+							<div class="col-xs-12 upload-media">
+								<img src="images/upload-media.png" alt="upload media">
+								<input type="text" id="mediaUrlReport" placeholder="Insert URL adress">
+							</div>
+							<div class="col-xs-12 upload-media">
+								<img src="images/upload-media.png" alt="upload media">
+								<input type="text" id="mediaUrlReport" placeholder="Insert URL adress">
+							</div>
+							<div class="col-xs-12 upload-media">
+								<img src="images/upload-media.png" alt="upload media">
+								<input type="text" id="mediaUrlReport" placeholder="Insert URL adress">
+							</div>
 							<div class="col-xs-12 text-holder">
 								<textarea name="user-message" form="report" class="col-xs-12" placeholder="Write here..."></textarea>
 								<input type="submit" name="submit-message" value="send" class="col-xs-3 text-center">
