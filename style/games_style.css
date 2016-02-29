@@ -145,8 +145,11 @@
 .game-page form > div.game-slider-wrapper{
 	margin-top: 15px;
 }
-#createGameIdContainer, #chooseTeamContainer, #checkPlayersContainer, #gamePaymentContainer{
+#createGameIdContainer, #chooseTeamContainer, #checkPlayersContainer, #gamePaymentContainer, #loginOnlyContainer{
 	top: 430px;
+}
+#loginOnlyContainer .login-wrapper{
+	top: 0;
 }
 .check-players-wrapper div form p{
 	border-bottom: 1px solid #1182f5;
@@ -484,15 +487,18 @@ div.bottom-inner-wrapper:last-of-type{
 	padding: 0;
 }
 .report-match-wrapper{
-	top: 1200px;
 	padding: 20px 30px;
 	background: rgba(0, 0, 0, 0.8);
 	border-top: 3px solid #e43f3f;
 	border-bottom: 3px solid #e43f3f;
 }
 #uploadMediaInnerWrapper{
-	top: 1500px;
 	padding: 30px 45px;
+}
+#uploadMediaContainer, #reportMatchContainer, #reportContainer{
+	height: 200%;
+	top: 1500px;
+	padding: 50px 0;
 }
 .upload-media{
 	margin-bottom: 15px;
@@ -771,9 +777,6 @@ p.chat-message{
 .flip-clock-divider.seconds .flip-clock-label{
 	right: -50px;
 }
-#reportContainer{
-	top: 1500px;
-}
 .report-wrapper{
 	padding: 20px 30px;
 	background: rgba(0, 0, 0, 0.8);
@@ -874,7 +877,7 @@ p.chat-message{
 	}
 }
 @media screen and (min-width: 768px){
-	#reportContainer{
+	#uploadMediaContainer, #reportMatchContainer, #reportContainer{
 		top: 1000px;
 	}
 	.players-wrapper>div{
@@ -950,14 +953,8 @@ p.chat-message{
 	.match-info.game-chat p{
 		height: auto;
 	}
-	.report-match-wrapper{
-		top: 700px;
-	}
 	.report-match-wrapper button{
 		margin-top: 0;
-	}
-	#uploadMediaInnerWrapper{
-		top: 1000px;
 	}
 	.upload-media input[type="text"]{
 		width: 90%;
@@ -984,9 +981,6 @@ p.chat-message{
 	}
 }
 @media screen and (min-width: 990px){
-	#reportContainer{
-		top: 100px;
-	}
 	.players-wrapper h3{
 		margin-left: 5px;
 	}
@@ -1028,11 +1022,9 @@ p.chat-message{
     	height: auto;
     	padding: 0;
 	}
-	#createGameIdContainer, #chooseTeamContainer, #checkPlayersContainer, #uploadMediaInnerWrapper{
+	#loginOnlyContainer, #createGameIdContainer, #chooseTeamContainer, #checkPlayersContainer, #gamePaymentContainer, #uploadMediaContainer, #reportMatchContainer, #reportContainer{
 		top: 100px;
-	}
-	#gamePaymentContainer{
-		top: 50px;
+		padding: 0;
 	}
 	.report-match-wrapper{
 		top: 0;
