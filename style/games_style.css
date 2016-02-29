@@ -48,8 +48,7 @@
 .game-page form label.terms{
 	font-style: italic;
 }
-.game-page.covering-box form input[type="submit"],
-.covering-box form input[type="submit"] {
+.game-page.covering-box form input[type="submit"], #chooseTeamForm input[type="submit"]{
 	margin: 30px 16px;
 	float: right;
 	cursor: pointer;
