@@ -220,7 +220,7 @@
 	font-size: 14px;
 	color: #fff;
 }
-.middle-row-games button.deadline{
+.middle-row-games input.deadline{
 	background: #e43f3f;
 	box-shadow: 0 0 0 6px #e43f3f;
 }
@@ -232,7 +232,7 @@
 .middle-row-games div.deadline ul.flip{
 	background: #e43f3f;
 }
-.middle-row-games button.over-time{
+.middle-row-games input.over-time{
 	background: #1182f5;
 	box-shadow: 0 0 0 6px #1182f5;
 }
@@ -249,6 +249,7 @@
 	margin-bottom: 4px;
 	padding: 0;
 	font-size: 12px;
+	font-weight: bold;
 }
 .prize-container ul{
 	list-style: none;
@@ -307,7 +308,6 @@
 }
 .report-wrapper .bottom-inner-wrapper button{
 	margin: 0 auto 10px auto;
-	display: block;
 }
 .report-wrapper .bottom-inner-wrapper button:last-of-type{
 	margin: 0 auto;
@@ -1025,6 +1025,10 @@ p.chat-message{
 		top: 100px;
 		padding: 0;
 	}
+	#reportMatchContainer{
+		top: 600px;
+		position: absolute;
+	}
 	.report-match-wrapper{
 		top: 0;
 	}
@@ -1064,16 +1068,15 @@ p.chat-message{
 	}
 	.prize-container ul{
 		margin-bottom: 0;
-	    margin-left: 25px;
 	    padding-right: 0;
 	}
 	.prize-container ul li{
-		width: 14%;
+		width: 12%;
 		height: 54px;
 		line-height: 56px;
 	}
 	.prize-container h6{
-		margin-left: 35px;
+		padding-left: 15px;
 	}
 }
 @media screen and (min-width: 1024px){
@@ -1151,11 +1154,5 @@ p.chat-message{
 	}
 	.flip-clock-divider.seconds .flip-clock-label{
 		right: -70px;
-	}
-	.prize-container ul{
-	    margin-left: 33px;
-	}
-	.prize-container h6{
-		margin-left: 40px;
 	}
 }
