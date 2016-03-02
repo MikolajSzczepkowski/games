@@ -1156,3 +1156,9 @@ p.chat-message{
 		right: -70px;
 	}
 }
+@media screen and (min-height: 810px){
+	#reportMatchContainer{
+		top: 100px;
+		position: fixed;
+	}
+}
