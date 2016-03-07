@@ -622,6 +622,7 @@ div.bottom-inner-wrapper:last-of-type{
 	padding: 0;
 }
 .game-chat-inner-wrapper{
+	margin-bottom: 20px;
 	display: none;
 }
 .game-chat-inner{
@@ -678,6 +679,9 @@ div.bottom-inner-wrapper:last-of-type{
 	width: 39px;
 	margin: 0 5px 0 0;
 	border: 2px solid #363636; 
+}
+.game-right-info{
+	margin-bottom: 20px;
 }
 .game-right-info h4, .game-right-info>div{
 	background: #f4f4f4;
@@ -753,9 +757,6 @@ p.chat-message{
 	height: 100px;
 	padding: 0 5px;
 	resize: none;
-}
-.right-banner{
-	margin-top: 20px; 
 }
 #clock{
 	margin-top: 40px;
