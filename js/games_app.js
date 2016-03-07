@@ -219,5 +219,4 @@ $(function (){
 		$("#acceptPayment").prop("disabled", false);
 		$("#cancelPayment").hide();
 	});
-
 });

@@ -656,7 +656,7 @@ div.bottom-inner-wrapper:last-of-type{
 	font-style: italic;
 	color: #d8d8d8;
 }
-.game-chat p{
+.game-chat>p{
 	padding: 5px 0;
 	margin: 0;
 	border-bottom: 1px solid #d8d8d8;
@@ -678,6 +678,43 @@ div.bottom-inner-wrapper:last-of-type{
 	width: 39px;
 	margin: 0 5px 0 0;
 	border: 2px solid #363636; 
+}
+.game-right-info h4, .game-right-info>div{
+	background: #f4f4f4;
+	border-left: 3px solid #e43f3f;
+}
+.game-right-info h4{
+	height: 50px;
+	padding-top: 18px; 
+	font-size: 14px;
+	font-weight: bold;
+}
+.game-right-info h4 span{
+	padding: 0;
+}
+.game-right-info>div{
+	padding: 15px;
+	border-left: 3px solid #1182f5;
+}
+.game-right-info>div div:first-of-type{
+	margin: 0 0 10px 0;
+}
+.game-right-info>div div img, .game-right-info>div div div{
+	display: inline-block;
+}
+.game-right-info>div div img{
+	padding: 0 5px 0 0;
+	vertical-align: top;
+}
+.game-right-info>div div div p:first-of-type, .game-right-info>div div:nth-of-type(2) p{
+	font-weight: bold;
+}
+.game-right-info>div div:nth-of-type(2) a{
+	font-style: italic;
+	color: #333;
+}
+.game-right-info>div div:nth-of-type(2) a:hover{
+	color: #e43f3f; 
 }
 .online-player{
 	color: #1182f5;
