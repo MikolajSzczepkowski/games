@@ -685,7 +685,7 @@ div.bottom-inner-wrapper:last-of-type{
 }
 .game-right-info h4, .game-right-info>div{
 	background: #f4f4f4;
-	border-left: 3px solid #e43f3f;
+	border-left: 3px solid #1182f5;
 }
 .game-right-info h4{
 	height: 50px;
@@ -695,10 +695,11 @@ div.bottom-inner-wrapper:last-of-type{
 }
 .game-right-info h4 span{
 	padding: 0;
+	font-weight: normal;
 }
 .game-right-info>div{
 	padding: 15px;
-	border-left: 3px solid #1182f5;
+	border-left: 3px solid #e43f3f;
 }
 .game-right-info>div div:first-of-type{
 	margin: 0 0 10px 0;
