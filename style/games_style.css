@@ -173,6 +173,7 @@
 	list-style: none;
 	border-left: 3px solid #1182f5;
 	cursor: pointer;
+	color: #fff;
 }
 .top-row ul li.checked:hover{
 	color: #1182f5;
@@ -185,18 +186,15 @@
 	padding: 15px 0 0 5px;
 	font-size: 12px;
 	font-weight: bold;
-	background: #f4f4f4;
+	background: #222;
 }
 .top-row ul li.locked p{
-	background: #929292;
+	background: #0d0d0d;
+	color: #626262;
 }
 .top-row ul li p span{
 	font-style: italic;
 	font-weight: normal;
-}
-.top-row ul li p img{
-	margin: -3px 0 0 0;
-	padding: 0 0 0 5px;
 }
 .middle-row-games{
 	margin: 40px 0;
@@ -269,6 +267,25 @@
     font-weight: bold;
     color: #ccc;
 }
+.title-row{
+	padding: 0 15px 0 23px;
+}
+.title-row p{
+	padding: 15px 0;
+	background: #363636;
+	color: #fff;
+	font-weight: bold;
+}
+.title-row p span{
+	color: #e43f3f;
+}
+.title-row img{
+	left: 50%;
+	margin: 38px 0 0 -16px;
+	position: absolute;
+	background: #e43f3f;
+	z-index: 1;
+}
 .games-menu img, .games-menu a img{
 	width: 78px;
 	height: 78px;
@@ -280,7 +297,6 @@
 }
 .games-menu img{
 	height: 30px;
-	background: #363636;
 }
 .games-menu .active img{
 	background: #363636;
@@ -1017,6 +1033,10 @@ p.chat-message{
 	.prize-container ul li{
 		width: 12%;
 	}
+	.title-row img{
+		margin: 0 0 0 -25px;
+		padding: 9px;
+	}
 }
 @media screen and (min-width: 990px){
 	.players-wrapper h3{
@@ -1104,13 +1124,14 @@ p.chat-message{
 	.prize-container{
 		margin-top: -27px;
 		margin-bottom: 0;
+		padding-left: 3px;
 	}
 	.prize-container ul{
 		margin-bottom: 0;
-	    padding-right: 0;
+	    padding: 0;
 	}
 	.prize-container ul li{
-		width: 12%;
+		width: 12.5%;
 		height: 54px;
 		line-height: 56px;
 	}

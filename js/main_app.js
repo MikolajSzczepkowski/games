@@ -3,6 +3,7 @@ $(function (){
 		pageWidth = $(document).width(),
 		htmlHeight = $("html").height(),
 		chatBoxCounter = 0,
+		menuChosenGame = false,
 		allFriends = [
 			{id: "Depsperados_PL",
 			address: "chat.html"},
@@ -149,7 +150,7 @@ $(function (){
 				var	ul = "<ul class='row friends-list-buttons'></ul>",
 				messageButton = "<li id='chatOn'><a data-name='"+allFriends[i].id+"' href='"+allFriends[i].address+"'><img src='images/message.png' alt='massage' class='friends-list-buttons'></a></li>",
 				userButton = "<li><img src='images/user.png' alt='user' class='friends-list-buttons'></li>",
-				addUserButton = "<li><img src='images/add-user.png' alt='add user' class='friends-list-buttons'></li>";
+				removeUserButton = "<li data-toggle='modal' data-target='#errorContainer'><img src='images/user-minus.png' alt='remove user' class='friends-list-buttons'></li>";
 				if ($(this).hasClass("collapsed")) {
 					$("#friendsList").find(".friends-list-buttons").remove();
 					$(this).removeClass("collapsed");
@@ -157,7 +158,7 @@ $(function (){
 				else{
 					$("#friendsList").find(".friends-list-buttons").remove();
 					$(this).after(ul);
-					$(this).next(".friends-list-buttons").append(messageButton, userButton, addUserButton);
+					$(this).next(".friends-list-buttons").append(messageButton, userButton, removeUserButton);
 					$(this).addClass("collapsed");
 				}
 			}
@@ -345,6 +346,55 @@ $(function (){
 		if (!$(this).hasClass("current-game")) {
 			$("#gamesSlider ul li").removeClass("current-game");
 			$(this).addClass("current-game");
+		}
+	});
+	$(document).on("click", "#menuBackground ul li", function(){
+		if (!$(this).hasClass("current-game")) {
+			$("#menuBackground ul li").removeClass("current-game");
+			$(this).addClass("current-game");
+			$("#tournamentContainer").addClass("visable");
+			menuChosenGame = true;
+		}
+	});
+
+	$("#gameButton").on("click", function(){
+		$(this).parent().toggleClass("open");
+	});
+	$("body").on("click", function(e){
+		if (!$("li.dropdown").is(e.target) 
+			&& $("li.dropdown").has(e.target).length === 0 
+			&& $(".open").has(e.target).length === 0
+		) {
+			$("li.dropdown").removeClass("open");
+		}
+	});
+
+	$("#tournamentContainer li").on("mouseenter", function(){
+		$(this).find("img[data-name='cup']").attr("src", "images/cup-menu-red.png");
+		$(this).find("img[data-name='coins']").attr("src", "images/coins-menu-red.png");
+		$(this).find("span[data-name='play']").css("opacity", "1");
+	});
+	$("#tournamentContainer li").on("mouseleave", function(){
+		$(this).find("img[data-name='cup']").attr("src", "images/cup-menu.png");
+		$(this).find("img[data-name='coins']").attr("src", "images/coins-menu.png");
+		$(this).find("span[data-name='play']").css("opacity", "0");
+	});
+
+
+	$(".menu-scroll ul li").on("mouseenter", function(){
+		if (menuChosenGame === false) {
+			$("#tournamentContainer").addClass("visable");
+		}
+	});
+	$(".menu-scroll ul li").on("mouseleave", function(){
+		if (menuChosenGame === false) {
+			$("#tournamentContainer").removeClass("visable");
+		}
+	});
+	$(document).on("click", "#tournamentPages a", function(){
+		if (!$(this).hasClass("active")) {
+			$("#tournamentPages a").removeClass("active");
+			$(this).addClass("active");
 		}
 	});
 });
