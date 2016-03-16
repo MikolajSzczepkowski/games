@@ -246,4 +246,26 @@ $(function (){
 		$("#acceptPayment").prop("disabled", false);
 		$("#cancelPayment").hide();
 	});
+
+	$(document).on("submit", "#report", function(e){
+		var usedInput = false;
+		e.preventDefault();
+		
+		if ($(this).find("textarea").val().length == 0) {
+			$("#alertBox p").text("You have to write a request");
+			$("#alertBox").show();
+			$("#alertBox").delay(3000).hide(0);
+		}
+
+		$(".upload-media").each(function(){
+			if ($(this).find("input").val().length != 0) {
+				usedInputCounter = true;
+			}
+		});
+		if (usedInput == false){
+			$("#alertBox p").text("You have to insert URL address");
+			$("#alertBox").show();
+			$("#alertBox").delay(3000).hide(0);
+		}
+	});
 });
