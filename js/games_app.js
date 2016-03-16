@@ -141,11 +141,6 @@ $(function (){
 		}
 	});
 
-	$(document).on("click", ".teams-to-choose li", function(){
-		clickedTeam = $(this).find("input").attr("name");
-		$("#chooseTeam").attr("value", clickedTeam);
-	});
-
 	$(document).on("change", "#checkPlayersForm input", function(){
 		checkedPlayers = $("#checkPlayersForm").find("input:checked").length;
 		$("#checkPlayersForm").find("p span").text(checkedPlayers+"/"+playersToChoose);
@@ -164,22 +159,54 @@ $(function (){
 		e.preventDefault();
 		checkIfPlayerHasGameId();
 		if (checkedPlayers>playersToChoose) {
-			$("#alertBox p").text("You have exceeded the number of players.");
+			$("#alertBox p").text("You have exceeded the number of players");
 			$("#alertBox").show();
 			$("#alertBox").delay(3000).hide(0);
 		}
-		if (playerGameId === false) {
-			$("#alertBox p").text("Chosen player does not have game ID.");
+		if (playerGameId == false) {
+			$("#alertBox p").text("Chosen player does not have game ID");
 			$("#alertBox").show();
 			$("#alertBox").delay(3000).hide(0);
 		}
 	});
 
+	$(document).on("click", ".teams-to-choose li", function(){
+		clickedTeam = $(this).find("input").attr("name");
+		$(".teams-to-choose input").prop("checked", false);
+		$(this).find("input").prop("checked", true);
+		$("#chooseTeam").attr("value", clickedTeam);
+	});
+
 	$(document).on("click", "#chooseTeamForm .form-click", function(){
 		if ($(this).parents("div").hasClass("disabled")) {
 			$(this).parents("div").removeClass("disabled");
+			$("#chooseTeam").attr("value", "Choose team");
+			$(".teams-to-choose input").prop("checked", false);
 			$(this).parents("div").siblings(".to-choose").addClass("disabled");
 		}
+	});
+
+	$(document).on("submit", "#chooseTeamForm", function(e){
+		e.preventDefault();
+		if (!$("#chooseTeamForm div:first").hasClass("disabled")) {
+			if ($(".teams-to-choose input").prop("checked") == false) {
+				$("#alertBox p").text("You have to choose team");
+				$("#alertBox").show();
+				$("#alertBox").delay(3000).hide(0);
+			}
+		}
+		else if($("#chooseTeamForm div:first").hasClass("disabled")){
+			if ($("#createNewTeam").val().length == 0) {
+				$("#alertBox p").text("You have to write team name");
+				$("#alertBox").show();
+				$("#alertBox").delay(3000).hide(0);
+			}
+			if ($("#acceptNewTeamTerms").prop("checked") == false) {
+				$("#alertBox p").text("You have to accept terms");
+				$("#alertBox").show();
+				$("#alertBox").delay(3000).hide(0);
+			}
+		}	
 	});
 
 	$(document).on("click", "#gamesPickSlider ul li", function(){
@@ -198,7 +225,7 @@ $(function (){
 
 	$(document).on("click", "#acceptPayment", function(){
 		if (!$("#acceptPaymentTerms").is(":checked")) {
-			$("#alertBox p").text("You must accept terms of use and Privacy Policy.");
+			$("#alertBox p").text("You must accept terms of use and Privacy Policy");
 			$("#alertBox").show();
 			$("#alertBox").delay(3000).hide(0);
 		}

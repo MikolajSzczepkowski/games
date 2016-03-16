@@ -38,7 +38,7 @@
 .game-page.game-payment-wrapper form>div:last-of-type{
 	border-bottom: none;
 }
-.game-page form>div{
+.game-page form>div, .to-choose div{
 	margin: 5px 0 0 0;
 }
 .game-page form label{
