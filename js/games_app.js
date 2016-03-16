@@ -259,7 +259,7 @@ $(function (){
 
 		$(".upload-media").each(function(){
 			if ($(this).find("input").val().length != 0) {
-				usedInputCounter = true;
+				usedInput = true;
 			}
 		});
 		if (usedInput == false){
