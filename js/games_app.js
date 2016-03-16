@@ -196,13 +196,13 @@ $(function (){
 			}
 		}
 		else if($("#chooseTeamForm div:first").hasClass("disabled")){
-			if ($("#createNewTeam").val().length == 0) {
-				$("#alertBox p").text("You have to write team name");
+			if ($("#acceptNewTeamTerms").prop("checked") == false) {
+				$("#alertBox p").text("You have to accept terms");
 				$("#alertBox").show();
 				$("#alertBox").delay(3000).hide(0);
 			}
-			if ($("#acceptNewTeamTerms").prop("checked") == false) {
-				$("#alertBox p").text("You have to accept terms");
+			if ($("#createNewTeam").val().length == 0) {
+				$("#alertBox p").text("You have to write team name");
 				$("#alertBox").show();
 				$("#alertBox").delay(3000).hide(0);
 			}
