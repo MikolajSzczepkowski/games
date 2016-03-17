@@ -9,6 +9,10 @@ body{
 	background-color: #2a2c38;
 	padding-right: 0!important;
 }
+button, input, textarea{
+	border: none;
+	outline: none;
+}
 .margin-left{
 	margin-left: 15px;
 }
@@ -595,7 +599,7 @@ body{
 	border: none;
 	font-weight: bold;
 }
-.register-wrapper form{
+.register-wrapper form, #forgotPasswordInnerWrapper form{
 	padding-bottom: 20px;
 }
 .register-wrapper form>div{
@@ -1297,7 +1301,7 @@ li.social-list img{
 		top: 54px;	 
 	}
 	.alert-box-wrapper{
-		top: 50px;
+		top: 45px;
 	}
 	.nav-wrapper{
 		position: fixed;
