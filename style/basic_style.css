@@ -9,8 +9,11 @@ body{
 	background-color: #2a2c38;
 	padding-right: 0!important;
 }
-button, input, textarea{
+button{
 	border: none;
+	outline: none;
+}
+input, textarea{
 	outline: none;
 }
 .margin-left{
@@ -212,7 +215,7 @@ button, input, textarea{
 }
 #chat .menu-info-box{
 	margin-left: 0;
-	background: #e43f3f; 
+	background: #1182f5; 
 }
 .dropdown-submenu {
 	position: relative;
@@ -487,7 +490,7 @@ button, input, textarea{
 	font-weight: bold;
 	color: #fff;
 }
-.covering-box h2{
+.groupmates h2, .covering-box h2{
 	height: 50px;
 	margin: 0;
 	padding-top: 18px;
@@ -564,7 +567,7 @@ button, input, textarea{
 #forgotPasswordContainer.covering-box form input[type="submit"]{
 	margin-bottom: 15px;
 }
-.covering-box form #createTeamTooltip{
+.covering-box form #createTeamTooltip, .covering-box form #createTeamGamesTooltip{
 	margin: 17px 0 0 -30px;
 	position: absolute;
 	color: #fff;
@@ -976,16 +979,14 @@ p.chat-panel-message{
 }
 .groupmates{
 	top: 100px;
+	color: #333;
+}
+.groupmates>div{
+	margin: 5px 0 0 0;
+	padding-top: 15px;
 	background: #fff;
 	border-top: 5px solid #e43f3f;
 	border-bottom: 3px solid #e43f3f;
-	color: #333;
-}
-.groupmates h2{
-	padding-bottom: 10px;
-	border-bottom: 1px solid #d8d8d8;
-	font-size: 22px;
-	font-weight: bold; 
 }
 .groupmates ul{
 	max-height: 200px;
@@ -1070,7 +1071,7 @@ p.chat-panel-message{
 	top: 100px;
 }
 .create-team-wrapper form{
-	padding-bottom: 15px;
+	padding: 15px;
 }
 .games-slider{
 	overflow-x: scroll;

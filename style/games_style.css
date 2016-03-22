@@ -147,6 +147,9 @@
 #createGameIdContainer, #chooseTeamContainer, #checkPlayersContainer, #gamePaymentContainer, #loginOnlyContainer{
 	top: 430px;
 }
+#chooseTeamContainer form{
+	padding-top: 15px;
+}
 #loginOnlyContainer .login-wrapper{
 	top: 0;
 }
